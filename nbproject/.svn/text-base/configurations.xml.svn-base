@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="89">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="config" displayName="config" projectFiles="true">
+      <itemPath>Doxyfile</itemPath>
+      <itemPath>config/plugins.cfg</itemPath>
+      <itemPath>config/resources.cfg</itemPath>
+    </logicalFolder>
+    <logicalFolder name="includes" displayName="includes" projectFiles="true">
+      <logicalFolder name="ai" displayName="ai" projectFiles="true">
+        <itemPath>includes/ai/gather.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="gfx" displayName="gfx" projectFiles="true">
+        <itemPath>includes/gfx/DebugDrawer.h</itemPath>
+        <itemPath>includes/gfx/GraphicsInteractionManager.h</itemPath>
+        <itemPath>includes/gfx/ThreadTester.h</itemPath>
+        <itemPath>includes/gfx/cameraMgr.h</itemPath>
+        <itemPath>includes/gfx/controlGroupsHandler.h</itemPath>
+        <itemPath>includes/gfx/creationMouseHandler.h</itemPath>
+        <itemPath>includes/gfx/gfxConst.h</itemPath>
+        <itemPath>includes/gfx/gfxMgr.h</itemPath>
+        <itemPath>includes/gfx/gfxNode.h</itemPath>
+        <itemPath>includes/gfx/gfxThread.h</itemPath>
+        <itemPath>includes/gfx/inputEvents.h</itemPath>
+        <itemPath>includes/gfx/inputHandlers.h</itemPath>
+        <itemPath>includes/gfx/lobbyMgr.h</itemPath>
+        <itemPath>includes/gfx/minimap.h</itemPath>
+        <itemPath>includes/gfx/selectionBox.h</itemPath>
+        <itemPath>includes/gfx/uiMgr.h</itemPath>
+        <itemPath>includes/gfx/widgetMgr.h</itemPath>
+        <itemPath>includes/gfx/widgets.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="net" displayName="net" projectFiles="true">
+        <itemPath>includes/net/listener.h</itemPath>
+        <itemPath>includes/net/messages.h</itemPath>
+        <itemPath>includes/net/netAspect.h</itemPath>
+        <itemPath>includes/net/netCommon.h</itemPath>
+        <itemPath>includes/net/netLobby.h</itemPath>
+        <itemPath>includes/net/netThread.h</itemPath>
+        <itemPath>includes/net/sender.h</itemPath>
+        <itemPath>includes/net/server.h</itemPath>
+        <itemPath>includes/net/socket.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="snd" displayName="snd" projectFiles="true">
+        <itemPath>includes/snd/SoundMgr.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="tactical" displayName="tactical" projectFiles="true">
+        <itemPath>includes/tactical/flock.h</itemPath>
+        <itemPath>includes/tactical/group.h</itemPath>
+        <itemPath>includes/tactical/groupAI.h</itemPath>
+        <itemPath>includes/tactical/groupMgr.h</itemPath>
+      </logicalFolder>
+      <itemPath>includes/DEBUG.h</itemPath>
+      <itemPath>includes/ExplosionType.h</itemPath>
+      <itemPath>includes/HealthBar.h</itemPath>
+      <itemPath>includes/Rect.h</itemPath>
+      <itemPath>includes/WeaponType.h</itemPath>
+      <itemPath>includes/aspect.h</itemPath>
+      <itemPath>includes/buildings.h</itemPath>
+      <itemPath>includes/command.h</itemPath>
+      <itemPath>includes/commandFactory.h</itemPath>
+      <itemPath>includes/commandHelp.h</itemPath>
+      <itemPath>includes/const.h</itemPath>
+      <itemPath>includes/distanceMgr.h</itemPath>
+      <itemPath>includes/engine.h</itemPath>
+      <itemPath>includes/ent.h</itemPath>
+      <itemPath>includes/entHelpers.h</itemPath>
+      <itemPath>includes/entityMgr.h</itemPath>
+      <itemPath>includes/enums.h</itemPath>
+      <itemPath>includes/gameMgr.h</itemPath>
+      <itemPath>includes/identity.h</itemPath>
+      <itemPath>includes/mgr.h</itemPath>
+      <itemPath>includes/options.h</itemPath>
+      <itemPath>includes/physics.h</itemPath>
+      <itemPath>includes/selectionMgr.h</itemPath>
+      <itemPath>includes/target.h</itemPath>
+      <itemPath>includes/timer.h</itemPath>
+      <itemPath>includes/unitAI.h</itemPath>
+      <itemPath>includes/unitBuilder.h</itemPath>
+      <itemPath>includes/unitWeapons.h</itemPath>
+      <itemPath>includes/utils.h</itemPath>
+      <itemPath>includes/weaponMgr.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="src" displayName="src" projectFiles="true">
+      <logicalFolder name="ai" displayName="ai" projectFiles="true">
+        <itemPath>src/ai/gather.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="gfx" displayName="gfx" projectFiles="true">
+        <itemPath>src/gfx/DebugDrawer.cpp</itemPath>
+        <itemPath>src/gfx/GraphicsInteractionManager.cpp</itemPath>
+        <itemPath>src/gfx/cameraMgr.cpp</itemPath>
+        <itemPath>src/gfx/controlGroupsHandler.cpp</itemPath>
+        <itemPath>src/gfx/creationMouseHandler.cpp</itemPath>
+        <itemPath>src/gfx/gfxThread.cpp</itemPath>
+        <itemPath>src/gfx/lobbyMgr.cpp</itemPath>
+        <itemPath>src/gfx/minimap.cpp</itemPath>
+        <itemPath>src/gfx/selectionBox.cpp</itemPath>
+        <itemPath>src/gfx/uiMgr.cpp</itemPath>
+        <itemPath>src/gfx/widgetMgr.cpp</itemPath>
+        <itemPath>src/gfx/widgets.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="net" displayName="net" projectFiles="true">
+        <itemPath>src/net/listener.cpp</itemPath>
+        <itemPath>src/net/messages.cpp</itemPath>
+        <itemPath>src/net/netAspect.cpp</itemPath>
+        <itemPath>src/net/netCommon.cpp</itemPath>
+        <itemPath>src/net/netLobby.cpp</itemPath>
+        <itemPath>src/net/netThread.cpp</itemPath>
+        <itemPath>src/net/sender.cpp</itemPath>
+        <itemPath>src/net/socket.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="snd" displayName="snd" projectFiles="true">
+        <itemPath>src/snd/SoundMgr.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="tactical" displayName="tactical" projectFiles="true">
+        <itemPath>src/tactical/flock.cpp</itemPath>
+        <itemPath>src/tactical/group.cpp</itemPath>
+        <itemPath>src/tactical/groupAI.cpp</itemPath>
+        <itemPath>src/tactical/groupMgr.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>src/ExplosionType.cpp</itemPath>
+      <itemPath>includes/HealthBar.cpp</itemPath>
+      <itemPath>includes/Rect.cpp</itemPath>
+      <itemPath>src/WeaponType.cpp</itemPath>
+      <itemPath>src/aspect.cpp</itemPath>
+      <itemPath>src/buildings.cpp</itemPath>
+      <itemPath>src/command.cpp</itemPath>
+      <itemPath>src/commandFactory.cpp</itemPath>
+      <itemPath>src/commandHelp.cpp</itemPath>
+      <itemPath>src/distanceMgr.cpp</itemPath>
+      <itemPath>src/engine.cpp</itemPath>
+      <itemPath>src/ent.cpp</itemPath>
+      <itemPath>src/entityMgr.cpp</itemPath>
+      <itemPath>src/gameMgr.cpp</itemPath>
+      <itemPath>src/main.cpp</itemPath>
+      <itemPath>src/mgr.cpp</itemPath>
+      <itemPath>src/physics1.cpp</itemPath>
+      <itemPath>src/physics2.cpp</itemPath>
+      <itemPath>src/pyEngine.cpp</itemPath>
+      <itemPath>src/selectionMgr.cpp</itemPath>
+      <itemPath>src/unitAI.cpp</itemPath>
+      <itemPath>src/unitBuilder.cpp</itemPath>
+      <itemPath>src/unitWeapons.cpp</itemPath>
+      <itemPath>src/weaponMgr.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>includes</Elem>
+    <Elem>src</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/OGRE</pElem>
+            <pElem>includes/gfx</pElem>
+            <pElem>includes/tactical</pElem>
+            <pElem>includes/net</pElem>
+            <pElem>/usr/include/OIS</pElem>
+            <pElem>includes</pElem>
+            <pElem>includes/snd</pElem>
+            <pElem>/usr/include/audio</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DEBUG_OUTPUT_</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/i386-linux-gnu/OGRE-1.7.4</pElem>
+            <pElem>/usr/lib/i386-linux-gnu</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerOptionItem>-lOgreMain</linkerOptionItem>
+            <linkerOptionItem>-lboost_system</linkerOptionItem>
+            <linkerOptionItem>-lOIS</linkerOptionItem>
+            <linkerOptionItem>-lboost_thread</linkerOptionItem>
+            <linkerOptionItem>-lboost_date_time</linkerOptionItem>
+            <linkerOptionItem>-lopenal</linkerOptionItem>
+            <linkerOptionItem>-laudio</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Doxyfile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/plugins.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/resources.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/DEBUG.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/ExplosionType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/HealthBar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="includes/HealthBar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/Rect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="includes/Rect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/WeaponType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/ai/gather.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/aspect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/buildings.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/command.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/commandFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/commandHelp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/const.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/distanceMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/engine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/ent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/entHelpers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/entityMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/enums.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gameMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/DebugDrawer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/GraphicsInteractionManager.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="includes/gfx/ThreadTester.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/cameraMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/controlGroupsHandler.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="includes/gfx/creationMouseHandler.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="includes/gfx/gfxConst.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/gfxMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/gfxNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/gfxThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/inputEvents.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/inputHandlers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/lobbyMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/minimap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/selectionBox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/uiMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/widgetMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/widgets.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/identity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/mgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/listener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/messages.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/netAspect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/netCommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/netLobby.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/netThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/sender.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/server.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/socket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/physics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/selectionMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/snd/SoundMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/tactical/flock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/tactical/group.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/tactical/groupAI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/tactical/groupMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/target.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/timer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/unitAI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/unitBuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/unitWeapons.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/weaponMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ExplosionType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/WeaponType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ai/gather.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aspect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/buildings.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/command.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/commandFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/commandHelp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/distanceMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/engine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ent.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/entityMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gameMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/DebugDrawer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/GraphicsInteractionManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/gfx/cameraMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/controlGroupsHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/creationMouseHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/gfxThread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/lobbyMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/minimap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/selectionBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/uiMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/widgetMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/widgets.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/listener.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/messages.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/netAspect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/netCommon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/netLobby.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/netThread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/sender.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/socket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/physics1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/physics2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/pyEngine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/selectionMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/snd/SoundMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tactical/flock.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tactical/group.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tactical/groupAI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tactical/groupMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/unitAI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/unitBuilder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/unitWeapons.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/weaponMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>/usr/include/OGRE</pElem>
+            <pElem>includes/gfx</pElem>
+            <pElem>includes/tactical</pElem>
+            <pElem>includes/net</pElem>
+            <pElem>/usr/include/OIS</pElem>
+            <pElem>includes</pElem>
+            <pElem>includes/snd</pElem>
+            <pElem>/usr/include/audio</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/i386-linux-gnu/OGRE-1.7.4</pElem>
+            <pElem>/usr/lib/i386-linux-gnu</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerOptionItem>-lOgreMain</linkerOptionItem>
+            <linkerOptionItem>-lboost_system</linkerOptionItem>
+            <linkerOptionItem>-lOIS</linkerOptionItem>
+            <linkerOptionItem>-lboost_thread</linkerOptionItem>
+            <linkerOptionItem>-lboost_date_time</linkerOptionItem>
+            <linkerOptionItem>-lopenal</linkerOptionItem>
+            <linkerOptionItem>-laudio</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Doxyfile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/plugins.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/resources.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/DEBUG.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/ExplosionType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/HealthBar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="includes/HealthBar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/Rect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="includes/Rect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/WeaponType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/ai/gather.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/aspect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/buildings.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/command.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/commandFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/commandHelp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/const.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/distanceMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/engine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/ent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/entHelpers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/entityMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/enums.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gameMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/DebugDrawer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/GraphicsInteractionManager.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="includes/gfx/ThreadTester.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/cameraMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/controlGroupsHandler.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="includes/gfx/creationMouseHandler.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="includes/gfx/gfxConst.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/gfxMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/gfxNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/gfxThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/inputEvents.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/inputHandlers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/lobbyMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/minimap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/selectionBox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/uiMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/widgetMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/gfx/widgets.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/identity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/mgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/listener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/messages.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/netAspect.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/netCommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/netLobby.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/netThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/sender.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/server.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/net/socket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/physics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/selectionMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/snd/SoundMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/tactical/flock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/tactical/group.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/tactical/groupAI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/tactical/groupMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/target.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/timer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/unitAI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/unitBuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/unitWeapons.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="includes/weaponMgr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ExplosionType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/WeaponType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ai/gather.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/aspect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/buildings.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/command.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/commandFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/commandHelp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/distanceMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/engine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ent.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/entityMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gameMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/DebugDrawer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/GraphicsInteractionManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/gfx/cameraMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/controlGroupsHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/creationMouseHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/gfxThread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/lobbyMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/minimap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/selectionBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/uiMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/widgetMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/gfx/widgets.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/listener.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/messages.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/netAspect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/netCommon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/netLobby.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/netThread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/sender.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/net/socket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/physics1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/physics2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/pyEngine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/selectionMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/snd/SoundMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tactical/flock.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tactical/group.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tactical/groupAI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/tactical/groupMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/unitAI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/unitBuilder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/unitWeapons.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/weaponMgr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
