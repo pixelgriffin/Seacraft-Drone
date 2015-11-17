@@ -55,11 +55,12 @@ src/gfx/uiMgr.d: ../src/gfx/uiMgr.cpp \
  /home/ecsl/workspace/DroneCraft/includes/tactical/groupMgr.h \
  /home/ecsl/workspace/DroneCraft/includes/tactical/group.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/GA.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h \
  /home/ecsl/workspace/DroneCraft/includes/gfx/gfxThread.h \
  /home/ecsl/workspace/DroneCraft/includes/gfx/GraphicsInteractionManager.h \
@@ -248,7 +249,8 @@ src/gfx/uiMgr.d: ../src/gfx/uiMgr.cpp \
  /home/ecsl/workspace/DroneCraft/includes/commandHelp.h \
  /home/ecsl/workspace/DroneCraft/includes/gfx/creationMouseHandler.h \
  /home/ecsl/workspace/DroneCraft/includes/Rect.h \
- /usr/include/OGRE/OgreEntity.h
+ /usr/include/OGRE/OgreEntity.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy.h
 
 /home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
 
@@ -370,15 +372,17 @@ src/gfx/uiMgr.d: ../src/gfx/uiMgr.cpp \
 
 /home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/GA.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h:
+
+/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h:
 
@@ -867,3 +871,5 @@ src/gfx/uiMgr.d: ../src/gfx/uiMgr.cpp \
 /home/ecsl/workspace/DroneCraft/includes/Rect.h:
 
 /usr/include/OGRE/OgreEntity.h:
+
+/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy.h:

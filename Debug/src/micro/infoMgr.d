@@ -16,10 +16,10 @@ src/micro/infoMgr.d: ../src/micro/infoMgr.cpp \
  /usr/include/OGRE/OgreMemoryNedPooling.h /usr/include/OGRE/OgreMath.h \
  /usr/include/OGRE/OgreQuaternion.h \
  /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/GA.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h \
  /home/ecsl/workspace/DroneCraft/includes/ent.h \
  /usr/include/OGRE/OgreQuaternion.h \
  /home/ecsl/workspace/DroneCraft/includes/const.h \
@@ -43,6 +43,7 @@ src/micro/infoMgr.d: ../src/micro/infoMgr.cpp \
  /home/ecsl/workspace/DroneCraft/includes/net/netAspect.h \
  /home/ecsl/workspace/DroneCraft/includes/net/messages.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h \
  /home/ecsl/workspace/DroneCraft/includes/engine.h \
  /home/ecsl/workspace/DroneCraft/includes/entityMgr.h \
@@ -281,13 +282,13 @@ src/micro/infoMgr.d: ../src/micro/infoMgr.cpp \
 
 /home/ecsl/workspace/DroneCraft/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/GA.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h:
 
 /home/ecsl/workspace/DroneCraft/includes/ent.h:
 
@@ -336,6 +337,8 @@ src/micro/infoMgr.d: ../src/micro/infoMgr.cpp \
 /home/ecsl/workspace/DroneCraft/includes/net/messages.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h:
+
+/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h:
 

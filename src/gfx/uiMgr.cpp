@@ -499,7 +499,7 @@ void OgreGFX::UIMgr::drawUnderMouseCircle()
 //TODO turn to 3D representation
 void OgreGFX::UIMgr::drawIM()
 {
-	FastEcslent::IMEnemy *im = this->gfx->engine->infoMgr->getIMEnemy(RED);
+	FastEcslent::IMEnemy3D *im = this->gfx->engine->infoMgr->getIMEnemy(RED);
 
 	//draw the grid
 	/*for (int i=0; i< im->m_dataSizeX; i++)
@@ -512,27 +512,27 @@ void OgreGFX::UIMgr::drawIM()
 	}*/
 
 	//draw grid color
-	for(int i=0;i<im->m_dataSizeX;i++)
+	for(int i=0;i<im->m_numCels - 2;i++)
 	{
-		int gridX = i%im->m_dataSizeX;
-		int gridY = i/im->m_dataSizeX;
-		//int gridX = i;
-		//int gridY = i + 1;
-		//int gridZ = i + 2;
+		//int gridX = i%im->m_dataSizeX;
+		//int gridY = i/im->m_dataSizeX;
+		int gridX = i;
+		int gridY = i + 1;
+		int gridZ = i + 2;
 
 
 		int x = gridX*im->m_celResX+im->m_celResX/2;
-		//int y = gridY*im->m_celResY+im->m_celResY/2;
-		int y = 0;
-		int z = gridY*im->m_celResY+im->m_celResY/2;
+		int y = gridY*im->m_celResY+im->m_celResY/2;
+		//int y = 0;
+		int z = gridY*im->m_celResZ+im->m_celResZ/2;
 
 		if (im->m_map[i] == 0){
 			continue;
 		}
 		Ogre::Vector3 * verties=new Ogre::Vector3[4];
 		verties[0] = Ogre::Vector3(x, y, z);
-		verties[1] = Ogre::Vector3(x, y, z+im->m_celResY-10);
-		verties[2] = Ogre::Vector3(x+im->m_celResX-10, y, z+im->m_celResY-10);
+		verties[1] = Ogre::Vector3(x, y, z+im->m_celResZ-10);
+		verties[2] = Ogre::Vector3(x+im->m_celResX-10, y, z+im->m_celResZ-10);
 		verties[3] = Ogre::Vector3(x+im->m_celResX-10, y, z);
 
 		float cv = (float)(im->m_map[i])/180.0f;

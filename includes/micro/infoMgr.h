@@ -3,7 +3,7 @@
 
 #include <OgreVector3.h>
 #include <enums.h>
-#include <IMEnemy.h>
+#include <IMEnemy3D.h>
 #include <IMTerrain.h>
 #include "mgr.h"
 #include "SquadMgr.h"
@@ -21,7 +21,7 @@ namespace FastEcslent {
 		virtual void init();
 		virtual void tick(double dtime);
 
-		IMEnemy* getIMEnemy(Side s);
+		IMEnemy3D* getIMEnemy(Side s);
 
 		int getFrameCount(){return this->frame;};
 
@@ -32,7 +32,7 @@ namespace FastEcslent {
     private:
 		int frame;
 		double dt;
-		IMEnemy   *eIM_red, *eIM_blue;
+		IMEnemy3D   *eIM_red, *eIM_blue;
 		IMTerrain *tIM_red, *tIM_blue;
 
 		IMParams redParams;

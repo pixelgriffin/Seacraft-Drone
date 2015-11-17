@@ -1,7 +1,7 @@
 
 #include "infoMgr.h"
 #include "engine.h"
-#include "InfluenceMap.h"
+#include "InfluenceMap3D.h"
 #include "DEBUG.h"
 
 using namespace FastEcslent;
@@ -23,7 +23,7 @@ InfoMgr::~InfoMgr(){
 	delete squadmgr_blue;
 }
 
-IMEnemy* InfoMgr::getIMEnemy(Side s){
+IMEnemy3D* InfoMgr::getIMEnemy(Side s){
 	if(s == RED) {
 		return this->eIM_red;
 	}else{
@@ -35,10 +35,10 @@ void InfoMgr::init(){
 	this->frame = 0;
 	this->dt = 0;
 
-	this->eIM_red  = new IMEnemy(RED);
+	this->eIM_red  = new IMEnemy3D(RED);
 	this->tIM_red  = new IMTerrain(RED);
 
-	this->eIM_blue = new IMEnemy(BLUE);
+	this->eIM_blue = new IMEnemy3D(BLUE);
 	this->tIM_blue = new IMTerrain(BLUE);
 
 	int sizeX = 64;
@@ -47,11 +47,11 @@ void InfoMgr::init(){
 
 	this->tIM_red->Init(sizeX, sizeY, sizeX* unitSize, sizeY*unitSize);
 	this->eIM_red->setTerrainIM(tIM_red->m_map);
-	this->eIM_red->Init(sizeX, sizeY, sizeX* unitSize, sizeY*unitSize);
+	this->eIM_red->Init(sizeX, sizeY, sizeY, sizeX* unitSize, sizeY*unitSize, sizeY*unitSize);
 
 	this->tIM_blue->Init(sizeX, sizeY, sizeX* unitSize, sizeY*unitSize);
 	this->eIM_blue->setTerrainIM(tIM_blue->m_map);
-	this->eIM_blue->Init(sizeX, sizeY, sizeX* unitSize, sizeY*unitSize);
+	this->eIM_blue->Init(sizeX, sizeY, sizeY, sizeX* unitSize, sizeY*unitSize, sizeY*unitSize);
 
 }
 

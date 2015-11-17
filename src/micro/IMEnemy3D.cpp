@@ -124,6 +124,7 @@ void IMEnemy3D::DrawUnit(float dt){
 }
 
 Entity* IMEnemy3D::getLowestValueUnit(){
+	//3D
 	Entity* t;
 	int min = 100000;
 	for (std::map<Entity*, RegObj>::iterator i= registeredObjects.begin(); i!= registeredObjects.end();i++){

@@ -160,7 +160,8 @@ void MicroAspect::onFire(set<Entity*> &enemies){
 
 	//ready to attack
 	if(weapon->m_cooldown<=0){
-		Entity* lowimunit = this->squad->im->getIMEnemy(this->side)->getLowestValueUnit();
+		IMEnemy3D* myim = this->squad->im->getIMEnemy(this->side);
+		Entity* lowimunit = myim->getLowestValueUnit();
 		//update target
 		bool isSquadMoving = this->squad->isSquadMoving();
 		if(this->squad->state == SquadMgr::SquadState::Approaching && !isSquadMoving){

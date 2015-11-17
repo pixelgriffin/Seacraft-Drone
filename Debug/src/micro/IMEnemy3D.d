@@ -60,9 +60,8 @@ src/micro/IMEnemy3D.d: ../src/micro/IMEnemy3D.cpp \
  /home/ecsl/workspace/DroneCraft/includes/tactical/groupMgr.h \
  /home/ecsl/workspace/DroneCraft/includes/tactical/group.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h \
  /home/ecsl/workspace/DroneCraft/includes/gfx/gfxThread.h \
  /home/ecsl/workspace/DroneCraft/includes/gfx/GraphicsInteractionManager.h \
@@ -376,11 +375,9 @@ src/micro/IMEnemy3D.d: ../src/micro/IMEnemy3D.cpp \
 
 /home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h:
-
-/home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h:
 
