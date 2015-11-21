@@ -151,7 +151,7 @@ Ogre::Vector3 IMEnemy3D::getHidingPos(Ogre::Vector3* pos, int celldis){
 
 Ogre::Vector3 IMEnemy3D::getLowestNearby(Entity* u){
 	int grid = getGridFromPosition(u->pos);
-	if(grid > m_dataSizeX*m_dataSizeX)
+	if(grid > m_dataSizeX*m_dataSizeY*m_dataSizeZ)
 		return Ogre::Vector3(0,0,0);
 	int count = 0;
 	while (this->GetInfluenceValueByGrid(m_map, grid) > 0 && count++ < m_worldSizeX){
@@ -164,9 +164,9 @@ Ogre::Vector3 IMEnemy3D::getLowestNearby(Entity* u){
 }
 
 int IMEnemy3D::getLowestNearbyGrid(int grid){
-	int gridX = grid;
+	int gridX = grid + 2;
 	int gridY = grid + 1;
-	int gridZ = grid + 2;
+	int gridZ = grid;
 	
 	int mv = 100000;
 	int gridNumber = grid;

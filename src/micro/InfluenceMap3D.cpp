@@ -30,7 +30,7 @@ void InfluenceMap3D::Init(int sizeX, int sizeY, int sizeZ, int wSizeX, int wSize
 	m_worldSizeY = wSizeY;
 	m_worldSizeZ = wSizeZ;
 
-	m_celResX = m_worldSizeX / m_dataSizeX;
+	m_celResX = m_worldSizeX / m_dataSizeX;//get cel resolution
 	m_celResY = m_worldSizeY / m_dataSizeY;
 	m_celResZ = m_worldSizeZ / m_dataSizeZ;
 
@@ -52,7 +52,8 @@ void InfluenceMap3D::Reset()
 void InfluenceMap3D::RegisterGameObj(FastEcslent::Entity* object)
 {
 	registeredObjects[object].m_lastPosX = object->pos.x;
-	registeredObjects[object].m_lastPosY = object->pos.z;
+	registeredObjects[object].m_lastPosY = object->pos.y;
+	registeredObjects[object].m_lastPosZ = object->pos.z;
 	registeredObjects[object].m_stamped = false;
 	registeredObjects[object].exist = true;
 }
@@ -101,11 +102,14 @@ int InfluenceMap3D::GetInfluenceValue(int* pMap,int gridX, int gridY, int gridZ)
 int InfluenceMap3D::GetInfluenceValueByGrid(int* pMap,int gridNumber){
 	//int gridY = gridNumber/m_dataSizeX;
 	//int gridX = gridNumber%m_dataSizeX;
-	int gridX = gridNumber;
-	int gridY = gridNumber + 1;
-	int gridZ = gridNumber + 2;
+	//int gridX = gridNumber;
+	//int gridY = gridNumber + 1;
+	//int gridZ = gridNumber + 2;
+	int gridX = gridNumber / (m_dataSizeY * m_dataSizeZ) % m_dataSizeX;
+	int gridY = gridNumber / (m_dataSizeZ) % m_dataSizeX;
+	int gridZ = gridNumber % m_dataSizeZ;
 
-	return GetInfluenceValue(pMap, gridX, gridY, gridZ);
+	return pMap[gridNumber];//GetInfluenceValue(pMap, gridX, gridY, gridZ);
 }
 
 std::list<Ogre::Vector3> InfluenceMap3D::GetInfluenceValueHigher(int* pMap,Ogre::Vector3& location)
@@ -273,9 +277,12 @@ Ogre::Vector3 InfluenceMap3D::getPositionFromGrid(int gridNumber)
 {
 	//int gridX = gridNumber/m_dataSizeX;
 	//int gridY = gridNumber%m_dataSizeX;
-	int gridX = gridNumber;
-	int gridY = gridNumber + 1;
-	int gridZ = gridNumber + 2;
+	//int gridX = gridNumber + 2;
+	//int gridY = gridNumber + 1;
+	//int gridZ = gridNumber;
+	int gridX = gridNumber / (m_dataSizeY * m_dataSizeZ) % m_dataSizeX;
+	int gridY = gridNumber / (m_dataSizeZ) % m_dataSizeX;
+	int gridZ = gridNumber % m_dataSizeZ;
 
 	return this->getPositionFromGrid(gridX, gridY, gridZ);
 }
@@ -294,8 +301,13 @@ Ogre::Vector3 InfluenceMap3D::getPositionFromGrid(int x, int y, int z)
 int InfluenceMap3D::getGridFromPosition(Ogre::Vector3 position)
 {
 	int gridX = floor((float)position.x/ (float)m_celResX);
-	int gridY = floor((float)position.z/ (float)m_celResY);
-	int index = gridY*m_dataSizeX + (gridX%m_dataSizeX);
+	int gridZ = floor((float)position.z/ (float)m_celResZ);
+	int gridY = floor((float)position.y/ (float)m_celResY);
+
+
+	//int index = gridY*m_dataSizeX + (gridX%m_dataSizeX);
+	int index = gridX + m_dataSizeX * (gridY + m_dataSizeY * gridZ);
+
 	return index;
 }
 
@@ -309,9 +321,12 @@ bool InfluenceMap3D::hasEnemyInRange(int* pMap, int gridNumber, int radius)
 {
 	//int gridX = gridNumber/m_dataSizeX;
 	//int gridY = gridNumber%m_dataSizeX;
-	int gridX = gridNumber;
+	/*int gridX = gridNumber;
 	int gridY = gridNumber + 1;
-	int gridZ = gridNumber + 2;
+	int gridZ = gridNumber + 2;*/
+	int gridX = gridNumber / (m_dataSizeY * m_dataSizeZ) % m_dataSizeX;
+	int gridY = gridNumber / (m_dataSizeZ) % m_dataSizeX;
+	int gridZ = gridNumber % m_dataSizeZ;
 
 	int startX = gridX - radius;
 	int stopX  = gridX + radius;
