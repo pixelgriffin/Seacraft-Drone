@@ -84,6 +84,12 @@ void FastEcslent::WeaponMgr::fixFightingProperties(){
 			initDamageMultiplier[DRONE] = 1.0;
 			weaponType[DRONE] = &WeaponTypes::Rifle;
 			break;
+		case TURRET:
+			maxHitpoints[TURRET] = 100.0;
+			initArmor[TURRET] = 1.0;
+			initDamageMultiplier[TURRET] = 1.0;
+			weaponType[TURRET] = &WeaponTypes::Rifle;
+			break;
 		case SC_TANK:
 			maxHitpoints[SC_TANK] = 160.0;
 			initArmor[SC_TANK]     = 1.0;

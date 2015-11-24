@@ -134,6 +134,7 @@ void FastEcslent::GameMgr::setupEntityBuildTimes(){
 	this->entTypeData[HELLION].buildTime = 30;
 
 	this->entTypeData[DRONE].buildTime = 1;
+	this->entTypeData[TURRET].buildTime = 1;
 
 	this->entTypeData[COMMANDCENTER].buildTime = 100;
 	this->entTypeData[BARRACKS].buildTime = 65;
@@ -156,6 +157,7 @@ void FastEcslent::GameMgr::setupEntityBuildTimes(){
 	this->entTypeData[HELLION].minerals = 150;
 
 	this->entTypeData[DRONE].minerals = 150;
+	this->entTypeData[TURRET].minerals = 200;
 
 	this->entTypeData[COMMANDCENTER].minerals = 500;
 	this->entTypeData[BARRACKS].minerals = 30;
@@ -201,6 +203,7 @@ void FastEcslent::GameMgr::setupEntitySupply(){
 	this->entTypeData[HELLION].supply  = 2;
 
 	this->entTypeData[DRONE].supply = 1;
+	this->entTypeData[TURRET].supply = 1;
 }
 
 void FastEcslent::GameMgr::game0(){
@@ -323,7 +326,8 @@ void FastEcslent::GameMgr::makeArmyForSidePlayer(Side side, Player player, Ogre:
 	if(side==RED){
 		createNEntitiesCircle(DRONE, 6, side, player, location, 5);
 	}else{
-		createNEntitiesCircle(SC_VULTURE, 6, side, player, location, 5);
+		createNEntitiesCircle(TURRET, 3, side, player, location, 5);
+		//reateNEntitiesCircle(SC_VULTURE, 6, side, player, location, 5);
 		//createNEntitiesCircle(SC_VULTURE, 6, side, player, location,5);
 	}
 //	createNEntitiesRadial(SC_TANK,    5, side, player, location, offset/1.0f, yawOffset/2.0f);

@@ -60,6 +60,8 @@ src/micro/IMEnemy.d: ../src/micro/IMEnemy.cpp \
  /home/ecsl/workspace/DroneCraft/includes/tactical/groupMgr.h \
  /home/ecsl/workspace/DroneCraft/includes/tactical/group.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h \
  /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h \
  /home/ecsl/workspace/DroneCraft/includes/gfx/gfxThread.h \
@@ -373,6 +375,10 @@ src/micro/IMEnemy.d: ../src/micro/IMEnemy.cpp \
 /home/ecsl/workspace/DroneCraft/includes/tactical/group.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h:
+
+/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h:
+
+/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h:
 
 /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h:
 

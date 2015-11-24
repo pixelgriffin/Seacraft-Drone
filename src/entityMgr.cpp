@@ -126,9 +126,11 @@ FastEcslent::Entity *FastEcslent::EntityMgr::createEntity(EntityType etype, Ogre
 	case LAND:
 		ent = new Land(engine);
 		break;
-
 	case DRONE:
 		ent = new Drone(engine);
+		break;
+	case TURRET:
+		ent = new Turret(engine);
 		break;
 
 	default:

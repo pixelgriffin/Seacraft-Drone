@@ -38,6 +38,7 @@ namespace FastEcslent {
 			Meshes[4] = "sleek.mesh";
 			Meshes[5] = "alienship.mesh";
 			Meshes[6] = "drone.mesh";
+			Meshes[7] = "turret.mesh";
 		}
 
 		Entity* createEntity(EntityType etype, Ogre::Vector3 pos = Ogre::Vector3(0,0,0), float heading = 0.0f);
@@ -45,7 +46,7 @@ namespace FastEcslent {
 
 	public:
 		Entity *ents[MaxEnts]; // MaxEnts in const.h
-		std::string Meshes[7];
+		std::string Meshes[8];
 		Options options;
 		int     nEnts;
 

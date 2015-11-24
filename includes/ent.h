@@ -168,39 +168,69 @@ namespace FastEcslent {
 	};
 
 	class Drone : public Entity {
+		public:
+			Drone(Engine *eng) : Entity(eng, DRONE) {
+				meshName = "drone.mesh";
+				//meshName = "ddg51.mesh";
+				uiname = "Drone.";
+				uiname.append(boost::lexical_cast<std::string>(count++));
 
-			public:
-				Drone(Engine *eng) : Entity(eng, DRONE) {
-					meshName = "drone.mesh";
-					//meshName = "ddg51.mesh";
-					uiname = "Drone.";
-					uiname.append(boost::lexical_cast<std::string>(count++));
+				// properties
+				length = meters(45.0f);
+				width  = meters(10.0f);
+				height = meters(12.0f);
 
-					// properties
-					length = meters(45.0f);
-					width  = meters(10.0f);
-					height = meters(12.0f);
+				maxSpeed = knots(64.0f);
+				minSpeed = knots(0.0f);
+				speedRange = maxSpeed - minSpeed + EPSILON;
 
-					maxSpeed = knots(64.0f);
-					minSpeed = knots(0.0f);
-					speedRange = maxSpeed - minSpeed + EPSILON;
+				maxAcceleration = feetPerSecondSquared(55.0f);
+				maxRotationalSpeed = degreesPerSecond(170.0f);
+				turningRadius = 180;
+				mass = tons(200);
 
-					maxAcceleration = feetPerSecondSquared(55.0f);
-					maxRotationalSpeed = degreesPerSecond(170.0f);
-					turningRadius = 180;
-					mass = tons(200);
+				selectable = true;
 
-					selectable = true;
+				entityId.side = YELLOW;
 
-					entityId.side = YELLOW;
+				hitpoints = 80;
+				hitpointsmax = 80;
+				seekRange = 256*2;
 
-					hitpoints = 80;
-					hitpointsmax = 80;
-					seekRange = 256*2;
+				isAttacking = false;
+			}
+	};
 
-					isAttacking = false;
-				}
-			};
+	class Turret : public Entity {
+		public:
+			Turret(Engine* eng) : Entity(eng, TURRET) {
+				meshName = "turret.mesh";
+				uiname = "Turret.";
+				uiname.append(boost::lexical_cast<std::string>(count++));
+
+				length = feet(100.0f);
+				width = feet(100.0f);
+				height = feet(100.0f);
+
+				maxSpeed = knots(0.0f);
+				minSpeed = knots(0.0f);
+				speedRange = maxSpeed - minSpeed;
+				maxAcceleration = feetPerSecondSquared(0.0f);
+				maxRotationalSpeed = degreesPerSecond(0.0f);
+				turningRadius = 0;
+
+				mass = tons(50);
+
+				selectable = false;
+				entityId.side = YELLOW;
+
+				hitpoints = 100;
+				hitpointsmax = 100;
+				seekRange = 512;
+
+				isAttacking = false;
+			}
+	};
 
 
 	class Marine : public Entity { //marine

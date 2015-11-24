@@ -48,8 +48,9 @@ namespace FastEcslent {
 		TANK         = 3, // Tank
 		THOR         = 4, //
 		MARAUDER     = 5, //
-		HELLION       = 6, // Hellion
+		HELLION      = 6, // Hellion
 		DRONE		 = 19,
+		TURRET		 = 20,
 
 		BARRACKS      = 7,
 		COMMANDCENTER = 8,
