@@ -53,6 +53,10 @@ void FastEcslent::Physics3D::doHelmsman(double dt) {
 
 	Ogre::Vector3 to = entity->pos + (entity->vel * dt);
 
+	//TODO variable lowest Y
+	if(to.y < 5)
+		to.y = 5;
+
 	//a wall of x centimeters!
 	//if(to.z < centimeters(25) && to.z > -centimeters(25))
 	//	return;

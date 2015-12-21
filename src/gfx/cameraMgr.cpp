@@ -51,7 +51,7 @@ OgreGFX::CameraMgr::CameraMgr(GraphicsInteractionManager *gim): GFXMgr(gim) { //
     timeToStop = 1.0f;
     mouseScrollSpeed = 10;
     maxHeight = 6000.0;
-    minHeight = 800.0; //1000.0;s
+    minHeight = 0.0;//800.0; //1000.0;s
 
 }
 

@@ -59,11 +59,6 @@ Ogre::Vector3 FastEcslent::Move::computeRepulsor(){
 }
 
 void FastEcslent::Move::init(){
-	if(entity->entityType == DRONE)
-	{
-		std::cout << "drone given move..." << std::endl;
-	}
-
 	Ogre::Vector3 diff = target->location - entity->pos;
 	entity->desiredHeading = -atan2(diff.z, diff.x);
 	entity->desiredSpeed = entity->maxSpeed;
@@ -150,7 +145,7 @@ Ogre::Vector3 FastEcslent::Move3D::computeRepulsor(){
 void FastEcslent::Move3D::init(){
 	if(entity->entityType == DRONE)
 	{
-		std::cout << "drone given move..." << std::endl;
+		std::cout << "drone given 3D move to " << target->location.x << " " << target->location.y << " " << target->location.z << " @ " << entity->pos.x << " " << entity->pos.y << " " << entity->pos.z << std::endl;
 	}
 
 	Ogre::Vector3 diff = target->location - entity->pos;
@@ -162,6 +157,7 @@ void FastEcslent::Move3D::init(){
 	return;
 }
 
+//TODO ask Siming about this Y computation
 inline void FastEcslent::Move3D::tick(double dt) {
 	if(!done()) {
 		this->computeRepulsor();
@@ -169,6 +165,11 @@ inline void FastEcslent::Move3D::tick(double dt) {
 		relativePos = target->location - entity->pos;
 		entity->desiredHeading = -atan2(relativePos.z, relativePos.x);
 		entity->desiredSpeed = entity->maxSpeed;
+
+		if(target->location.y < entity->pos.y)
+			entity->potentialVec.y = -1;
+		else
+			entity->potentialVec.y = 1;
 
 		if(this->repulsor.length() > 0){
 			Ogre::Vector3 force = this->repulsor + this->relativePos;
@@ -188,8 +189,6 @@ inline void FastEcslent::Move3D::tick(double dt) {
 			if (forceScale > 1000) forceScale = 1000;
 			float forcerange = forceScale /maxForce;
 			entity->desiredSpeed = entity->maxSpeed * forcerange;
-
-			entity->potentialVec = force.normalisedCopy();
 		}
 	} else {
 		entity->desiredSpeed = 0.0f;
@@ -354,13 +353,28 @@ inline void FastEcslent::PotentialMove::tick(double dt){
 
 //3D Potential fields for flying entities
 inline bool FastEcslent::Potential3DMove::done() {
-	return (entity->pos.squaredDistance(target->location) <= (entity->turningRadius * entity->turningRadius)*100.0);// && (int) ((entity->attractivePotential)) > -15);
-	//return false;
+	/*double dist = entity->pos.squaredDistance(target->location);
+	double trad = (entity->turningRadius * entity->turningRadius)*10.0;
+
+	return (dist <= trad);// && (int) ((entity->attractivePotential)) > -15);*/
+	return false;
 }
 
 void FastEcslent::Potential3DMove::init(){
 	Ogre::Vector3 diff = target->location - entity->pos;
 	entity->desiredSpeed = entity->maxSpeed;
+
+	if(entity->entityId.side == Side::BLUE) {
+		this->A = entity->engine->infoMgr->squadmgr_blue->getPotentialA();
+		this->B = entity->engine->infoMgr->squadmgr_blue->getPotentialB();
+		this->m = entity->engine->infoMgr->squadmgr_blue->getPotentialM();
+		this->n = entity->engine->infoMgr->squadmgr_blue->getPotentialN();
+	} else {
+		this->A = entity->engine->infoMgr->squadmgr_red->getPotentialA();
+		this->B = entity->engine->infoMgr->squadmgr_red->getPotentialB();
+		this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
+		this->n = entity->engine->infoMgr->squadmgr_red->getPotentialN();
+	}
 }
 
 inline void FastEcslent::Potential3DMove::tick(double dt) {
@@ -627,6 +641,46 @@ inline bool FastEcslent::AttackMove::done(){
 
 
 inline void FastEcslent::AttackMove::tick(double dt){
+	this->entity->isAttacking = true;
+	//Target is an entity
+	if(this->target->entity != 0 && this->entity->pos.distance(this->target->entity->pos) > this->entity->weapon->weaponType->maxRange()){
+		this->move->tick(dt);
+	}
+
+	//Target is a location
+	if(this->target->entity == 0 &&
+			this->entity->engine->distanceMgr->closestEnemyDistance[this->entity->entityId.id] > this->entity->weapon->weaponType->maxRange()){
+		this->move->tick(dt);
+	}
+}
+
+inline void FastEcslent::AttackMove3D::init(){
+	this->entity->weapon->setTarget(this->target->entity);
+	this->move = new Potential3DMove(this->entity, this->target);
+	this->entity->isAttacking = true;
+}
+
+inline void FastEcslent::AttackMove3D::postProcess(){
+	this->entity->isAttacking = false;
+}
+
+inline bool FastEcslent::AttackMove3D::done(){
+	//Attack to a position, if the entity arrived the destination, done
+	if(this->target->entity==0 && this->target->location.distance(this->entity->pos) < this->entity->turningRadius){
+		this->entity->isAttacking = false;
+		return true;
+	}
+	//If the target is an entity, stop when the entity is dead.
+	if(this->target->entity !=0 && this->target->entity->entityState != FastEcslent::ALIVE){
+		this->entity->isAttacking = false;
+		return true;
+	}
+
+	return false;
+}
+
+
+inline void FastEcslent::AttackMove3D::tick(double dt){
 	this->entity->isAttacking = true;
 	//Target is an entity
 	if(this->target->entity != 0 && this->entity->pos.distance(this->target->entity->pos) > this->entity->weapon->weaponType->maxRange()){

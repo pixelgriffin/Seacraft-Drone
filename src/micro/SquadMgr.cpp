@@ -35,6 +35,21 @@ SquadMgr::SquadMgr(Engine *eng, InfoMgr *inforMgr, Side s):side(s){
 	this->target = NULL;
 }
 
+double SquadMgr::getPotentialA() {
+	return A;
+}
+
+double SquadMgr::getPotentialB() {
+	return B;
+}
+
+double SquadMgr::getPotentialM() {
+	return m;
+}
+
+double SquadMgr::getPotentialN() {
+	return n;
+}
 
 void SquadMgr::loadUnits(){
 	for(int i=0;i<this->engine->entityMgr->nEnts;i++){

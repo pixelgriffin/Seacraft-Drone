@@ -59,6 +59,11 @@ public:
 	int getSquadScore2();
 	int getSquadDestroyScore();
 	FastEcslent::Entity* setTarget();
+
+	double getPotentialA();
+	double getPotentialB();
+	double getPotentialM();
+	double getPotentialN();
 private:
 	void regroup();
 	void refreshGroupPosition();

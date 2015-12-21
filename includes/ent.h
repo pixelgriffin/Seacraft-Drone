@@ -208,9 +208,9 @@ namespace FastEcslent {
 				uiname = "Turret.";
 				uiname.append(boost::lexical_cast<std::string>(count++));
 
-				length = feet(100.0f);
-				width = feet(100.0f);
-				height = feet(100.0f);
+				length = feet(40.0f);
+				width = feet(40.0f);
+				height = feet(40.0f);
 
 				maxSpeed = knots(0.0f);
 				minSpeed = knots(0.0f);
@@ -224,8 +224,8 @@ namespace FastEcslent {
 				selectable = false;
 				entityId.side = YELLOW;
 
-				hitpoints = 100;
-				hitpointsmax = 100;
+				hitpoints = 10000000;
+				hitpointsmax = 10000000;
 				seekRange = 512;
 
 				isAttacking = false;

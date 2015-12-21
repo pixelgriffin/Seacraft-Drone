@@ -43,6 +43,26 @@ AttackMove *createAttackForEnt(Entity* ent, Ogre::Vector3 pos){
 	return a;
 }
 
+AttackMove3D *createAttack3DForEnt(Entity* ent, Entity* enemy){
+	Target* t = new Target;
+	t->entity = enemy;
+	t->location = enemy->pos;
+	t->offset   = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+	AttackMove3D* a = new AttackMove3D(ent, t);
+	a->init();
+	return a;
+}
+
+AttackMove3D *createAttack3DForEnt(Entity* ent, Ogre::Vector3 pos){
+	Target* t = new Target;
+	t->entity = 0;
+	t->location = pos;
+	t->offset   = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+	AttackMove3D* a = new AttackMove3D(ent, t);
+	a->init();
+	return a;
+}
+
 Move *createMoveForEnt(Entity* ent, Ogre::Vector3 pos){
 	Target* t = new Target;
 	t->entity = 0;
@@ -54,11 +74,6 @@ Move *createMoveForEnt(Entity* ent, Ogre::Vector3 pos){
 }
 
 Move3D *createMove3DForEnt(Entity* ent, Ogre::Vector3 pos, bool isKiting){
-	if(isKiting)
-	{
-		pos.y += 50;
-	}
-
 	Target* t = new Target;
 	t->entity = 0;
 	t->location = pos;

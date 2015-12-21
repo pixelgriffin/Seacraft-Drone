@@ -183,13 +183,31 @@ void MicroAspect::onFire(set<Entity*> &enemies){
 		}
 
 		this->target = newtarget;
-		AttackMove* attack= createAttackForEnt(this->unit, target);
-		ai->setCommand(attack);
+		if(this->unit->entityType == DRONE) {
+			AttackMove3D* attack= createAttack3DForEnt(this->unit, target);
+			ai->setCommand(attack);
+		} else {
+			AttackMove* attack = createAttackForEnt(this->unit, target);
+			ai->setCommand(attack);
+		}
 
 	}else{
 		this->target = newtarget;
 		kiteMove(enemies);
 	}
+
+	//Ogre::Vector3 fmtp = Ogre::Vector3(0, 96, 0);
+	//this->squad->potentialMove(this->unit, &fmtp, 80);
+
+	/*UnitAI* ai     = static_cast<UnitAI*>(unit->getAspect(UNITAI));
+
+	if(this->unit->entityType == DRONE) {
+		AttackMove3D* attack= createAttack3DForEnt(this->unit, Ogre::Vector3(0, 100, 0));
+		ai->setCommand(attack);
+	} else {
+		AttackMove* attack = createAttackForEnt(this->unit, Ogre::Vector3(0, 0, 0));
+		ai->setCommand(attack);
+	}*/
 }
 
 void MicroAspect::kiteMove(set<Entity*> &enemies){

@@ -43,15 +43,16 @@ void InfoMgr::init(){
 
 	int sizeX = 64;
 	int sizeY = 64;
+	int sizeZ = 64;
 	int unitSize = 32;
 
-	this->tIM_red->Init(sizeX, sizeY, sizeX* unitSize, sizeY*unitSize);
+	this->tIM_red->Init(sizeX, sizeZ, sizeX* unitSize, sizeZ*unitSize);
 	this->eIM_red->setTerrainIM(tIM_red->m_map);
-	this->eIM_red->Init(sizeX, sizeY, sizeY, sizeX* unitSize, sizeY*unitSize, sizeY*unitSize);
+	this->eIM_red->Init(sizeX, sizeY, sizeZ, sizeX* unitSize, sizeY*unitSize, sizeZ*unitSize);
 
-	this->tIM_blue->Init(sizeX, sizeY, sizeX* unitSize, sizeY*unitSize);
+	this->tIM_blue->Init(sizeX, sizeZ, sizeX* unitSize, sizeZ*unitSize);
 	this->eIM_blue->setTerrainIM(tIM_blue->m_map);
-	this->eIM_blue->Init(sizeX, sizeY, sizeY, sizeX* unitSize, sizeY*unitSize, sizeY*unitSize);
+	this->eIM_blue->Init(sizeX, sizeY, sizeZ, sizeX* unitSize, sizeY*unitSize, sizeZ*unitSize);
 
 }
 

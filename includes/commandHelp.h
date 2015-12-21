@@ -25,6 +25,8 @@ Move* createMoveForEnt(Entity* ent, Ogre::Vector3 pos);
 Move3D* createMove3DForEnt(Entity* ent, Ogre::Vector3 pos, bool isKite);
 AttackMove* createAttackForEnt(Entity* ent, Entity* enemy);
 AttackMove* createAttackForEnt(Entity* ent, Ogre::Vector3 pos);
+AttackMove3D* createAttack3DForEnt(Entity* ent, Entity* enemy);
+AttackMove3D* createAttack3DForEnt(Entity* ent, Ogre::Vector3 pos);
 Wait* createWaitForEnt(Entity* ent, double wtime);
 Gather* createGatherForEntAndMineral(SCVehicle *scv, Entity *resource);
 PotentialMove *createPotentialMoveForEnt(Entity *ent, Ogre::Vector3 pos);

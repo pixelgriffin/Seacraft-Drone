@@ -512,19 +512,22 @@ void OgreGFX::UIMgr::drawIM()
 	}*/
 
 	//draw grid color
-	for(int i=0;i<im->m_numCels - 2;i++)
+	for(int i=0;i<im->m_numCels;i++)
 	{
 		//int gridX = i%im->m_dataSizeX;
 		//int gridY = i/im->m_dataSizeX;
-		int gridX = i;
-		int gridY = i + 1;
-		int gridZ = i + 2;
+		int gridX = i / (im->m_dataSizeY * im->m_dataSizeZ) % im->m_dataSizeX;
+		int gridY = i / (im->m_dataSizeZ) % im->m_dataSizeX;
+		int gridZ = i % im->m_dataSizeZ;
 
+		/*if(gridY > 3) {
+			continue;
+		}*/
 
 		int x = gridX*im->m_celResX+im->m_celResX/2;
 		int y = gridY*im->m_celResY+im->m_celResY/2;
 		//int y = 0;
-		int z = gridY*im->m_celResZ+im->m_celResZ/2;
+		int z = gridZ*im->m_celResZ+im->m_celResZ/2;
 
 		if (im->m_map[i] == 0){
 			continue;
@@ -536,10 +539,15 @@ void OgreGFX::UIMgr::drawIM()
 		verties[3] = Ogre::Vector3(x+im->m_celResX-10, y, z);
 
 		float cv = (float)(im->m_map[i])/180.0f;
-		Ogre::ColourValue color = Ogre::ColourValue(cv,0,0,0.5);
+		/*if(cv > 0) {
+			std::cout << "Red" << std::endl;
+		}*/
+
+		Ogre::ColourValue color = Ogre::ColourValue(cv,0,0,0.25);
 		OgreGFX::DebugDrawer::getSingleton().drawQuad(verties, color, true);
 		delete verties;
 	}
+
 	//draw unit
 	std::map<FastEcslent::Entity*, FastEcslent::RegObj> imobjs = im->registeredObjects;
 	for (std::map<FastEcslent::Entity*, FastEcslent::RegObj>::iterator i= imobjs.begin(); i!= imobjs.end();i++){
@@ -554,6 +562,9 @@ void OgreGFX::UIMgr::drawMicro()
 	//draw my units.
 	for(int i=0;i<gfx->engine->entityMgr->nEnts;i++){
 		Entity* ent = gfx->engine->entityMgr->ents[i];
+		if(ent->entityType == TURRET)
+			continue;
+
 		//if(ent->entityId.player != gfx->engine->options.player) continue;
 		UnitAI* ai     = static_cast<UnitAI*>(ent->getAspect(UNITAI));
 		if(ai->commands.size() > 0){

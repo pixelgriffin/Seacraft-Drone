@@ -324,10 +324,12 @@ void FastEcslent::GameMgr::makeTerrain(){
 void FastEcslent::GameMgr::makeArmyForSidePlayer(Side side, Player player, Ogre::Vector3 location, float offset, float yawOffset){
 	//create Marine
 	if(side==RED){
-		createNEntitiesCircle(DRONE, 6, side, player, location, 5);
+		location.y = 100;
+		createNEntitiesCircle(DRONE, 50, side, player, location, 5);
 	}else{
-		createNEntitiesCircle(TURRET, 3, side, player, location, 5);
-		//reateNEntitiesCircle(SC_VULTURE, 6, side, player, location, 5);
+		location.y = 300;
+		createNEntitiesCircle(TURRET, 1, side, player, location, 75);
+		//createNEntitiesCircle(SC_VULTURE, 1, side, player, location, 5);
 		//createNEntitiesCircle(SC_VULTURE, 6, side, player, location,5);
 	}
 //	createNEntitiesRadial(SC_TANK,    5, side, player, location, offset/1.0f, yawOffset/2.0f);
@@ -371,7 +373,7 @@ std::vector<FastEcslent::Entity*> FastEcslent::GameMgr::createNEntitiesRadial(En
 std::vector<FastEcslent::Entity*> FastEcslent::GameMgr::createNEntitiesCircle(EntityType entType, int nEntities, Side side, Player player, Ogre::Vector3 center, int gap){
 	std::vector<Entity*> ents;
 	Entity *ent;
-	Ogre::Vector3 entityLocation(center.x, 0, center.z);
+	Ogre::Vector3 entityLocation(center.x, center.y, center.z);
 	float yaw  = atan2(center.z, center.x);
 	float radius = 50;
 	for (int i = 0; i < nEntities; i++) {

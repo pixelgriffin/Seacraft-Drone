@@ -74,7 +74,7 @@ int InfluenceMap3D::GetInfluenceValue(int* pMap,Ogre::Vector3& location)
 	int gridZ = location.z/ m_celResZ;
 
 	//int index = gridY*m_dataSizeX + (gridX%m_dataSizeX);
-	int index = gridX + m_dataSizeX * (gridY + m_dataSizeY * gridZ);
+	int index = gridZ + m_dataSizeX * (gridY + m_dataSizeY * gridX);
 
 	return pMap[index];
 }
@@ -87,7 +87,7 @@ int InfluenceMap3D::GetInfluenceValue(int* pMap,Ogre::Vector3* location)
 	int gridZ = location->z/ m_celResZ;
 
 	//int index = gridY*m_dataSizeX + (gridX%m_dataSizeX);
-	int index = gridX + m_dataSizeX * (gridY + m_dataSizeY * gridZ);
+	int index = gridZ + m_dataSizeX * (gridY + m_dataSizeY * gridX);
 
 	return pMap[index];
 }
@@ -95,7 +95,7 @@ int InfluenceMap3D::GetInfluenceValue(int* pMap,Ogre::Vector3* location)
 
 int InfluenceMap3D::GetInfluenceValue(int* pMap,int gridX, int gridY, int gridZ){
 	//int index = gridY*m_dataSizeX + (gridX%m_dataSizeX);
-	int index = gridX + m_dataSizeX * (gridY + m_dataSizeY * gridZ);
+	int index = gridZ + m_dataSizeX * (gridY + m_dataSizeY * gridX);
 	return pMap[index];
 }
 
@@ -193,7 +193,7 @@ void InfluenceMap3D::StampInfluenceGradient(int* pMap,int pos_x, int pos_y, int 
 				}
 
 				//int index = y*m_dataSizeX + (x%m_dataSizeX);
-				int index = gridX + m_dataSizeX * (gridY + m_dataSizeY * gridZ);
+				int index = x + m_dataSizeX * (y + m_dataSizeY * z);
 				pMap[index] += value;
 			}
 		}
@@ -206,6 +206,9 @@ void InfluenceMap3D::StampInfluenceGradientSum(int* pMap,int pos_x, int pos_y, i
 	int gridX = floor((float)pos_x/ (float)m_celResX);
 	int gridY = floor((float)pos_y/ (float)m_celResY);
 	int gridZ = floor((float)pos_z/ (float)m_celResZ);
+	//int gridX = (float)pos_x / m_celResX;
+	//int gridY = (float)pos_y / m_celResY;
+	//int gridZ = (float)pos_y / m_celResZ;
 
 	int startX = gridX - radius;
 	int stopX  = gridX + radius;
@@ -246,7 +249,7 @@ void InfluenceMap3D::StampInfluenceGradientSum(int* pMap,int pos_x, int pos_y, i
 				}
 
 				//int index = y*m_dataSizeX + (x%m_dataSizeX);
-				int index = gridX + m_dataSizeX * (gridY + m_dataSizeY * gridZ);
+				int index = z + m_dataSizeX * (y + m_dataSizeY * x);
 				pMap[index] += value;
 			}
 		}
@@ -306,7 +309,7 @@ int InfluenceMap3D::getGridFromPosition(Ogre::Vector3 position)
 
 
 	//int index = gridY*m_dataSizeX + (gridX%m_dataSizeX);
-	int index = gridX + m_dataSizeX * (gridY + m_dataSizeY * gridZ);
+	int index = gridZ + m_dataSizeX * (gridY + m_dataSizeY * gridX);
 
 	return index;
 }

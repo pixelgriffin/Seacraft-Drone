@@ -325,6 +325,30 @@ namespace FastEcslent {
 		virtual void postProcess(); //called when the command is interrupted.
         virtual Command* clone() {};
 	};
+
+	class AttackMove3D: public UnitCommand {
+		private:
+			Potential3DMove *move;
+			bool valid(Ogre::Vector3 pos){
+				return true;
+			}
+			bool valid(Entity* ent ){
+				return ent != NULL;
+			}
+		public:
+			AttackMove3D (Entity *ent, Target *tgt): UnitCommand(ent, AttackCommand, tgt) {
+				if(valid(tgt->entity)) {
+					DEBUG(std::cout << "Attack entity: " << tgt->entity << std::endl;)
+				}else if(valid(tgt->location)) {
+					DEBUG(std::cout << "Attack to: " << tgt->location << std::endl;)
+				}
+			}
+			virtual bool done();
+			virtual void init();
+			virtual void tick(double dt);
+			virtual void postProcess(); //called when the command is interrupted.
+	        virtual Command* clone() {};
+		};
 }
 
 

@@ -65,7 +65,7 @@ namespace FastEcslent
     void init()
     {
       weaponTypeData[Fusion_Cutter.getID()].set("Fusion_Cutter", 16,  1, 22, 1, ExplosionTypes::Normal,            0, 15*2, 0, 0, 0,   0, 1, 0); //SCV
-      weaponTypeData[Rifle.getID()]        .set("Rifle",         30,  2, 22, 1, ExplosionTypes::Normal,            0, 160*2,0, 0, 0,   1, 1, 0);        //Marine
+      weaponTypeData[Rifle.getID()]        .set("Rifle",         1,  2, 22, 1, ExplosionTypes::Normal,            0, 160*2,0, 0, 0,   1, 1, 0);        //Marine
       weaponTypeData[Hellfire.getID()]     .set("Hellfire",      25,  1, 22, 1, ExplosionTypes::Enemy_Line_Splash, 0, 200, 200,0, 300, 0, 1, 0);    //Hellion
       weaponTypeData[Cannon.getID()]       .set("Cannon",        30,  3, 37, 1, ExplosionTypes::Enemy_Splash,      0, 300, 50,70,100, 0, 1, 0);      //Tank
       weaponTypeData[None.getID()]         .set("None",          0,   0, 0,  0, ExplosionTypes::None,              0, 0,   0, 0, 0,   0, 0, 0);

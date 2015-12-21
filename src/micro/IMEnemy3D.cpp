@@ -149,6 +149,7 @@ Ogre::Vector3 IMEnemy3D::getHidingPos(Ogre::Vector3* pos, int celldis){
 	return this->getPositionFromGrid(grid);
 }
 
+//TODO check whether y always 0
 Ogre::Vector3 IMEnemy3D::getLowestNearby(Entity* u){
 	int grid = getGridFromPosition(u->pos);
 	if(grid > m_dataSizeX*m_dataSizeY*m_dataSizeZ)
@@ -164,20 +165,22 @@ Ogre::Vector3 IMEnemy3D::getLowestNearby(Entity* u){
 }
 
 int IMEnemy3D::getLowestNearbyGrid(int grid){
-	int gridX = grid + 2;
-	int gridY = grid + 1;
-	int gridZ = grid;
+	int gridX = grid / (m_dataSizeY * m_dataSizeZ) % m_dataSizeX;
+	int gridY = grid / (m_dataSizeZ) % m_dataSizeX;
+	int gridZ = grid % m_dataSizeZ;
 	
 	int mv = 100000;
 	int gridNumber = grid;
 
 	int mX = min(gridX+1, m_dataSizeX-1);
-	int mY = min(gridY+1, m_dataSizeX-1);
-	int mZ = min(gridZ+1, m_dataSizeX-1);
+	int mY = min(gridY+1, m_dataSizeY-1);
+	int mZ = min(gridZ+1, m_dataSizeZ-1);
 
-	for(int i=gridX-1;i<=mX;i++){
-		for(int j=gridY-1; j<=mY;j++){
-			for(int k=gridZ-1; k<=mZ;k++){
+	//search center and upper areas first
+	int j;
+	for(j=gridY; j<=mY;j++){//TODO FIX DOWNWARD BIAS
+		for(int i=gridX-1;i<=mX;i++){
+			for(int k=gridZ-1;k<=mZ;k++){
 				if(i<0) i=0;
 				if(j<0) j=0;
 				if(k<0) k=0;
@@ -187,12 +190,32 @@ int IMEnemy3D::getLowestNearbyGrid(int grid){
 				if(value < mv){
 					mv = value;
 					//gridNumber = j*m_dataSizeX + (i%m_dataSizeX);
-					gridNumber = i + m_dataSizeX * (j + m_dataSizeY * k);
+					gridNumber = k + m_dataSizeX * (j + m_dataSizeY * i);
 				}
 			}
 		}
 	}
-	
+
+	//search lower portion afterwards, to avoid bias towards sinking lower
+	j= gridY - 1;
+
+	for(int i=gridX-1;i<=mX;i++){
+		for(int k=gridZ-1;k<=mZ;k++){
+			if(i<0) i=0;
+			if(j<0) j=0;
+			if(k<0) k=0;
+
+			if(i== gridX && j== gridY && k== gridZ) continue;  //skip the cell which the unit is inside
+			int value = this->GetInfluenceValue(m_map, i, j, k);
+			if(value < mv){
+				mv = value;
+				//gridNumber = j*m_dataSizeX + (i%m_dataSizeX);
+				gridNumber = k + m_dataSizeX * (j + m_dataSizeY * i);
+			}
+		}
+	}
+
+	cout<<"Grid: " << gridNumber << ", x,y,z:" << gridX<<","<<gridY<<","<<gridZ << std::endl;
 	return gridNumber;
 }
 
