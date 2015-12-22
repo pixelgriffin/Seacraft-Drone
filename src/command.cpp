@@ -353,18 +353,18 @@ inline void FastEcslent::PotentialMove::tick(double dt){
 
 //3D Potential fields for flying entities
 inline bool FastEcslent::Potential3DMove::done() {
-	/*double dist = entity->pos.squaredDistance(target->location);
-	double trad = (entity->turningRadius * entity->turningRadius)*10.0;
+	double dist = entity->pos.squaredDistance(target->location);
+	double trad = (entity->turningRadius * entity->turningRadius);
 
 	return (dist <= trad);// && (int) ((entity->attractivePotential)) > -15);*/
-	return false;
+	//return false;
 }
 
 void FastEcslent::Potential3DMove::init(){
 	Ogre::Vector3 diff = target->location - entity->pos;
 	entity->desiredSpeed = entity->maxSpeed;
 
-	if(entity->entityId.side == Side::BLUE) {
+	/*if(entity->entityId.side == Side::BLUE) {
 		this->A = entity->engine->infoMgr->squadmgr_blue->getPotentialA();
 		this->B = entity->engine->infoMgr->squadmgr_blue->getPotentialB();
 		this->m = entity->engine->infoMgr->squadmgr_blue->getPotentialM();
@@ -374,7 +374,7 @@ void FastEcslent::Potential3DMove::init(){
 		this->B = entity->engine->infoMgr->squadmgr_red->getPotentialB();
 		this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
 		this->n = entity->engine->infoMgr->squadmgr_red->getPotentialN();
-	}
+	}*/
 }
 
 inline void FastEcslent::Potential3DMove::tick(double dt) {
@@ -416,6 +416,41 @@ inline void FastEcslent::Potential3DMove::tick(double dt) {
 				entity->desiredSpeed   = (entity->maxSpeed - entity->minSpeed) * (1.0 - cosDiffFrac);
 
 				std::cout << "Moving " << entity->uiname << " to " << target->location.y << " Y" << std::endl;
+
+			/*double repulsivePotential = 0.0f;
+						entity->potentialVec = Ogre::Vector3::ZERO;
+						Ogre::Vector3 tmp;
+						int nInRange = 1; // at least one so that you don't multiply by 0 later
+						for (int i = 0; i < nEnts; i++){
+							if(i != entity->entityId.id){// repulsed by all other entities
+								//if (entity->engine->distanceMgr->distance[entity->entityId.id][i] < RepulsionThresholdDistance) { // Don't care about entities too far away
+								if(entity->pos.distance(entity->engine->entityMgr->ents[i]->pos) < RepulsionThresholdDistance) {
+									nInRange += 1;
+									//tmp = (entity->engine->distanceMgr->normalizedDistanceVec[i][entity->entityId.id]);
+									tmp = (entity->pos - entity->engine->entityMgr->ents[i]->pos).normalisedCopy();
+
+									double val = sqrt(pow(entity->pos.x - entity->engine->entityMgr->ents[i]->pos.x, 2) + pow(entity->pos.y - entity->engine->entityMgr->ents[i]->pos.y, 2) + pow(entity->pos.z - entity->engine->entityMgr->ents[i]->pos.z, 2));
+
+									repulsivePotential =  (B * entity->engine->entityMgr->ents[i]->mass) / pow(val, m);
+									if(repulsivePotential  > INT_MAX){   //repulsive potential could be infinite
+										repulsivePotential = INT_MAX;
+									}
+									entity->potentialVec += (tmp * repulsivePotential);
+								}
+							}
+						}
+						//attracted by target
+						tmp = (entity->pos - target->location);
+						//tmp = target->location - entity->pos;
+						double targetDistance = tmp.length();
+						entity->attractivePotential =  -(A ) / pow(targetDistance, n);// + (B) /pow (targetDistance, m);
+						entity->potentialVec += (tmp.normalisedCopy() * entity->attractivePotential * nInRange); // nInRange needs to be at least 1
+						//applyPotential(entity, potentialVec);
+
+						entity->desiredHeading = atan2(-entity->potentialVec.z, entity->potentialVec.x);
+
+						double cosDiffFrac = (1.0 - cos(entity->vel.angleBetween(entity->potentialVec).valueRadians()))/2.0;// between 0 and 2 divided by 2.0 gives something between 0 and 1
+						entity->desiredSpeed   = (entity->maxSpeed - entity->minSpeed) * (1.0 - cosDiffFrac);*/
 
 			// apply force
 		} else {

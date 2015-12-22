@@ -457,8 +457,8 @@ void OgreGFX::UIMgr::decorateSelectedEntities()
 
 
         // Debug potential fields
-        //DebugDrawer::getSingleton().drawAngleLine(cpos, Ogre::Radian(ent->potentialVec.angleBetween(Ogre::Vector3::UNIT_X)), ent->potentialVec.length() * 100, Ogre::ColourValue(1.0f, 0.0f, 0.0f, 1.0));
-        //DebugDrawer::getSingleton().drawLine(cpos, cpos + (ent->potentialVec * 100), Ogre::ColourValue(1.0f, 0.0f, 0.0f, 1.0));
+        DebugDrawer::getSingleton().drawAngleLine(cpos, Ogre::Radian(ent->potentialVec.angleBetween(Ogre::Vector3::UNIT_X)), ent->potentialVec.length() * 100, Ogre::ColourValue(1.0f, 0.0f, 0.0f, 1.0));
+        DebugDrawer::getSingleton().drawLine(cpos, cpos + (ent->potentialVec * 100), Ogre::ColourValue(1.0f, 0.0f, 0.0f, 1.0));
     }
 
 }
@@ -519,6 +519,9 @@ void OgreGFX::UIMgr::drawIM()
 		int gridX = i / (im->m_dataSizeY * im->m_dataSizeZ) % im->m_dataSizeX;
 		int gridY = i / (im->m_dataSizeZ) % im->m_dataSizeX;
 		int gridZ = i % im->m_dataSizeZ;
+
+		if(gridY != 20)
+			continue;
 
 		/*if(gridY > 3) {
 			continue;

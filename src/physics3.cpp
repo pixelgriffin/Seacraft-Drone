@@ -48,14 +48,16 @@ void FastEcslent::Physics3D::doHelmsman(double dt) {
 
 
 	entity->vel.x = cos(-entity->heading) * entity->speed;
-	entity->vel.y = entity->potentialVec.normalisedCopy().y * entity->speed; //fly when we need to. No heading
+	entity->vel.y = entity->potentialVec.y * entity->speed; //fly when we need to. No heading
 	entity->vel.z = sin(-entity->heading) * entity->speed;
 
-	Ogre::Vector3 to = entity->pos + (entity->vel * dt);
 
-	//TODO variable lowest Y
-	if(to.y < 5)
-		to.y = 5;
+
+	Ogre::Vector3 to = entity->pos + (entity->potentialVec.normalisedCopy()* entity->maxSpeed * dt);
+
+	//TODO variable lowest Y, tune this?
+	if(to.y < 10)
+		to.y = 10;
 
 	//a wall of x centimeters!
 	//if(to.z < centimeters(25) && to.z > -centimeters(25))
