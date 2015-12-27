@@ -88,7 +88,7 @@ void FastEcslent::WeaponMgr::fixFightingProperties(){
 			maxHitpoints[TURRET] = 100.0;
 			initArmor[TURRET] = 1.0;
 			initDamageMultiplier[TURRET] = 1.0;
-			weaponType[TURRET] = &WeaponTypes::Rifle;
+			weaponType[TURRET] = &WeaponTypes::Hellfire;
 			break;
 		case SC_TANK:
 			maxHitpoints[SC_TANK] = 160.0;

@@ -325,10 +325,10 @@ void FastEcslent::GameMgr::makeArmyForSidePlayer(Side side, Player player, Ogre:
 	//create Marine
 	if(side==RED){
 		location.y = 100;
-		createNEntitiesCircle(DRONE, 25, side, player, location, 5);
+		createNEntitiesCircle(DRONE, 3, side, player, location, 5);
 		location.x += 1350;
 		location.z += 1350;
-		createNEntitiesCircle(DRONE, 25, side, player, location, 5);
+		createNEntitiesCircle(DRONE, 3, side, player, location, 5);
 	}else{
 		location.y = 0;
 		location.x -= 250;

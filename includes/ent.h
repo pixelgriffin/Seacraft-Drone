@@ -224,8 +224,8 @@ namespace FastEcslent {
 				selectable = false;
 				entityId.side = YELLOW;
 
-				hitpoints = 10000000;
-				hitpointsmax = 10000000;
+				hitpoints = 100;
+				hitpointsmax = 100;
 				seekRange = 512;
 
 				isAttacking = false;
