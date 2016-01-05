@@ -371,6 +371,8 @@ void GraphicsInteractionManager::makeNode(FastEcslent::Entity *feEnt){
 	gfxNodes[id].selectable = feEnt->selectable;
         gfxNodes[id].entType = feEnt->entityType;
 	sceneNodeToEntIdMap[sceneNode] = id;
+
+
 }
 
 
@@ -399,7 +401,7 @@ void GraphicsInteractionManager::createScene(){
     Ogre::MeshManager::getSingleton().createPlane("OceanSurface",
         Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
         oceanSurface,
-        level.width * 32, level.height * 32, 1, 1, true, 1, 1, 1, Ogre::Vector3::UNIT_Z);
+        level.width * 512, level.height * 512, 1, 1, true, 1, 1, 1, Ogre::Vector3::UNIT_Z);
 
     mOceanSurfaceEnt = mSceneMgr->createEntity( "OceanSurface", "OceanSurface" );
     Ogre::SceneNode *node = mSceneMgr->getRootSceneNode()->createChildSceneNode();

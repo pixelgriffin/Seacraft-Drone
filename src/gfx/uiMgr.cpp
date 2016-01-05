@@ -501,8 +501,8 @@ void OgreGFX::UIMgr::drawIM()
 {
 	FastEcslent::IMEnemy3D *im = this->gfx->engine->infoMgr->getIMEnemy(RED);
 
-	//draw the grid
-	/*for (int i=0; i< im->m_dataSizeX; i++)
+	/*//draw the grid
+	for (int i=0; i< im->m_dataSizeX; i++)
 	{
 		OgreGFX::DebugDrawer::getSingleton().drawLine(Ogre::Vector3(i*im->m_celResX, 0, 0), Ogre::Vector3(i*im->m_celResX,0, im->m_worldSizeY), Ogre::ColourValue(0.5f, 0.5f, 0.5f, 1.0f));
 	}

@@ -56,9 +56,7 @@ MicroAspect::MicroAspect(Entity* u, SquadMgr* s, Side side){
 //Target selection
 Entity* MicroAspect::getTarget(std::set<Entity*> &enemies){
 	Entity* t = getNearestUnit(enemies);
-
 	std::set<Entity*> nearbyunits;
-
 	for(int i=0;i<t->engine->entityMgr->nEnts;i++){
 		if(t->engine->entityMgr->ents[i]->entityId.side == this->side) continue;
 		else if(t->engine->entityMgr->ents[i]->entityState != ALIVE) continue;
@@ -152,10 +150,11 @@ void MicroAspect::onFire(set<Entity*> &enemies){
 
 	Entity* newtarget = this->getTarget(enemies);
 
+
 	//attack freeze
 	if(weapon->weaponType->damageCooldown() - weapon->m_cooldown < this->microparam.freeze){
 	//if((unit->getType().groundWeapon().damageCooldown()-unit->getGroundWeaponCooldown()) < this->microparam.freeze){
-		return;
+		//return;
 	}
 
 	//ready to attack
@@ -169,27 +168,29 @@ void MicroAspect::onFire(set<Entity*> &enemies){
 		}
 		
 
-		bool isSquadInCombat = this->squad->isSquadInCombat();
-		if(isSquadInCombat){
-			this->squad->switchState(SquadMgr::SquadState::Attacking);
-		}
 
-		//if it is far from enemy, potential move toward enemy and formation
-		if(unit->pos.distance(newtarget->pos) > unit->seekRange && (this->squad->state == SquadMgr::SquadState::Approaching ||this->squad->state == SquadMgr::SquadState::Idle)){
-			this->squad->switchState(SquadMgr::SquadState::Approaching);
-			Ogre::Vector3 fmtp = this->squad->im->getIMEnemy(this->side)->getLowestNearby(lowimunit);
-			this->squad->potentialMove(this->unit, &fmtp, 80);
-			return;
-		}
+			bool isSquadInCombat = this->squad->isSquadInCombat();
+			if(isSquadInCombat){
+				this->squad->switchState(SquadMgr::SquadState::Attacking);
+			}
 
-		this->target = newtarget;
-		if(this->unit->entityType == DRONE) {
-			AttackMove3D* attack= createAttack3DForEnt(this->unit, target);
-			ai->setCommand(attack);
-		} else {
-			AttackMove* attack = createAttackForEnt(this->unit, target);
-			ai->setCommand(attack);
-		}
+			//if it is far from enemy, potential move toward enemy and formation
+			if(unit->pos.distance(newtarget->pos) > unit->seekRange && (this->squad->state == SquadMgr::SquadState::Approaching ||this->squad->state == SquadMgr::SquadState::Idle)){
+				this->squad->switchState(SquadMgr::SquadState::Approaching);
+				Ogre::Vector3 fmtp = this->squad->im->getIMEnemy(this->side)->getLowestNearby(lowimunit);
+				this->squad->potentialMove(this->unit, &fmtp, 0);
+				return;
+			}
+
+			this->target = newtarget;
+			if(this->unit->entityType == DRONE) {
+				AttackMove3D* attack= createAttack3DForEnt(this->unit, target);
+				ai->setCommand(attack);
+			} else {
+				AttackMove* attack = createAttackForEnt(this->unit, target);
+				ai->setCommand(attack);
+			}
+
 
 	}else{
 		this->target = newtarget;
@@ -220,11 +221,13 @@ void MicroAspect::kiteMove(set<Entity*> &enemies){
 			{
 				//3D COMMAND
 				Potential3DMove* move = createPotential3DMoveForEnt(this->unit, kitingpos);
+				move->init();
 				uai->setCommand(move);
 			}
 			else
 			{
 				Move* move = createMoveForEnt(this->unit, kitingpos);
+				move->init();
 				uai->setCommand(move);
 			}
 		}else if(this->isBeingTarget(unit, enemies) && (this->getUnitHPPercent(unit) < this->microparam.hpkiting)){ //kiting only being targeted
@@ -232,11 +235,13 @@ void MicroAspect::kiteMove(set<Entity*> &enemies){
 			{
 				//3D COMMAND
 				Potential3DMove* move = createPotential3DMoveForEnt(this->unit, target->pos);
+				move->init();
 				uai->setCommand(move);
 			}
 			else
 			{
 				Move* move = createMoveForEnt(this->unit, target->pos);
+				move->init();
 				uai->setCommand(move);
 			}
 		}

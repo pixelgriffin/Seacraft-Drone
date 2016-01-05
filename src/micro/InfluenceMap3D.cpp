@@ -76,6 +76,11 @@ int InfluenceMap3D::GetInfluenceValue(int* pMap,Ogre::Vector3& location)
 	//int index = gridY*m_dataSizeX + (gridX%m_dataSizeX);
 	int index = gridZ + m_dataSizeX * (gridY + m_dataSizeY * gridX);
 
+	//std:: cout << index << ": " << pMap[index] << std::endl;
+
+//	if(location.x < 0 ||location.y < 0||location.z < 0){
+//		std:: cout << index << ": " << pMap[index]<<": "<< location<< std::endl;
+//	}
 	return pMap[index];
 }
 
@@ -151,7 +156,7 @@ void InfluenceMap3D::StampInfluenceGradient(int* pMap,int pos_x, int pos_y, int 
 	int gridY = floor((float)pos_y/ (float)m_celResY);
 	int gridZ = floor((float)pos_z/ (float)m_celResZ);
 
-	int stopDist = fabsf(initValue)*0.75f;
+	int stopDist = abs(initValue)*0.75f;
 	int halfStopDist = stopDist / 2;
 
 	int startX = gridX - halfStopDist;

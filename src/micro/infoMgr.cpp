@@ -67,10 +67,10 @@ void InfoMgr::registerEntity(Entity *ent){
 
 
 void InfoMgr::tick(double dtime){
-	if(this->getFrameCount() == 7){
-		this->tIM_red->Update(dtime);
+	if(this->getFrameCount() == 7){ // ASK: FIND OUT WHAT THIS DOES, WHAT IS 7?
+		//this->tIM_red->Update(dtime);
 		//this->eIM_red->setTerrainIM(tIM_red->m_map);
-		this->tIM_blue->Update(dtime);
+		//this->tIM_blue->Update(dtime);
 		//this->eIM_blue->setTerrainIM(tIM_blue->m_map);
 	}
 	this->eIM_red->Update(dtime);
@@ -86,14 +86,14 @@ void InfoMgr::tick(double dtime){
 
 	if(this->getFrameCount() > 10){
 		//check the end criteria
-		if(this->squadmgr_red->getEnemies().size() <= 0 || this->squadmgr_blue->getEnemies().size() <= 0 || this->getFrameCount() > 30000){
+		if(this->squadmgr_red->getEnemies().size() <= 0 || this->squadmgr_blue->getEnemies().size() <= 0 || this->getFrameCount() > 300000){
 			ptime endTime = getCurrentTime();
 			ptime startTime = this->engine->startTime;
 			long duration = (endTime - startTime).total_seconds();
 
 			int score = this->squadmgr_red->getSquadScore();
 
-			cout<<"\nFinal Score is: "<< score << ", Game duration: "<<duration << " seconds." <<endl<<endl<<endl<<endl;
+			cout<</*"\nFinal Score is: "<<*/ score << /*", Game duration: "<<duration << " seconds." <<endl<<endl<<endl<<*/endl;
 
 			exit(0);
 		}

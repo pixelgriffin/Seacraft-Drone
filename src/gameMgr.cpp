@@ -273,8 +273,10 @@ void FastEcslent::GameMgr::StarCraft(){
 	}
 
 	float offset = 400.0f;
-	makeArmyForSidePlayer(RED, ONE, Ogre::Vector3(offset, 0, offset), 250.0f, 0.06f);
-	makeArmyForSidePlayer(BLUE, THREE, Ogre::Vector3(offset*4, 0, offset*4), 250.0f, 0.06f);
+//	makeArmyForSidePlayer(RED, ONE, Ogre::Vector3(offset, 0, offset), 250.0f, 0.06f);
+//	makeArmyForSidePlayer(BLUE, THREE, Ogre::Vector3(offset*4, 0, offset*4), 250.0f, 0.06f);
+	makeArmyForSidePlayer(RED, ONE, Ogre::Vector3(4800, 100, 4800), 250.0f, 0.06f);
+	makeArmyForSidePlayer(BLUE, THREE, Ogre::Vector3(5200, 100, 5200), 250.0f, 0.06f);
 	//makeTerrain();
 	//makeBaseForSidePlayer(YELLOW, THREE, Ogre::Vector3(-offset, 0, offset), 550.0f, 0.06f);
 	//makeBaseForSidePlayer(GREEN, FOUR, Ogre::Vector3(offset, 0, -offset), 550.0f, 0.06f);
@@ -324,16 +326,22 @@ void FastEcslent::GameMgr::makeTerrain(){
 void FastEcslent::GameMgr::makeArmyForSidePlayer(Side side, Player player, Ogre::Vector3 location, float offset, float yawOffset){
 	//create Marine
 	if(side==RED){
-		location.y = 100;
-		createNEntitiesCircle(DRONE, 3, side, player, location, 5);
-		location.x += 1350;
-		location.z += 1350;
-		createNEntitiesCircle(DRONE, 3, side, player, location, 5);
+		//location.y = 100;
+		//createNEntitiesCircle(DRONE, 3, side, player, location, 5);
+//		location.x += 1350;
+//		location.z += 1350;
+		createNEntitiesCircle(DRONE, 6, side, player, location, 5);
 	}else{
+//		location.y = 100;
+//		location.x -= 350;
+//		location.z -= 350;
+		//location.y = 0;
+		createNEntitiesCircle(DRONE, 6, side, player, location, 5);
 		location.y = 0;
-		location.x -= 250;
-		location.z -= 250;
-		createNEntitiesCircle(TURRET, 1, side, player, location, 75);
+//		location.x -= 250;
+//		location.z -= 250;
+		//createNEntitiesCircle(TURRET, 1, side, player, location, 75);
+
 		//createNEntitiesCircle(SC_VULTURE, 1, side, player, location, 5);
 		//createNEntitiesCircle(SC_VULTURE, 6, side, player, location,5);
 	}

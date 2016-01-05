@@ -24,10 +24,10 @@ SquadMgr::SquadMgr(Engine *eng, InfoMgr *inforMgr, Side s):side(s){
 		params = GA::getInstance()->getBlueParams();
 	}
 
-	A = params.A * 100;            //Attraction
-	B = params.B * 1000;           //Nearby repulsion
-	m = params.m * 0.1;            //Nearby repulsion
-	n = params.n * 0.1;            //Attraction
+	A = 20000;//params.A * 1000;            //Attraction
+	B = 50;//params.B * 10;           //Nearby repulsion
+	m = 4;//params.m * 0.1;            //Nearby repulsion
+	n = 3;//params.n * 0.1;            //Attraction
 
 	repulsionThreshold = 1500;
 
@@ -213,22 +213,49 @@ void SquadMgr::potentialMove(Entity* unit, Ogre::Vector3* target, int dist)
 
 int SquadMgr::getSquadScore()
 {
-	int unitscore = 100;
-	int fu = this ->unitSet.size();
-	int eu = this->enemySet.size();
-	int du = fu - eu;
 
-	double score = du*unitscore;
+	int unitscore = 100;
+	int fu = this->unitSet.size();
+	int eu = this->enemySet.size();
+	//int du = fu - eu;
+
+	double score = fu/*du*/*unitscore;
+
+	double umhp = 0, uhp = 0, emhp = 0, ehp = 0;
+
+	for (set<Entity*>::iterator i = this->unitSet.begin(); i != this->unitSet.end(); i++)
+	{
+	   Entity* t = *i;
+	   umhp += t->hitpointsmax;
+	   uhp += t->hitpoints;
+	}
+	for (set<Entity*>::iterator i = this->enemySet.begin(); i != this->enemySet.end(); i++)
+	{
+	   Entity* t = *i;
+	   emhp += t->hitpointsmax;
+	   ehp += t->hitpoints;
+	}
+
+	if (fu == 0)
+		umhp = 1;
+
+	if (eu == 0)
+	{
+		ehp = emhp = 1;
+	}
+
+	score += (uhp/umhp + (1 - ehp/emhp)) * 100;
 
 	double frame = this->im->getFrameCount();
 	//Time score is the within [0-1) * marine score
-	double timescore =  unitscore * (1 - frame/30000);    //250 is the set longest time in one game
+	double timescore =  unitscore * (1 - frame/300000);    //250 is the set longest time in one game
 
-	if(score < 0) timescore *= -1;  //when the enemy win, time score is negative
+	if(score < 0) timescore = -score + 1;//timescore *= -1;  //when the enemy win, time score is negative
 	score += timescore;
 
 	if(eu > 0 && fu > 0){    //didn't fight at all, punish
-		score -= eu* unitscore;
+		//score -= eu* unitscore;
+		score = 1;
 	}
 
 	return score;

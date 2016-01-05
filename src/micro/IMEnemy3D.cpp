@@ -215,7 +215,7 @@ int IMEnemy3D::getLowestNearbyGrid(int grid){
 		}
 	}
 
-	cout<<"Grid: " << gridNumber << ", x,y,z:" << gridX<<","<<gridY<<","<<gridZ << std::endl;
+	//cout<<"Grid: " << gridNumber << ", x,y,z:" << gridX<<","<<gridY<<","<<gridZ << std::endl;
 	return gridNumber;
 }
 

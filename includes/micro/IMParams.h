@@ -9,8 +9,8 @@ public:
 	//IM - 18 bits
 	int UnitValue;      //5 bits
 	int UnitRadius;     //4 bits
-	int TerrainValue;   //5 bits
-	int TerrainRadius;  //4 bits
+	//int TerrainValue;   //5 bits
+	//int TerrainRadius;  //4 bits
 	//PF - 20 bits
 	int A;              //6 bits
 	int B;              //6 bits

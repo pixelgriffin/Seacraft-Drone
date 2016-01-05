@@ -13,7 +13,7 @@ GA* GA::getInstance()
 
 GA::GA()
 {
-	chromoLen = 60;
+	chromoLen = 51;
 	signalLen = 4;
 	this->initialized = false;
 
@@ -31,7 +31,8 @@ IMParams GA::getRedParams()
 
 IMParams GA::getBlueParams()
 {
-	return this->blueParams;
+	//return this->blueParams;
+	return this->getBaselineParams();
 }
 
 IMParams GA::getBaselineParams()
@@ -39,8 +40,8 @@ IMParams GA::getBaselineParams()
 	IMParams param;
 	param.UnitValue      = 26;
 	param.UnitRadius     = 16;
-	param.TerrainValue   = 3;
-	param.TerrainRadius  = 10;
+	//param.TerrainValue   = 3;
+	//param.TerrainRadius  = 10;
 
 	param.A = 46;
 	param.B = 5;
@@ -64,8 +65,8 @@ IMParams GA::getBaselineParams2()
 	IMParams param;
 	param.UnitValue      = 30;
 	param.UnitRadius     = 15;
-	param.TerrainValue   = 3;
-	param.TerrainRadius  = 11;
+	//param.TerrainValue   = 3;
+	//param.TerrainRadius  = 11;
 
 	param.A = 57;
 	param.B = 48;

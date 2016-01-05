@@ -165,13 +165,18 @@ namespace FastEcslent {
 		virtual bool raising(double dt);
 		virtual bool sinking(double dt);
 
+		virtual void setVultureProperties();
+		virtual void setZealotProperties();
+
 	};
 
 	class Drone : public Entity {
 		public:
 			Drone(Engine *eng) : Entity(eng, DRONE) {
-				meshName = "drone.mesh";
-				//meshName = "ddg51.mesh";
+				//if (entityId.side == RED)
+					meshName = "drone.mesh";
+				//else
+				//	meshName = "ddg51.mesh";
 				uiname = "Drone.";
 				uiname.append(boost::lexical_cast<std::string>(count++));
 
@@ -180,11 +185,22 @@ namespace FastEcslent {
 				width  = meters(10.0f);
 				height = meters(12.0f);
 
-				maxSpeed = knots(64.0f);
+				//maxSpeed = knots(64.0f);
+
+				if (entityId.side == RED)
+					maxSpeed = knots(64.0f);
+				else
+					maxSpeed = knots(40.0f);
+
 				minSpeed = knots(0.0f);
 				speedRange = maxSpeed - minSpeed + EPSILON;
 
-				maxAcceleration = feetPerSecondSquared(55.0f);
+				//maxAcceleration = feetPerSecondSquared(55.0f);
+				if (entityId.side == RED)
+					maxAcceleration = feetPerSecondSquared(55.0f);
+				else
+					maxAcceleration = feetPerSecondSquared(40.0f);
+
 				maxRotationalSpeed = degreesPerSecond(170.0f);
 				turningRadius = 180;
 				mass = tons(200);
@@ -193,9 +209,23 @@ namespace FastEcslent {
 
 				entityId.side = YELLOW;
 
-				hitpoints = 80;
-				hitpointsmax = 80;
-				seekRange = 256*2;
+				//hitpoints = 80;
+				if (entityId.side == RED)
+					hitpoints = 80;
+				else
+					hitpoints = 160;
+
+				//hitpointsmax = 80;
+				if (entityId.side == RED)
+					hitpointsmax = 80;
+				else
+					hitpointsmax = 160;
+
+				//seekRange = 256*2;
+				if (entityId.side == RED)
+					seekRange = 256*2;
+				else
+					seekRange = 224*2;
 
 				isAttacking = false;
 			}

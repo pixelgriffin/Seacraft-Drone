@@ -45,7 +45,7 @@ void OgreGFX::Minimap::init(void) {
 	minimapCamera->setNearClipDistance(5);
 	minimapCamera->setAspectRatio((double)gfx->mWindow->getViewport(0)->getActualWidth()/(double)gfx->mWindow->getViewport(0)->getActualHeight());
 	Ogre::Vector3 cpos = gfx->mCamera->getPosition();
-	minimapCamera->setPosition(0, 2000, 0);
+	minimapCamera->setPosition(5000, 2000, 5000);
 
 	minimapCamera->pitch(Ogre::Radian(-1.5708));;
 	renderTexture->addViewport(minimapCamera);
@@ -82,7 +82,7 @@ bool OgreGFX::Minimap::frameRenderingQueued(const Ogre::FrameEvent& evt){
 		updatePeriod = DEFAULT_MINIMAP_UPDATE_PERIOD;
 	}
 	Ogre::Vector3 cpos = gfx->mCamera->getPosition();
-	minimapCamera->setPosition(cpos.x+1000, 3000, cpos.z+1000);
+	minimapCamera->setPosition(cpos.x+5000, 5000, cpos.z+5000);
 
 
 	return true;

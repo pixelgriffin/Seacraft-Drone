@@ -173,8 +173,14 @@ FastEcslent::Entity *FastEcslent::EntityMgr::createEntityForPlayerAndSide(Entity
 	ent->entityId.side = side;
 	ent->desiredSpeed = 0.0f;
 
+	if (side == RED && etype == DRONE)
+		ent->setVultureProperties();
+	else if (etype == DRONE)
+		ent->setZealotProperties();
+
 	this->engine->infoMgr->registerEntity(ent);
 	//gaeSpecific Stuff
+
 	return ent;
 }
 

@@ -145,7 +145,7 @@ Ogre::Vector3 FastEcslent::Move3D::computeRepulsor(){
 void FastEcslent::Move3D::init(){
 	if(entity->entityType == DRONE)
 	{
-		std::cout << "drone given 3D move to " << target->location.x << " " << target->location.y << " " << target->location.z << " @ " << entity->pos.x << " " << entity->pos.y << " " << entity->pos.z << std::endl;
+		//std::cout << "drone given 3D move to " << target->location.x << " " << target->location.y << " " << target->location.z << " @ " << entity->pos.x << " " << entity->pos.y << " " << entity->pos.z << std::endl;
 	}
 
 	Ogre::Vector3 diff = target->location - entity->pos;
@@ -301,7 +301,7 @@ void FastEcslent::PotentialMove::init(){
 
 	if(entity->entityType == DRONE)
 	{
-		std::cout << "entity given 2d potential" << std::endl;
+		//std::cout << "entity given 2d potential" << std::endl;
 	}
 
 }
@@ -364,17 +364,26 @@ void FastEcslent::Potential3DMove::init(){
 	Ogre::Vector3 diff = target->location - entity->pos;
 	entity->desiredSpeed = entity->maxSpeed;
 
-	/*if(entity->entityId.side == Side::BLUE) {
-		this->A = entity->engine->infoMgr->squadmgr_blue->getPotentialA();
-		this->B = entity->engine->infoMgr->squadmgr_blue->getPotentialB();
-		this->m = entity->engine->infoMgr->squadmgr_blue->getPotentialM();
-		this->n = entity->engine->infoMgr->squadmgr_blue->getPotentialN();
+	if(entity->entityId.side == Side::BLUE) {
+//		this->A = entity->engine->infoMgr->squadmgr_blue->getPotentialA();
+//		this->B = entity->engine->infoMgr->squadmgr_blue->getPotentialB();
+//		this->m = entity->engine->infoMgr->squadmgr_blue->getPotentialM();
+//		this->n = entity->engine->infoMgr->squadmgr_blue->getPotentialN();
+		this->A = 1000.0;
+		this->B = 80000.0;
+		this->m = 4.0;
+		this->n = 1;
 	} else {
 		this->A = entity->engine->infoMgr->squadmgr_red->getPotentialA();
 		this->B = entity->engine->infoMgr->squadmgr_red->getPotentialB();
 		this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
 		this->n = entity->engine->infoMgr->squadmgr_red->getPotentialN();
-	}*/
+		//if (entity->engine->infoMgr->squadmgr_red->getPotentialM() > 3.00)
+			//this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
+//		else
+//			this->m = 3.00;
+	}
+	//std::cout << this->entity->entityId.side << ": " << this->A << ", " << this->B << ", " << this->m << ", " << this->n << std::endl;
 }
 
 inline void FastEcslent::Potential3DMove::tick(double dt) {
@@ -403,10 +412,12 @@ inline void FastEcslent::Potential3DMove::tick(double dt) {
 				}
 				//attracted by target
 
+
 				tmp = (entity->pos - target->location);
 				//tmp = target->location - entity->pos;
 				double targetDistance = tmp.length();
 				entity->attractivePotential =  -(A ) / pow(targetDistance, n);// + (B) /pow (targetDistance, m);
+
 				entity->potentialVec += (tmp.normalisedCopy() * entity->attractivePotential * nInRange); // nInRange needs to be at least 1
 
 				//applyPotential(entity, potentialVec);
@@ -415,7 +426,7 @@ inline void FastEcslent::Potential3DMove::tick(double dt) {
 				double cosDiffFrac = (1.0 - cos(entity->vel.angleBetween(entity->potentialVec).valueRadians()))/2.0;// between 0 and 2 divided by 2.0 gives something between 0 and 1
 				entity->desiredSpeed   = (entity->maxSpeed - entity->minSpeed) * (1.0 - cosDiffFrac);
 
-				std::cout << "Moving " << entity->uiname << " to " << target->location.y << " Y" << std::endl;
+				//std::cout << "Moving " << entity->uiname << " to " << target->location.y << " Y" << std::endl;
 
 			/*double repulsivePotential = 0.0f;
 						entity->potentialVec = Ogre::Vector3::ZERO;
@@ -692,6 +703,7 @@ inline void FastEcslent::AttackMove::tick(double dt){
 inline void FastEcslent::AttackMove3D::init(){
 	this->entity->weapon->setTarget(this->target->entity);
 	this->move = new Potential3DMove(this->entity, this->target);
+	this->move->init();
 	this->entity->isAttacking = true;
 }
 

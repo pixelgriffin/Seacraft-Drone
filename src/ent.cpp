@@ -16,18 +16,18 @@
 int FastEcslent::Entity::count = 0;
 
 void FastEcslent::Entity::print() {
-    DEBUG(std::cout << "Id: " << entityId.id << ", instanceId: " << engine->instanceId << std::endl;)
-    DEBUG(std::cout << "UIName " << uiname << ", meshName: " << meshName << std::endl;)
-    DEBUG(std::cout << "Position: " << pos.x << ", " << pos.y << ", " << pos.z << std::endl;)
-    DEBUG(std::cout << "Velocity: " << vel.x << ", " << vel.y << ", " << vel.z << std::endl;)
-    DEBUG(std::cout << "Accelert: " << acc.x << ", " << acc.y << ", " << acc.z << std::endl;)
-    DEBUG(std::cout << "Speed:    " << speed << std::endl;)
-    DEBUG(std::cout << "Heading:  " << heading << std::endl;)
-    DEBUG(std::cout << "dsrdSpd:  " << desiredSpeed << std::endl;)
-    DEBUG(std::cout << "dsrdHdg:  " << desiredHeading << std::endl;)
-    DEBUG(std::cout << "yaw:      " << yaw << std::endl;)
-    DEBUG(std::cout << "selected: " << isSelected << std::endl;)
-    DEBUG(std::cout << "-------------------------------------------------------------------" << std::endl;)
+     std::cout << "Id: " << entityId.id << ", instanceId: " << engine->instanceId << std::endl;
+     std::cout << "UIName " << uiname << ", meshName: " << meshName << std::endl;
+     std::cout << "Position: " << pos.x << ", " << pos.y << ", " << pos.z << std::endl;
+     std::cout << "Velocity: " << vel.x << ", " << vel.y << ", " << vel.z << std::endl;
+     std::cout << "Accelert: " << acc.x << ", " << acc.y << ", " << acc.z << std::endl;
+     std::cout << "Speed:    " << speed << std::endl;
+     std::cout << "Heading:  " << heading << std::endl;
+     std::cout << "dsrdSpd:  " << desiredSpeed << std::endl;
+     std::cout << "dsrdHdg:  " << desiredHeading << std::endl;
+     std::cout << "yaw:      " << yaw << std::endl;
+     std::cout << "selected: " << isSelected << std::endl;
+     std::cout << "-------------------------------------------------------------------" << std::endl;
 }
 
 void FastEcslent::Entity::reset() {
@@ -274,3 +274,44 @@ void FastEcslent::SCVehicle::init() {
     //Entity::init();
 
 }
+
+void FastEcslent::Entity::setVultureProperties(){
+
+	maxSpeed = knots(64.0f);
+
+	minSpeed = knots(0.0f);
+	speedRange = maxSpeed - minSpeed + EPSILON;
+
+	maxAcceleration = feetPerSecondSquared(55.0f);
+
+	maxRotationalSpeed = degreesPerSecond(170.0f);
+	turningRadius = 180;
+	mass = tons(200);
+
+	hitpoints = 80;
+
+	hitpointsmax = 80;
+
+	seekRange = 256*2;
+}
+
+void FastEcslent::Entity::setZealotProperties(){
+
+	maxSpeed = knots(40.0f);
+
+	minSpeed = knots(0.0f);
+	speedRange = maxSpeed - minSpeed + EPSILON;
+
+	maxAcceleration = feetPerSecondSquared(40.0f);
+
+	maxRotationalSpeed = degreesPerSecond(170.0f);
+	turningRadius = 180;
+	mass = tons(200);
+
+	hitpoints = 160;
+
+	hitpointsmax = 160;
+
+	seekRange = 224*2;
+}
+

@@ -23,12 +23,12 @@ C_UPPER_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-includes \
 src \
-src/ai \
-src/gfx \
-src/micro \
-src/net \
-src/snd \
 src/tactical \
+src/snd \
+src/net \
+src/micro \
+src/gfx \
+src/ai \
+includes \
 

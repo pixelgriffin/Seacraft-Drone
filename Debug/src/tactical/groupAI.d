@@ -1,76 +1,79 @@
 src/tactical/groupAI.d: ../src/tactical/groupAI.cpp \
- /home/ecsl/workspace/DroneCraft/includes/tactical/groupAI.h \
- /home/ecsl/workspace/DroneCraft/includes/aspect.h \
- /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/command.h \
- /home/ecsl/workspace/DroneCraft/includes/DEBUG.h \
- /usr/include/OGRE/OgreVector3.h /usr/include/OGRE/OgrePrerequisites.h \
- /usr/include/OGRE/OgrePlatform.h /usr/include/OGRE/OgreConfig.h \
- /usr/include/OGRE/OgreBuildSettings.h \
- /usr/include/OGRE/Threading/OgreThreadDefines.h \
- /usr/include/OGRE/Threading/OgreThreadDefinesBoost.h \
- /usr/include/OGRE/OgreStdHeaders.h \
- /usr/include/OGRE/Threading/OgreThreadHeaders.h \
- /usr/include/OGRE/Threading/OgreThreadHeadersBoost.h \
- /usr/include/OGRE/OgreMemoryAllocatorConfig.h \
- /usr/include/OGRE/OgreMemoryAllocatedObject.h \
- /usr/include/OGRE/OgreMemorySTLAllocator.h \
- /usr/include/OGRE/OgreHeaderPrefix.h \
- /usr/include/OGRE/OgreHeaderSuffix.h \
- /usr/include/OGRE/OgreMemoryNedPooling.h /usr/include/OGRE/OgreMath.h \
- /usr/include/OGRE/OgreQuaternion.h \
- /home/ecsl/workspace/DroneCraft/includes/target.h \
- /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/DEBUG.h
+ /home/ecsl/workspace/DroneCraft1.1/includes/tactical/groupAI.h \
+ /home/ecsl/workspace/DroneCraft1.1/includes/aspect.h \
+ /home/ecsl/workspace/DroneCraft1.1/includes/enums.h \
+ /home/ecsl/workspace/DroneCraft1.1/includes/command.h \
+ /home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h \
+ /usr/local/include/OGRE/OgreVector3.h \
+ /usr/local/include/OGRE/OgrePrerequisites.h \
+ /usr/local/include/OGRE/OgrePlatform.h \
+ /usr/local/include/OGRE/OgreConfig.h \
+ /usr/local/include/OGRE/OgreBuildSettings.h \
+ /usr/local/include/OGRE/Threading/OgreThreadDefines.h \
+ /usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h \
+ /usr/local/include/OGRE/OgreStdHeaders.h \
+ /usr/local/include/OGRE/Threading/OgreThreadHeaders.h \
+ /usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h \
+ /usr/local/include/OGRE/OgreMemoryAllocatorConfig.h \
+ /usr/local/include/OGRE/OgreMemoryAllocatedObject.h \
+ /usr/local/include/OGRE/OgreMemorySTLAllocator.h \
+ /usr/local/include/OGRE/OgreHeaderPrefix.h \
+ /usr/local/include/OGRE/OgreHeaderSuffix.h \
+ /usr/local/include/OGRE/OgreMemoryNedPooling.h \
+ /usr/local/include/OGRE/OgreMath.h \
+ /usr/local/include/OGRE/OgreQuaternion.h \
+ /home/ecsl/workspace/DroneCraft1.1/includes/target.h \
+ /home/ecsl/workspace/DroneCraft1.1/includes/enums.h \
+ /home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h
 
-/home/ecsl/workspace/DroneCraft/includes/tactical/groupAI.h:
+/home/ecsl/workspace/DroneCraft1.1/includes/tactical/groupAI.h:
 
-/home/ecsl/workspace/DroneCraft/includes/aspect.h:
+/home/ecsl/workspace/DroneCraft1.1/includes/aspect.h:
 
-/home/ecsl/workspace/DroneCraft/includes/enums.h:
+/home/ecsl/workspace/DroneCraft1.1/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/command.h:
+/home/ecsl/workspace/DroneCraft1.1/includes/command.h:
 
-/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
+/home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h:
 
-/usr/include/OGRE/OgreVector3.h:
+/usr/local/include/OGRE/OgreVector3.h:
 
-/usr/include/OGRE/OgrePrerequisites.h:
+/usr/local/include/OGRE/OgrePrerequisites.h:
 
-/usr/include/OGRE/OgrePlatform.h:
+/usr/local/include/OGRE/OgrePlatform.h:
 
-/usr/include/OGRE/OgreConfig.h:
+/usr/local/include/OGRE/OgreConfig.h:
 
-/usr/include/OGRE/OgreBuildSettings.h:
+/usr/local/include/OGRE/OgreBuildSettings.h:
 
-/usr/include/OGRE/Threading/OgreThreadDefines.h:
+/usr/local/include/OGRE/Threading/OgreThreadDefines.h:
 
-/usr/include/OGRE/Threading/OgreThreadDefinesBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h:
 
-/usr/include/OGRE/OgreStdHeaders.h:
+/usr/local/include/OGRE/OgreStdHeaders.h:
 
-/usr/include/OGRE/Threading/OgreThreadHeaders.h:
+/usr/local/include/OGRE/Threading/OgreThreadHeaders.h:
 
-/usr/include/OGRE/Threading/OgreThreadHeadersBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h:
 
-/usr/include/OGRE/OgreMemoryAllocatorConfig.h:
+/usr/local/include/OGRE/OgreMemoryAllocatorConfig.h:
 
-/usr/include/OGRE/OgreMemoryAllocatedObject.h:
+/usr/local/include/OGRE/OgreMemoryAllocatedObject.h:
 
-/usr/include/OGRE/OgreMemorySTLAllocator.h:
+/usr/local/include/OGRE/OgreMemorySTLAllocator.h:
 
-/usr/include/OGRE/OgreHeaderPrefix.h:
+/usr/local/include/OGRE/OgreHeaderPrefix.h:
 
-/usr/include/OGRE/OgreHeaderSuffix.h:
+/usr/local/include/OGRE/OgreHeaderSuffix.h:
 
-/usr/include/OGRE/OgreMemoryNedPooling.h:
+/usr/local/include/OGRE/OgreMemoryNedPooling.h:
 
-/usr/include/OGRE/OgreMath.h:
+/usr/local/include/OGRE/OgreMath.h:
 
-/usr/include/OGRE/OgreQuaternion.h:
+/usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/ecsl/workspace/DroneCraft/includes/target.h:
+/home/ecsl/workspace/DroneCraft1.1/includes/target.h:
 
-/home/ecsl/workspace/DroneCraft/includes/enums.h:
+/home/ecsl/workspace/DroneCraft1.1/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
+/home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h:

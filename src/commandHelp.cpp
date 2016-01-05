@@ -146,6 +146,7 @@ Move3D *createMove3DForEnt(Entity* ent, Ogre::Vector3 pos, bool isKiting){
 		t->offset = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 
 		Potential3DMove* p3dm = new Potential3DMove(ent, t);
+		p3dm->init();
 		return p3dm;
 	}
 

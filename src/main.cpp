@@ -42,41 +42,41 @@ pair<IMParams, IMParams> makeParams(int argc, char*argv[]){
 	IMParams param1;
 	param1.UnitValue      = array[0];
 	param1.UnitRadius     = array[1];
-	param1.TerrainValue   = array[2];
-	param1.TerrainRadius  = array[3];
+	//param1.TerrainValue   = array[2];
+	//param1.TerrainRadius  = array[3];
 
-	param1.A = array[4];
-	param1.B = array[5];
+	param1.A = array[2];
+	param1.B = array[3];
 
-	param1.m = array[6];
-	param1.n = array[7];
+	param1.m = array[4];
+	param1.n = array[5];
 
-	param1.m_freeze      = array[8];
-	param1.m_kitingRange = array[9];
-	param1.m_targetNearby= array[10];
-	param1.m_kitingDist  = array[11];
-	param1.m_hpfocus     = array[12];
-	param1.m_hpkiting    = array[13];
+	param1.m_freeze      = array[6];
+	param1.m_kitingRange = array[7];
+	param1.m_targetNearby= array[8];
+	param1.m_kitingDist  = array[9];
+	param1.m_hpfocus     = array[10];
+	param1.m_hpkiting    = array[11];
 
 
 	IMParams param2;
-	param2.UnitValue      = array[14];
-	param2.UnitRadius     = array[15];
-	param2.TerrainValue   = array[16];
-	param2.TerrainRadius  = array[17];
+	param2.UnitValue      = array[12];
+	param2.UnitRadius     = array[13];
+	//param2.TerrainValue   = array[14];
+	//param2.TerrainRadius  = array[15];
 
-	param2.A = array[18];
-	param2.B = array[19];
+	param2.A = array[14];
+	param2.B = array[15];
 
-	param2.m = array[20];
-	param2.n = array[21];
+	param2.m = array[16];
+	param2.n = array[17];
 
-	param2.m_freeze      = array[22];
-	param2.m_kitingRange = array[23];
-	param2.m_targetNearby= array[24];
-	param2.m_kitingDist  = array[25];
-	param2.m_hpfocus     = array[26];
-	param2.m_hpkiting    = array[27];
+	param2.m_freeze      = array[18];
+	param2.m_kitingRange = array[19];
+	param2.m_targetNearby= array[20];
+	param2.m_kitingDist  = array[21];
+	param2.m_hpfocus     = array[22];
+	param2.m_hpkiting    = array[23];
 
 	return pair<IMParams, IMParams> (param1,param2);
 }
@@ -104,7 +104,7 @@ Options makeOptions(int argc, char*argv[]){
 	options.enableGfx = true;
 	options.runDebugTests = false;
 
-	options.speedup = 5.0; //300.0; //10.0;
+	options.speedup = 10.0; //300.0; //10.0;
     
     options.levelType = _64x64;
 

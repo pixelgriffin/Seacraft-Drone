@@ -11,8 +11,8 @@ IMTerrain::IMTerrain(Side s):InfluenceMap(IM_OCCUPANCE),side(s)
 		params = GA::getInstance()->getBlueParams();
 	}
 
-	value = params.TerrainValue;
-	radius = params.TerrainRadius;
+	value = 0;//params.TerrainValue;
+	radius = 0;//params.TerrainRadius;
 
 	this->initiatied = false;
 }

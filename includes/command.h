@@ -272,13 +272,14 @@ namespace FastEcslent {
 		public:
 			Potential3DMove(Entity* ent, Target* tgt) : UnitCommand(ent, MoveCommand, tgt) {
 				if(valid(tgt->location)) {
-					DEBUG(std::cout << "Moving to: " << tgt->location << " using 3D Potential Field" << std::endl);
-					A = 1000.0;
-					B = 80000.0;
-					B2 = 3000000.0;
-					m = 4.0;
-					n = 1;
+					//DEBUG(std::cout << "Moving to: " << tgt->location << " using 3D Potential Field" << std::endl);
+//					A = 1000.0;
+//					B = 80000.0;
+//					B2 = 3000000.0;
+//					m = 4.0;
+//					n = 1;
 					RepulsionThresholdDistance = 10000;
+					init();
 				}
 			}
 
