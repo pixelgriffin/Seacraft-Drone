@@ -374,10 +374,14 @@ void FastEcslent::Potential3DMove::init(){
 		this->m = 4.0;
 		this->n = 1;
 	} else {
-		this->A = entity->engine->infoMgr->squadmgr_red->getPotentialA();
+		/*this->A = entity->engine->infoMgr->squadmgr_red->getPotentialA();
 		this->B = entity->engine->infoMgr->squadmgr_red->getPotentialB();
 		this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
-		this->n = entity->engine->infoMgr->squadmgr_red->getPotentialN();
+		this->n = entity->engine->infoMgr->squadmgr_red->getPotentialN();*/
+		this->A = 1000.0;
+		this->B = 80000.0;
+		this->m = 4.0;
+		this->n = 1;
 		//if (entity->engine->infoMgr->squadmgr_red->getPotentialM() > 3.00)
 			//this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
 //		else

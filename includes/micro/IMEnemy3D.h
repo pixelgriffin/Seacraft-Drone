@@ -31,9 +31,9 @@ namespace FastEcslent{
 		virtual void DrawGridValue();
 		void DrawUnit(float dt);
 		Entity* getLowestValueUnit();
-		Ogre::Vector3 getHidingPos(Ogre::Vector3* pos, int celldis);
-		Ogre::Vector3 getLowestNearby(Entity* u);
-		int getLowestNearbyGrid(int gridNumber);
+		Ogre::Vector3 getHidingPos(Ogre::Vector3* pos, Ogre::Vector3* enemyPos, int celldis);
+		Ogre::Vector3 getLowestNearby(Entity* u, Ogre::Vector3* enemyPos);
+		int getLowestNearbyGrid(int gridNumber, Ogre::Vector3* evadeLoc);
 		std::set<int> getBorlderCellList(int ringCount);
 
 		int getNextTargetGroup();

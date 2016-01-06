@@ -177,7 +177,12 @@ void MicroAspect::onFire(set<Entity*> &enemies){
 			//if it is far from enemy, potential move toward enemy and formation
 			if(unit->pos.distance(newtarget->pos) > unit->seekRange && (this->squad->state == SquadMgr::SquadState::Approaching ||this->squad->state == SquadMgr::SquadState::Idle)){
 				this->squad->switchState(SquadMgr::SquadState::Approaching);
-				Ogre::Vector3 fmtp = this->squad->im->getIMEnemy(this->side)->getLowestNearby(lowimunit);
+
+				if(unit->entityType == DRONE) {
+						std::cout << "dladwa" << std::endl;
+				}
+
+				Ogre::Vector3 fmtp = this->squad->im->getIMEnemy(this->side)->getLowestNearby(lowimunit, &unit->pos);
 				this->squad->potentialMove(this->unit, &fmtp, 0);
 				return;
 			}
@@ -210,6 +215,9 @@ void MicroAspect::onFire(set<Entity*> &enemies){
 
 void MicroAspect::kiteMove(set<Entity*> &enemies){
 	float distance = unit->pos.distance(target->pos);
+	if(unit->entityType == DRONE) {
+			std::cout << "dladwa" << std::endl;
+	}
 	Ogre::Vector3 kitingpos = this->getKitingPositionByIM(&unit->pos);
 	UnitAI* uai     = static_cast<UnitAI*>(unit->getAspect(UNITAI));
 	Weapon* uweapon = static_cast<Weapon*>(unit->getAspect(WEAPON));
@@ -277,7 +285,11 @@ Ogre::Vector3 MicroAspect::getKitingPosition(Entity* u, Entity* target){
 }
 
 Ogre::Vector3 MicroAspect::getKitingPositionByIM(Ogre::Vector3* pos){
-	Ogre::Vector3 kp = this->squad->im->getIMEnemy(this->side)->getHidingPos(pos, this->microparam.kitingDist);
+	Ogre::Vector3 enemyPos = Ogre::Vector3(*pos);
+	if(this->target != 0)
+		enemyPos = this->target->pos;
+
+	Ogre::Vector3 kp = this->squad->im->getIMEnemy(this->side)->getHidingPos(pos, &enemyPos, this->microparam.kitingDist);
 	//kp.y = kp.y + 100;//TODO**** remove
 
 	return kp;

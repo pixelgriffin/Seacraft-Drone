@@ -58,9 +58,9 @@ void FastEcslent::Physics3D::doHelmsman(double dt) {
 	//TODO variable lowest Y, tune this?
 //	if(to.y < 10)
 //		to.y = 10;
-	to.x = clamp(to.x, 0, 10000);
-	to.y = clamp(to.y, 10, 10000);
-	to.z = clamp(to.z, 0, 10000);
+	to.x = clamp(to.x, 0, 2048);
+	to.y = clamp(to.y, 10, 2048);
+	to.z = clamp(to.z, 0, 2048);
 
 	//a wall of x centimeters!
 	//if(to.z < centimeters(25) && to.z > -centimeters(25))

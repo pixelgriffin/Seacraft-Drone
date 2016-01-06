@@ -82,7 +82,7 @@ bool OgreGFX::Minimap::frameRenderingQueued(const Ogre::FrameEvent& evt){
 		updatePeriod = DEFAULT_MINIMAP_UPDATE_PERIOD;
 	}
 	Ogre::Vector3 cpos = gfx->mCamera->getPosition();
-	minimapCamera->setPosition(cpos.x+5000, 5000, cpos.z+5000);
+	minimapCamera->setPosition(cpos.x+500, 5000, cpos.z+500);
 
 
 	return true;

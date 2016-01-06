@@ -137,10 +137,11 @@ Entity* IMEnemy3D::getLowestValueUnit(){
 	return t;
 }
 
-Ogre::Vector3 IMEnemy3D::getHidingPos(Ogre::Vector3* pos, int celldis){
+//TODO fix two below
+Ogre::Vector3 IMEnemy3D::getHidingPos(Ogre::Vector3* pos, Ogre::Vector3* enemyPos, int celldis){
 	int grid = this->getGridFromPosition(*pos);
 	for (int i = 0;i< celldis; i++){
-		grid = this->getLowestNearbyGrid(grid);
+		grid = this->getLowestNearbyGrid(grid, enemyPos);
 		int value = m_map[grid];
 		if(value <= 0){
 			break;
@@ -149,14 +150,13 @@ Ogre::Vector3 IMEnemy3D::getHidingPos(Ogre::Vector3* pos, int celldis){
 	return this->getPositionFromGrid(grid);
 }
 
-//TODO check whether y always 0
-Ogre::Vector3 IMEnemy3D::getLowestNearby(Entity* u){
+Ogre::Vector3 IMEnemy3D::getLowestNearby(Entity* u, Ogre::Vector3* enemyPos){
 	int grid = getGridFromPosition(u->pos);
 	if(grid > m_dataSizeX*m_dataSizeY*m_dataSizeZ)
 		return Ogre::Vector3(0,0,0);
 	int count = 0;
 	while (this->GetInfluenceValueByGrid(m_map, grid) > 0 && count++ < m_worldSizeX){
-		grid = getLowestNearbyGrid(grid);
+		grid = getLowestNearbyGrid(grid, enemyPos);
 		Ogre::Vector3 p = this->getPositionFromGrid(grid);
 		//BWAPI::Broodwar->drawCircleMap(p.x(), p.y(),3,Colors::Yellow, true);
 	}
@@ -164,7 +164,7 @@ Ogre::Vector3 IMEnemy3D::getLowestNearby(Entity* u){
 	return this->getPositionFromGrid(grid);
 }
 
-int IMEnemy3D::getLowestNearbyGrid(int grid){
+int IMEnemy3D::getLowestNearbyGrid(int grid, Ogre::Vector3* evadeLoc){
 	int gridX = grid / (m_dataSizeY * m_dataSizeZ) % m_dataSizeX;
 	int gridY = grid / (m_dataSizeZ) % m_dataSizeX;
 	int gridZ = grid % m_dataSizeZ;
@@ -176,47 +176,58 @@ int IMEnemy3D::getLowestNearbyGrid(int grid){
 	int mY = min(gridY+1, m_dataSizeY-1);
 	int mZ = min(gridZ+1, m_dataSizeZ-1);
 
-	//search center and upper areas first
-	int j;
-	for(j=gridY; j<=mY;j++){//TODO FIX DOWNWARD BIAS
+	//calculate direction preferred (us - them) * m_cellResX;
+	//get position from vector?
+	//collect list of lowest nearby cells
+	//for each cell
+		//if distance == 0 done
+		//check distance from cell center to caculated preferred direction point
+		//select lowest distance
+
+	Ogre::Vector3 preferredPos = Ogre::Vector3(gridX * m_celResX, gridY * m_celResY, gridZ * m_celResZ);
+	preferredPos = preferredPos + ((preferredPos - *evadeLoc).normalisedCopy() * m_celResX);
+
+	std::vector<Ogre::Vector3> lowestCells;
+
+	for(int j=gridY - 1; j<=mY;j++){
 		for(int i=gridX-1;i<=mX;i++){
 			for(int k=gridZ-1;k<=mZ;k++){
+				if(i== gridX && j== gridY && k== gridZ) continue;//skips center cell
+
 				if(i<0) i=0;
 				if(j<0) j=0;
 				if(k<0) k=0;
 
-				if(i== gridX && j== gridY && k== gridZ) continue;  //skip the cell which the unit is inside
 				int value = this->GetInfluenceValue(m_map, i, j, k);
-				if(value < mv){
+				if(value < mv) {
 					mv = value;
-					//gridNumber = j*m_dataSizeX + (i%m_dataSizeX);
-					gridNumber = k + m_dataSizeX * (j + m_dataSizeY * i);
+					lowestCells.clear();
+					lowestCells.push_back(Ogre::Vector3(i, j, k));
+					//lowestCells.push_back(k + m_dataSizeX * (j + m_dataSizeY * i));
+				} else if(value == mv)  {
+					lowestCells.push_back(Ogre::Vector3(i, j, k));
+					//lowestCells.push_back(k + m_dataSizeX * (j + m_dataSizeY * i));
 				}
 			}
 		}
 	}
 
-	//search lower portion afterwards, to avoid bias towards sinking lower
-	j= gridY - 1;
+	double minDistGrid = 10000000;
 
-	for(int i=gridX-1;i<=mX;i++){
-		for(int k=gridZ-1;k<=mZ;k++){
-			if(i<0) i=0;
-			if(j<0) j=0;
-			if(k<0) k=0;
+	for(std::vector<Ogre::Vector3>::iterator it = lowestCells.begin(); it != lowestCells.end(); it++) {
+		Ogre::Vector3 tempGrid = *it;
 
-			if(i== gridX && j== gridY && k== gridZ) continue;  //skip the cell which the unit is inside
-			int value = this->GetInfluenceValue(m_map, i, j, k);
-			if(value < mv){
-				mv = value;
-				//gridNumber = j*m_dataSizeX + (i%m_dataSizeX);
-				gridNumber = k + m_dataSizeX * (j + m_dataSizeY * i);
-			}
+		double dist = tempGrid.distance(preferredPos);
+		if(dist < minDistGrid) {
+			minDistGrid = dist;
+			gridNumber = tempGrid.z + m_dataSizeX * (tempGrid.y + m_dataSizeY * tempGrid.x);
 		}
 	}
 
-	//cout<<"Grid: " << gridNumber << ", x,y,z:" << gridX<<","<<gridY<<","<<gridZ << std::endl;
 	return gridNumber;
+
+	//cout<<"Grid: " << gridNumber << ", x,y,z:" << gridX<<","<<gridY<<","<<gridZ << std::endl;
+	//return gridNumber;
 }
 
 void IMEnemy3D::setTerrainIM(int* m){

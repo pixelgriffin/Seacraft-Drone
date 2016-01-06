@@ -520,7 +520,7 @@ void OgreGFX::UIMgr::drawIM()
 		int gridY = i / (im->m_dataSizeZ) % im->m_dataSizeX;
 		int gridZ = i % im->m_dataSizeZ;
 
-		if(gridY != 20)
+		if(gridY != 1)
 			continue;
 
 		/*if(gridY > 3) {
