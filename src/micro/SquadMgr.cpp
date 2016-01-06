@@ -24,10 +24,10 @@ SquadMgr::SquadMgr(Engine *eng, InfoMgr *inforMgr, Side s):side(s){
 		params = GA::getInstance()->getBlueParams();
 	}
 
-	A = 20000;//params.A * 1000;            //Attraction
-	B = 50;//params.B * 10;           //Nearby repulsion
-	m = 4;//params.m * 0.1;            //Nearby repulsion
-	n = 3;//params.n * 0.1;            //Attraction
+	A = params.A * 1000;            //Attraction
+	B = params.B * 10;           //Nearby repulsion
+	m = params.m;// * 0.1;            //Nearby repulsion
+	n = params.n;// * 0.1;            //Attraction
 
 	repulsionThreshold = 1500;
 
