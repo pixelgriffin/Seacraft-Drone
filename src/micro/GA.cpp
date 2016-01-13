@@ -13,7 +13,7 @@ GA* GA::getInstance()
 
 GA::GA()
 {
-	chromoLen = 51;
+	chromoLen = 61;
 	signalLen = 4;
 	this->initialized = false;
 

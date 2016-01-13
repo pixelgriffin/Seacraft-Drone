@@ -31,26 +31,26 @@ MicroAspect::MicroAspect(Entity* u, SquadMgr* s, Side side){
 	return;
 
 	//ignore for now.
-	if(u->entityType == FastEcslent::SC_MARINE){
-		microparam.freeze = 8;
-		microparam.kitingRange = 200;
-		microparam.kitingDist = 100;
-		microparam.targetNearby = 30;
-		microparam.hpfocus = 0.3;
-	}else if(u->entityType == FastEcslent::SC_MARINE){
-		microparam.freeze = 8;
-		microparam.kitingRange = 300;
-		microparam.kitingDist = 100;
-		microparam.targetNearby = 30;
-		microparam.hpfocus = 0.3;
-	}else if(u->entityType == FastEcslent::SC_VULTURE){
-		microparam.freeze = 0;
-		microparam.kitingRange = 30;
-		microparam.kitingDist = 250;//3;   //IM cell distance
-		microparam.targetNearby = 80;
-		microparam.hpfocus = 0.3;
-		microparam.hpkiting = 0.5;
-	}
+//	if(u->entityType == FastEcslent::SC_MARINE){
+//		microparam.freeze = 8;
+//		microparam.kitingRange = 200;
+//		microparam.kitingDist = 100;
+//		microparam.targetNearby = 30;
+//		microparam.hpfocus = 0.3;
+//	}else if(u->entityType == FastEcslent::SC_MARINE){
+//		microparam.freeze = 8;
+//		microparam.kitingRange = 300;
+//		microparam.kitingDist = 100;
+//		microparam.targetNearby = 30;
+//		microparam.hpfocus = 0.3;
+//	}else if(u->entityType == FastEcslent::SC_VULTURE){
+//		microparam.freeze = 0;
+//		microparam.kitingRange = 30;
+//		microparam.kitingDist = 250;//3;   //IM cell distance
+//		microparam.targetNearby = 80;
+//		microparam.hpfocus = 0.3;
+//		microparam.hpkiting = 0.5;
+//	}
 };
 
 //Target selection
@@ -154,7 +154,7 @@ void MicroAspect::onFire(set<Entity*> &enemies){
 	//attack freeze
 	if(weapon->weaponType->damageCooldown() - weapon->m_cooldown < this->microparam.freeze){
 	//if((unit->getType().groundWeapon().damageCooldown()-unit->getGroundWeaponCooldown()) < this->microparam.freeze){
-		//return;
+		return;
 	}
 
 	//ready to attack

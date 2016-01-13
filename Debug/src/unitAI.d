@@ -1,9 +1,9 @@
 src/unitAI.d: ../src/unitAI.cpp \
- /home/ecsl/workspace/DroneCraft1.1/includes/unitAI.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/aspect.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/enums.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/command.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h \
+ /home/ecsl/workspace/DroneCraft/includes/unitAI.h \
+ /home/ecsl/workspace/DroneCraft/includes/aspect.h \
+ /home/ecsl/workspace/DroneCraft/includes/enums.h \
+ /home/ecsl/workspace/DroneCraft/includes/command.h \
+ /home/ecsl/workspace/DroneCraft/includes/DEBUG.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -22,52 +22,52 @@ src/unitAI.d: ../src/unitAI.cpp \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/target.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/enums.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/ent.h \
+ /home/ecsl/workspace/DroneCraft/includes/target.h \
+ /home/ecsl/workspace/DroneCraft/includes/enums.h \
+ /home/ecsl/workspace/DroneCraft/includes/DEBUG.h \
+ /home/ecsl/workspace/DroneCraft/includes/ent.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/const.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/utils.h \
+ /home/ecsl/workspace/DroneCraft/includes/const.h \
+ /home/ecsl/workspace/DroneCraft/includes/utils.h \
  /usr/local/include/OGRE/OgreMatrix3.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/unitWeapons.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/weaponMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/mgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/options.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/ExplosionType.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/WeaponType.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/physics.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/identity.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/unitBuilder.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/netAspect.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/messages.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/engine.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/entityMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/const.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/options.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/mgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/ent.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/ent_sc.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/selectionMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/entHelpers.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gameMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/buildings.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/distanceMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/engine.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/levelMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/tactical/groupMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/tactical/group.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/micro/infoMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/micro/IMEnemy3D.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/micro/GA.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/micro/IMParams.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/micro/InfluenceMap3D.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/micro/IMTerrain.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/micro/InfluenceMap.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/micro/SquadMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/gfxThread.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/GraphicsInteractionManager.h \
+ /home/ecsl/workspace/DroneCraft/includes/unitWeapons.h \
+ /home/ecsl/workspace/DroneCraft/includes/weaponMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/mgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/options.h \
+ /home/ecsl/workspace/DroneCraft/includes/ExplosionType.h \
+ /home/ecsl/workspace/DroneCraft/includes/WeaponType.h \
+ /home/ecsl/workspace/DroneCraft/includes/physics.h \
+ /home/ecsl/workspace/DroneCraft/includes/identity.h \
+ /home/ecsl/workspace/DroneCraft/includes/unitBuilder.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/netAspect.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/messages.h \
+ /home/ecsl/workspace/DroneCraft/includes/engine.h \
+ /home/ecsl/workspace/DroneCraft/includes/entityMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/const.h \
+ /home/ecsl/workspace/DroneCraft/includes/options.h \
+ /home/ecsl/workspace/DroneCraft/includes/mgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/ent.h \
+ /home/ecsl/workspace/DroneCraft/includes/ent_sc.h \
+ /home/ecsl/workspace/DroneCraft/includes/selectionMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/entHelpers.h \
+ /home/ecsl/workspace/DroneCraft/includes/gameMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/buildings.h \
+ /home/ecsl/workspace/DroneCraft/includes/distanceMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/engine.h \
+ /home/ecsl/workspace/DroneCraft/includes/levelMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/tactical/groupMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/tactical/group.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/GA.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
+ /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/gfxThread.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/GraphicsInteractionManager.h \
  /usr/local/include/OGRE/OgreCamera.h \
  /usr/local/include/OGRE/OgreString.h \
  /usr/local/include/OGRE/OgreMovableObject.h \
@@ -174,30 +174,30 @@ src/unitAI.d: ../src/unitAI.cpp \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreWindowEventUtilities.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/gfxNode.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/uiMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/gfxNode.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/uiMgr.h \
  /usr/local/include/OGRE/OgreSceneQuery.h /usr/include/OIS/OISEvents.h \
  /usr/include/OIS/OISPrereqs.h /usr/include/OIS/OISConfig.h \
  /usr/include/OIS/OISInputManager.h /usr/include/OIS/OISKeyboard.h \
  /usr/include/OIS/OISObject.h /usr/include/OIS/OISInterface.h \
  /usr/include/OIS/OISEvents.h /usr/include/OIS/OISMouse.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/gfxMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/cameraMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/selectionBox.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/gfxMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/cameraMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/selectionBox.h \
  /usr/local/include/OGRE/OgreManualObject.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/inputHandlers.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/inputEvents.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/controlGroupsHandler.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/minimap.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/inputHandlers.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/inputEvents.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/controlGroupsHandler.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/minimap.h \
  /usr/local/include/OGRE/OgreRenderTargetListener.h \
  /usr/local/include/OGRE/OgreRectangle2D.h \
  /usr/local/include/OGRE/OgreTexture.h \
  /usr/local/include/OGRE/OgreRenderTexture.h \
  /usr/local/include/OGRE/OgreMaterialManager.h \
  /usr/local/include/OGRE/OgreMaterialSerializer.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/HealthBar.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/Rect.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/widgets.h \
+ /home/ecsl/workspace/DroneCraft/includes/HealthBar.h \
+ /home/ecsl/workspace/DroneCraft/includes/Rect.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/widgets.h \
  /usr/local/include/OGRE/OgreVector2.h \
  /usr/local/include/OGRE/OgreColourValue.h \
  /usr/local/include/OGRE/OgreOverlayManager.h \
@@ -210,14 +210,14 @@ src/unitAI.d: ../src/unitAI.cpp \
  /usr/local/include/OGRE/OgreOverlayElement.h \
  /usr/local/include/OGRE/OgreTextAreaOverlayElement.h \
  /usr/local/include/OGRE/OgreFont.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/commandFactory.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/command.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/commandHelp.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/buildings.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/widgetMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/widgets.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/gfxConst.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/gfx/lobbyMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/commandFactory.h \
+ /home/ecsl/workspace/DroneCraft/includes/command.h \
+ /home/ecsl/workspace/DroneCraft/includes/commandHelp.h \
+ /home/ecsl/workspace/DroneCraft/includes/buildings.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/widgetMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/widgets.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/gfxConst.h \
+ /home/ecsl/workspace/DroneCraft/includes/gfx/lobbyMgr.h \
  /usr/local/include/OGRE/SdkTrays.h /usr/local/include/OGRE/Ogre.h \
  /usr/local/include/OGRE/OgreAnimation.h \
  /usr/local/include/OGRE/OgreArchiveManager.h \
@@ -284,24 +284,24 @@ src/unitAI.d: ../src/unitAI.cpp \
  /usr/local/include/OGRE/OgreBorderPanelOverlayElement.h \
  /usr/local/include/OGRE/OgrePanelOverlayElement.h \
  /usr/local/include/OGRE/OgreTextAreaOverlayElement.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/netLobby.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/listener.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/sender.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/netCommon.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/netLobby.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/listener.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/sender.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/netCommon.h \
  /usr/local/include/OGRE/OgreParticleSystem.h \
  /usr/local/include/OGRE/OgreParticleEmitter.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/netThread.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/timer.h
+ /home/ecsl/workspace/DroneCraft/includes/net/netThread.h \
+ /home/ecsl/workspace/DroneCraft/includes/timer.h
 
-/home/ecsl/workspace/DroneCraft1.1/includes/unitAI.h:
+/home/ecsl/workspace/DroneCraft/includes/unitAI.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/aspect.h:
+/home/ecsl/workspace/DroneCraft/includes/aspect.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/enums.h:
+/home/ecsl/workspace/DroneCraft/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/command.h:
+/home/ecsl/workspace/DroneCraft/includes/command.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h:
+/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -339,97 +339,97 @@ src/unitAI.d: ../src/unitAI.cpp \
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/target.h:
+/home/ecsl/workspace/DroneCraft/includes/target.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/enums.h:
+/home/ecsl/workspace/DroneCraft/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h:
+/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/ent.h:
+/home/ecsl/workspace/DroneCraft/includes/ent.h:
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/const.h:
+/home/ecsl/workspace/DroneCraft/includes/const.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/utils.h:
+/home/ecsl/workspace/DroneCraft/includes/utils.h:
 
 /usr/local/include/OGRE/OgreMatrix3.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/unitWeapons.h:
+/home/ecsl/workspace/DroneCraft/includes/unitWeapons.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/weaponMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/weaponMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/mgr.h:
+/home/ecsl/workspace/DroneCraft/includes/mgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/options.h:
+/home/ecsl/workspace/DroneCraft/includes/options.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/ExplosionType.h:
+/home/ecsl/workspace/DroneCraft/includes/ExplosionType.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/WeaponType.h:
+/home/ecsl/workspace/DroneCraft/includes/WeaponType.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/physics.h:
+/home/ecsl/workspace/DroneCraft/includes/physics.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/identity.h:
+/home/ecsl/workspace/DroneCraft/includes/identity.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/unitBuilder.h:
+/home/ecsl/workspace/DroneCraft/includes/unitBuilder.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/netAspect.h:
+/home/ecsl/workspace/DroneCraft/includes/net/netAspect.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/messages.h:
+/home/ecsl/workspace/DroneCraft/includes/net/messages.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/engine.h:
+/home/ecsl/workspace/DroneCraft/includes/engine.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/entityMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/entityMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/const.h:
+/home/ecsl/workspace/DroneCraft/includes/const.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/options.h:
+/home/ecsl/workspace/DroneCraft/includes/options.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/mgr.h:
+/home/ecsl/workspace/DroneCraft/includes/mgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/ent.h:
+/home/ecsl/workspace/DroneCraft/includes/ent.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/ent_sc.h:
+/home/ecsl/workspace/DroneCraft/includes/ent_sc.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/selectionMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/selectionMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/entHelpers.h:
+/home/ecsl/workspace/DroneCraft/includes/entHelpers.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gameMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/gameMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/buildings.h:
+/home/ecsl/workspace/DroneCraft/includes/buildings.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/distanceMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/distanceMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/engine.h:
+/home/ecsl/workspace/DroneCraft/includes/engine.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/levelMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/levelMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/tactical/groupMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/tactical/groupMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/tactical/group.h:
+/home/ecsl/workspace/DroneCraft/includes/tactical/group.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/micro/infoMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/micro/IMEnemy3D.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/micro/GA.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/GA.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/micro/IMParams.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/micro/InfluenceMap3D.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/micro/IMTerrain.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/micro/InfluenceMap.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/micro/SquadMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/gfxThread.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/gfxThread.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/GraphicsInteractionManager.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/GraphicsInteractionManager.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
 
@@ -647,9 +647,9 @@ src/unitAI.d: ../src/unitAI.cpp \
 
 /usr/local/include/OGRE/OgreWindowEventUtilities.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/gfxNode.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/gfxNode.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/uiMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/uiMgr.h:
 
 /usr/local/include/OGRE/OgreSceneQuery.h:
 
@@ -671,21 +671,21 @@ src/unitAI.d: ../src/unitAI.cpp \
 
 /usr/include/OIS/OISMouse.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/gfxMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/gfxMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/cameraMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/cameraMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/selectionBox.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/selectionBox.h:
 
 /usr/local/include/OGRE/OgreManualObject.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/inputHandlers.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/inputHandlers.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/inputEvents.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/inputEvents.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/controlGroupsHandler.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/controlGroupsHandler.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/minimap.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/minimap.h:
 
 /usr/local/include/OGRE/OgreRenderTargetListener.h:
 
@@ -699,11 +699,11 @@ src/unitAI.d: ../src/unitAI.cpp \
 
 /usr/local/include/OGRE/OgreMaterialSerializer.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/HealthBar.h:
+/home/ecsl/workspace/DroneCraft/includes/HealthBar.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/Rect.h:
+/home/ecsl/workspace/DroneCraft/includes/Rect.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/widgets.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/widgets.h:
 
 /usr/local/include/OGRE/OgreVector2.h:
 
@@ -729,21 +729,21 @@ src/unitAI.d: ../src/unitAI.cpp \
 
 /usr/local/include/OGRE/OgreFont.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/commandFactory.h:
+/home/ecsl/workspace/DroneCraft/includes/commandFactory.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/command.h:
+/home/ecsl/workspace/DroneCraft/includes/command.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/commandHelp.h:
+/home/ecsl/workspace/DroneCraft/includes/commandHelp.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/buildings.h:
+/home/ecsl/workspace/DroneCraft/includes/buildings.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/widgetMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/widgetMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/widgets.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/widgets.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/gfxConst.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/gfxConst.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/gfx/lobbyMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/gfx/lobbyMgr.h:
 
 /usr/local/include/OGRE/SdkTrays.h:
 
@@ -879,18 +879,18 @@ src/unitAI.d: ../src/unitAI.cpp \
 
 /usr/local/include/OGRE/OgreTextAreaOverlayElement.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/netLobby.h:
+/home/ecsl/workspace/DroneCraft/includes/net/netLobby.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/listener.h:
+/home/ecsl/workspace/DroneCraft/includes/net/listener.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/sender.h:
+/home/ecsl/workspace/DroneCraft/includes/net/sender.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/netCommon.h:
+/home/ecsl/workspace/DroneCraft/includes/net/netCommon.h:
 
 /usr/local/include/OGRE/OgreParticleSystem.h:
 
 /usr/local/include/OGRE/OgreParticleEmitter.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/netThread.h:
+/home/ecsl/workspace/DroneCraft/includes/net/netThread.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/timer.h:
+/home/ecsl/workspace/DroneCraft/includes/timer.h:

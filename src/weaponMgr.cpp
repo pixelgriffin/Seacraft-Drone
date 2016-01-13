@@ -79,13 +79,13 @@ void FastEcslent::WeaponMgr::fixFightingProperties(){
 			weaponType[SC_VULTURE] = &WeaponTypes::Rifle;
 			break;
 		case DRONE:
-			maxHitpoints[DRONE] = 60.0;
+			maxHitpoints[DRONE] = 80.0;
 			initArmor[DRONE]     = 1.0;
 			initDamageMultiplier[DRONE] = 1.0;
 			weaponType[DRONE] = &WeaponTypes::Rifle;
 			break;
 		case TURRET:
-			maxHitpoints[TURRET] = 100.0;
+			maxHitpoints[TURRET] = 200.0;
 			initArmor[TURRET] = 1.0;
 			initDamageMultiplier[TURRET] = 1.0;
 			weaponType[TURRET] = &WeaponTypes::Hellfire;

@@ -130,6 +130,7 @@ void FastEcslent::Engine::tickAll(float dt){
 
 }
 
+
 void FastEcslent::Engine::run(){
 	//unsigned long int frame = 0;
 	float dt = 0.0005; //1.0f/60.0f;
@@ -138,19 +139,31 @@ void FastEcslent::Engine::run(){
 	ptime newTime;
 	time_duration diff;
 	double speedup = options.speedup;
+	float fixedDt = 0.005f;
 
 	float dtime = 0.0;
+	float frameLength = 0.0f;
+	int currentFrame = 0;
 	while (runTime < 5000000.0 && !this->quit){
-
-		tickAll(dtime * speedup); // tick all managers
-
-		//update times
-		runTime += dt;
-
 		newTime = getCurrentTime();
 		diff = newTime - oldTime;
 		oldTime = newTime;
 		dtime = diff.total_microseconds() * 0.000001f; //inseconds
+		//cout<<frameLength<<", "<<dtime<<", "<<currentFrame<<endl;
+		if(frameLength < fixedDt){
+			frameLength += dtime;
+			continue;
+		}else{
+			frameLength = 0.00f;
+			currentFrame++;
+		}
+
+		tickAll(fixedDt * speedup); // tick all managers
+
+		//update times
+		runTime += dt;
+
+
 		/*
 		if(options.runDebugTests){
 			runTests();

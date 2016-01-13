@@ -17,30 +17,30 @@ src/physics2.d: ../src/physics2.cpp /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/physics.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/aspect.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/enums.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/ent.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/const.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/utils.h \
+ /home/ecsl/workspace/DroneCraft/includes/physics.h \
+ /home/ecsl/workspace/DroneCraft/includes/aspect.h \
+ /home/ecsl/workspace/DroneCraft/includes/enums.h \
+ /home/ecsl/workspace/DroneCraft/includes/ent.h \
+ /home/ecsl/workspace/DroneCraft/includes/const.h \
+ /home/ecsl/workspace/DroneCraft/includes/utils.h \
  /usr/local/include/OGRE/OgreMatrix3.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/command.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/target.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/enums.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/unitWeapons.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/weaponMgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/mgr.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/options.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/ExplosionType.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/WeaponType.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/unitAI.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/identity.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/unitBuilder.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/netAspect.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/messages.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h
+ /home/ecsl/workspace/DroneCraft/includes/command.h \
+ /home/ecsl/workspace/DroneCraft/includes/DEBUG.h \
+ /home/ecsl/workspace/DroneCraft/includes/target.h \
+ /home/ecsl/workspace/DroneCraft/includes/enums.h \
+ /home/ecsl/workspace/DroneCraft/includes/unitWeapons.h \
+ /home/ecsl/workspace/DroneCraft/includes/weaponMgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/mgr.h \
+ /home/ecsl/workspace/DroneCraft/includes/options.h \
+ /home/ecsl/workspace/DroneCraft/includes/ExplosionType.h \
+ /home/ecsl/workspace/DroneCraft/includes/WeaponType.h \
+ /home/ecsl/workspace/DroneCraft/includes/unitAI.h \
+ /home/ecsl/workspace/DroneCraft/includes/identity.h \
+ /home/ecsl/workspace/DroneCraft/includes/unitBuilder.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/netAspect.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/messages.h \
+ /home/ecsl/workspace/DroneCraft/includes/DEBUG.h
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -80,50 +80,50 @@ src/physics2.d: ../src/physics2.cpp /usr/local/include/OGRE/OgreVector3.h \
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/physics.h:
+/home/ecsl/workspace/DroneCraft/includes/physics.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/aspect.h:
+/home/ecsl/workspace/DroneCraft/includes/aspect.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/enums.h:
+/home/ecsl/workspace/DroneCraft/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/ent.h:
+/home/ecsl/workspace/DroneCraft/includes/ent.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/const.h:
+/home/ecsl/workspace/DroneCraft/includes/const.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/utils.h:
+/home/ecsl/workspace/DroneCraft/includes/utils.h:
 
 /usr/local/include/OGRE/OgreMatrix3.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/command.h:
+/home/ecsl/workspace/DroneCraft/includes/command.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h:
+/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/target.h:
+/home/ecsl/workspace/DroneCraft/includes/target.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/enums.h:
+/home/ecsl/workspace/DroneCraft/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/unitWeapons.h:
+/home/ecsl/workspace/DroneCraft/includes/unitWeapons.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/weaponMgr.h:
+/home/ecsl/workspace/DroneCraft/includes/weaponMgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/mgr.h:
+/home/ecsl/workspace/DroneCraft/includes/mgr.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/options.h:
+/home/ecsl/workspace/DroneCraft/includes/options.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/ExplosionType.h:
+/home/ecsl/workspace/DroneCraft/includes/ExplosionType.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/WeaponType.h:
+/home/ecsl/workspace/DroneCraft/includes/WeaponType.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/unitAI.h:
+/home/ecsl/workspace/DroneCraft/includes/unitAI.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/identity.h:
+/home/ecsl/workspace/DroneCraft/includes/identity.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/unitBuilder.h:
+/home/ecsl/workspace/DroneCraft/includes/unitBuilder.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/netAspect.h:
+/home/ecsl/workspace/DroneCraft/includes/net/netAspect.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/messages.h:
+/home/ecsl/workspace/DroneCraft/includes/net/messages.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/DEBUG.h:
+/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:

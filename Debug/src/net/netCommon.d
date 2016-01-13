@@ -1,7 +1,7 @@
 src/net/netCommon.d: ../src/net/netCommon.cpp \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/netCommon.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/net/messages.h \
- /home/ecsl/workspace/DroneCraft1.1/includes/utils.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/netCommon.h \
+ /home/ecsl/workspace/DroneCraft/includes/net/messages.h \
+ /home/ecsl/workspace/DroneCraft/includes/utils.h \
  /usr/local/include/OGRE/OgreMatrix3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -21,11 +21,11 @@ src/net/netCommon.d: ../src/net/netCommon.cpp \
  /usr/local/include/OGRE/OgreVector3.h /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/netCommon.h:
+/home/ecsl/workspace/DroneCraft/includes/net/netCommon.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/net/messages.h:
+/home/ecsl/workspace/DroneCraft/includes/net/messages.h:
 
-/home/ecsl/workspace/DroneCraft1.1/includes/utils.h:
+/home/ecsl/workspace/DroneCraft/includes/utils.h:
 
 /usr/local/include/OGRE/OgreMatrix3.h:
 

@@ -47,9 +47,9 @@ void FastEcslent::Physics3D::doHelmsman(double dt) {
 
 
 
-	entity->vel.x = cos(-entity->heading) * entity->speed;
-	entity->vel.y = entity->potentialVec.y * entity->speed; //fly when we need to. No heading
-	entity->vel.z = sin(-entity->heading) * entity->speed;
+	//entity->vel.x = cos(-entity->heading) * entity->speed;
+	//entity->vel.y = entity->potentialVec.y * entity->speed; //fly when we need to. No heading
+	//entity->vel.z = sin(-entity->heading) * entity->speed;
 
 
 

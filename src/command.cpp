@@ -317,7 +317,7 @@ inline void FastEcslent::PotentialMove::tick(double dt){
 			int nInRange = 1; // at least one so that you don't multiply by 0 later
 			for (int i = 0; i < nEnts; i++){
 				if(i != entity->entityId.id){// repulsed by all other entities
-					if (entity->engine->distanceMgr->distance[entity->entityId.id][i] < RepulsionThresholdDistance) { // Don't care about entities too far away
+					if (entity->engine->distanceMgr->distance[entity->entityId.id][i] < 0.1f/*RepulsionThresholdDistance*/) { // Don't care about entities too far away
 						nInRange += 1;
 						tmp = (entity->engine->distanceMgr->normalizedDistanceVec[i][entity->entityId.id]);
 						repulsivePotential =  (B * entity->engine->entityMgr->ents[i]->mass) / pow(entity->engine->distanceMgr->distance[entity->entityId.id][i], m);
@@ -370,17 +370,17 @@ void FastEcslent::Potential3DMove::init(){
 //		this->m = entity->engine->infoMgr->squadmgr_blue->getPotentialM();
 //		this->n = entity->engine->infoMgr->squadmgr_blue->getPotentialN();
 		this->A = 1000.0;
-		this->B = 80000.0;
-		this->m = 4.0;
+		this->B = 1000.0;
+		this->m = 2.0;
 		this->n = 1;
 	} else {
-		/*this->A = entity->engine->infoMgr->squadmgr_red->getPotentialA();
-		this->B = entity->engine->infoMgr->squadmgr_red->getPotentialB();
-		this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
-		this->n = entity->engine->infoMgr->squadmgr_red->getPotentialN();*/
+//		this->A = entity->engine->infoMgr->squadmgr_red->getPotentialA();
+//		this->B = entity->engine->infoMgr->squadmgr_red->getPotentialB();
+//		this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
+//		this->n = entity->engine->infoMgr->squadmgr_red->getPotentialN();
 		this->A = 1000.0;
-		this->B = 80000.0;
-		this->m = 4.0;
+		this->B = 1000.0;
+		this->m = 2.0;
 		this->n = 1;
 		//if (entity->engine->infoMgr->squadmgr_red->getPotentialM() > 3.00)
 			//this->m = entity->engine->infoMgr->squadmgr_red->getPotentialM();
@@ -392,87 +392,87 @@ void FastEcslent::Potential3DMove::init(){
 
 inline void FastEcslent::Potential3DMove::tick(double dt) {
 	int nEnts = entity->engine->entityMgr->nEnts;
+	float relevantDistanceThreshold = 100.0f;
+	if (!done()){
+		// compute force
+		double repulsivePotential = 0.0f;
+		entity->potentialVec = Ogre::Vector3::ZERO;
+		Ogre::Vector3 tmp;
+		int nInRange = 1; // at least one so that you don't multiply by 0 later
+		for (int i = 0; i < nEnts; i++){
+			if(i != entity->entityId.id){// repulsed by all other entities
+				if (entity->engine->distanceMgr->distance[entity->entityId.id][i] < relevantDistanceThreshold) { // Don't care about entities too far away
+					nInRange += 1;
+					tmp = (entity->engine->distanceMgr->normalizedDistanceVec[i][entity->entityId.id]);
 
-		if (!done()){
-			// compute force
-				double repulsivePotential = 0.0f;
-				entity->potentialVec = Ogre::Vector3::ZERO;
-				Ogre::Vector3 tmp;
-				int nInRange = 1; // at least one so that you don't multiply by 0 later
-				for (int i = 0; i < nEnts; i++){
-					if(i != entity->entityId.id){// repulsed by all other entities
-						if (entity->engine->distanceMgr->distance[entity->entityId.id][i] < RepulsionThresholdDistance) { // Don't care about entities too far away
-							nInRange += 1;
-							tmp = (entity->engine->distanceMgr->normalizedDistanceVec[i][entity->entityId.id]);
+					double val = entity->engine->distanceMgr->distance[entity->entityId.id][i];
+					if(val == 0)
+						val = 0.1;
 
-							double val = entity->engine->distanceMgr->distance[entity->entityId.id][i];
-							if(val == 0)
-								val = 0.1;
-
-							repulsivePotential =  (B * entity->engine->entityMgr->ents[i]->mass) / pow(val, m);
-							entity->potentialVec += (tmp * repulsivePotential);
-						}
-					}
+					repulsivePotential =  (B * entity->engine->entityMgr->ents[i]->mass) / pow(val, m);
+					entity->potentialVec += (tmp * repulsivePotential);
 				}
-				//attracted by target
+			}
+		}
+		//attracted by target
 
 
-				tmp = (entity->pos - target->location);
-				//tmp = target->location - entity->pos;
-				double targetDistance = tmp.length();
-				entity->attractivePotential =  -(A ) / pow(targetDistance, n);// + (B) /pow (targetDistance, m);
+		tmp = (entity->pos - target->location);
+		//tmp = target->location - entity->pos;
+		double targetDistance = tmp.length();
+		entity->attractivePotential =  -(A ) / pow(targetDistance, n);// + (B) /pow (targetDistance, m);
 
-				entity->potentialVec += (tmp.normalisedCopy() * entity->attractivePotential * nInRange); // nInRange needs to be at least 1
+		entity->potentialVec += (tmp.normalisedCopy() * entity->attractivePotential * nInRange); // nInRange needs to be at least 1
 
-				//applyPotential(entity, potentialVec);
+		//applyPotential(entity, potentialVec);
 
-				entity->desiredHeading = atan2(-entity->potentialVec.z, entity->potentialVec.x);
-				double cosDiffFrac = (1.0 - cos(entity->vel.angleBetween(entity->potentialVec).valueRadians()))/2.0;// between 0 and 2 divided by 2.0 gives something between 0 and 1
-				entity->desiredSpeed   = (entity->maxSpeed - entity->minSpeed) * (1.0 - cosDiffFrac);
+		entity->desiredHeading = atan2(-entity->potentialVec.z, entity->potentialVec.x);
+		double cosDiffFrac = (1.0 - cos(entity->vel.angleBetween(entity->potentialVec).valueRadians()))/2.0;// between 0 and 2 divided by 2.0 gives something between 0 and 1
+		entity->desiredSpeed   = (entity->maxSpeed - entity->minSpeed) * (1.0 - cosDiffFrac);
 
-				//std::cout << "Moving " << entity->uiname << " to " << target->location.y << " Y" << std::endl;
+			//std::cout << "Moving " << entity->uiname << " to " << target->location.y << " Y" << std::endl;
 
-			/*double repulsivePotential = 0.0f;
-						entity->potentialVec = Ogre::Vector3::ZERO;
-						Ogre::Vector3 tmp;
-						int nInRange = 1; // at least one so that you don't multiply by 0 later
-						for (int i = 0; i < nEnts; i++){
-							if(i != entity->entityId.id){// repulsed by all other entities
-								//if (entity->engine->distanceMgr->distance[entity->entityId.id][i] < RepulsionThresholdDistance) { // Don't care about entities too far away
-								if(entity->pos.distance(entity->engine->entityMgr->ents[i]->pos) < RepulsionThresholdDistance) {
-									nInRange += 1;
-									//tmp = (entity->engine->distanceMgr->normalizedDistanceVec[i][entity->entityId.id]);
-									tmp = (entity->pos - entity->engine->entityMgr->ents[i]->pos).normalisedCopy();
+		/*double repulsivePotential = 0.0f;
+					entity->potentialVec = Ogre::Vector3::ZERO;
+					Ogre::Vector3 tmp;
+					int nInRange = 1; // at least one so that you don't multiply by 0 later
+					for (int i = 0; i < nEnts; i++){
+						if(i != entity->entityId.id){// repulsed by all other entities
+							//if (entity->engine->distanceMgr->distance[entity->entityId.id][i] < RepulsionThresholdDistance) { // Don't care about entities too far away
+							if(entity->pos.distance(entity->engine->entityMgr->ents[i]->pos) < RepulsionThresholdDistance) {
+								nInRange += 1;
+								//tmp = (entity->engine->distanceMgr->normalizedDistanceVec[i][entity->entityId.id]);
+								tmp = (entity->pos - entity->engine->entityMgr->ents[i]->pos).normalisedCopy();
 
-									double val = sqrt(pow(entity->pos.x - entity->engine->entityMgr->ents[i]->pos.x, 2) + pow(entity->pos.y - entity->engine->entityMgr->ents[i]->pos.y, 2) + pow(entity->pos.z - entity->engine->entityMgr->ents[i]->pos.z, 2));
+								double val = sqrt(pow(entity->pos.x - entity->engine->entityMgr->ents[i]->pos.x, 2) + pow(entity->pos.y - entity->engine->entityMgr->ents[i]->pos.y, 2) + pow(entity->pos.z - entity->engine->entityMgr->ents[i]->pos.z, 2));
 
-									repulsivePotential =  (B * entity->engine->entityMgr->ents[i]->mass) / pow(val, m);
-									if(repulsivePotential  > INT_MAX){   //repulsive potential could be infinite
-										repulsivePotential = INT_MAX;
-									}
-									entity->potentialVec += (tmp * repulsivePotential);
+								repulsivePotential =  (B * entity->engine->entityMgr->ents[i]->mass) / pow(val, m);
+								if(repulsivePotential  > INT_MAX){   //repulsive potential could be infinite
+									repulsivePotential = INT_MAX;
 								}
+								entity->potentialVec += (tmp * repulsivePotential);
 							}
 						}
-						//attracted by target
-						tmp = (entity->pos - target->location);
-						//tmp = target->location - entity->pos;
-						double targetDistance = tmp.length();
-						entity->attractivePotential =  -(A ) / pow(targetDistance, n);// + (B) /pow (targetDistance, m);
-						entity->potentialVec += (tmp.normalisedCopy() * entity->attractivePotential * nInRange); // nInRange needs to be at least 1
-						//applyPotential(entity, potentialVec);
+					}
+					//attracted by target
+					tmp = (entity->pos - target->location);
+					//tmp = target->location - entity->pos;
+					double targetDistance = tmp.length();
+					entity->attractivePotential =  -(A ) / pow(targetDistance, n);// + (B) /pow (targetDistance, m);
+					entity->potentialVec += (tmp.normalisedCopy() * entity->attractivePotential * nInRange); // nInRange needs to be at least 1
+					//applyPotential(entity, potentialVec);
 
-						entity->desiredHeading = atan2(-entity->potentialVec.z, entity->potentialVec.x);
+					entity->desiredHeading = atan2(-entity->potentialVec.z, entity->potentialVec.x);
 
-						double cosDiffFrac = (1.0 - cos(entity->vel.angleBetween(entity->potentialVec).valueRadians()))/2.0;// between 0 and 2 divided by 2.0 gives something between 0 and 1
-						entity->desiredSpeed   = (entity->maxSpeed - entity->minSpeed) * (1.0 - cosDiffFrac);*/
+					double cosDiffFrac = (1.0 - cos(entity->vel.angleBetween(entity->potentialVec).valueRadians()))/2.0;// between 0 and 2 divided by 2.0 gives something between 0 and 1
+					entity->desiredSpeed   = (entity->maxSpeed - entity->minSpeed) * (1.0 - cosDiffFrac);*/
 
-			// apply force
-		} else {
-			DEBUG(std::cout << "Attractive Potential: " << entity->attractivePotential << std::endl;)
-			entity->desiredSpeed = 0.0f;
-			entity->desiredHeading = entity->heading;
-		}
+		// apply force
+	} else {
+		DEBUG(std::cout << "Attractive Potential: " << entity->attractivePotential << std::endl;)
+		entity->desiredSpeed = 0.0f;
+		entity->desiredHeading = entity->heading;
+	}
 }
 
 

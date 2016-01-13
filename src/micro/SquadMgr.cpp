@@ -251,7 +251,7 @@ int SquadMgr::getSquadScore()
 	double timescore =  unitscore * (1 - frame/300000);    //250 is the set longest time in one game
 
 	if(score < 0) timescore = -score + 1;//timescore *= -1;  //when the enemy win, time score is negative
-	score += timescore;
+	if (eu == 0) score += timescore;
 
 	if(eu > 0 && fu > 0){    //didn't fight at all, punish
 		//score -= eu* unitscore;

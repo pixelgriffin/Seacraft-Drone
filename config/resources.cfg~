@@ -1,0 +1,40 @@
+# Resources required by the sample browser and most samples.
+[Essential]
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/SdkTrays.zip
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/thumbnails
+FileSystem=data/material/programs
+FileSystem=data/material/scripts
+FileSystem=data/material/textures
+FileSystem=data/meshes
+FileSystem=data/watercraft/material/maps
+FileSystem=data/watercraft/material/scripts
+FileSystem=data/watercraft/material/textures
+FileSystem=data/watercraft/material/programs
+FileSystem=data/watercraft/meshes
+
+# Common sample resources needed by many of the samples.
+# Rarely used resources should be separately loaded by the
+# samples which require them.
+[Popular]
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/fonts
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/materials/programs
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/materials/scripts
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/materials/textures
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/materials/textures/nvidia
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/models
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/particle
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/DeferredShadingMedia
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/PCZAppMedia
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/RTShaderLib
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/RTShaderLib/materials
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/cubemap.zip
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/cubemapsJS.zip
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/dragon.zip
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/fresneldemo.zip
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/ogretestmap.zip
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/ogredance.zip
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/Sinbad.zip
+Zip=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media/packs/skybox.zip
+
+[General]
+FileSystem=/home/tyler/Downloads/ogre_src_v1-7-4/Samples/Media

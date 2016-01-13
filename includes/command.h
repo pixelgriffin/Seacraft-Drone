@@ -267,7 +267,7 @@ namespace FastEcslent {
 				return true;
 			}
 
-			double A, B, B2, m, n, RepulsionThresholdDistance;
+			double A, B, B2, m, n, RepulsionThresholdDistance, updateTime;
 
 		public:
 			Potential3DMove(Entity* ent, Target* tgt) : UnitCommand(ent, MoveCommand, tgt) {
@@ -278,7 +278,7 @@ namespace FastEcslent {
 //					B2 = 3000000.0;
 //					m = 4.0;
 //					n = 1;
-					RepulsionThresholdDistance = 10000;
+					//RepulsionThresholdDistance = 100;
 					init();
 				}
 			}
@@ -296,6 +296,7 @@ namespace FastEcslent {
 	public:
 		Maintain (Entity *ent, Target *tgt);
 		virtual bool done();
+
 		virtual void init();
 		virtual void tick(double dt);
 		virtual void postProcess(){};
