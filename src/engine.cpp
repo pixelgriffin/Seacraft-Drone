@@ -144,7 +144,7 @@ void FastEcslent::Engine::run(){
 	float dtime = 0.0;
 	float frameLength = 0.0f;
 	int currentFrame = 0;
-	while (runTime < 5000000.0 && !this->quit){
+	while (runTime < 500000.0 && !this->quit){
 		newTime = getCurrentTime();
 		diff = newTime - oldTime;
 		oldTime = newTime;
@@ -176,12 +176,14 @@ void FastEcslent::Engine::run(){
 		}
 		frame++;
 		*/
+		//cout << "runtime: " << runTime << ", dt: " << dt << std::endl;
 
 	}
 	cout << endl << "Finished, running. Dumping first entity..." << endl;
 	entityMgr->dumpOne(0);
 	//cout << " Number of collisions: " << distanceMgr->collisionTotal << endl;
 	this->quit = true;
+	exit(0);
 
 
 }

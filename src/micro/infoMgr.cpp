@@ -1,4 +1,6 @@
 
+#include<fstream>
+
 #include "infoMgr.h"
 #include "engine.h"
 #include "InfluenceMap3D.h"
@@ -12,6 +14,7 @@ InfoMgr::InfoMgr(Engine *eng):Mgr(eng) {
 
 	redParams  = GA::getInstance()->getRedParams();
 	blueParams = GA::getInstance()->getBlueParams();
+	//this->maxFrames = 300000;
 }
 
 InfoMgr::~InfoMgr(){
@@ -33,6 +36,8 @@ IMEnemy3D* InfoMgr::getIMEnemy(Side s){
 
 void InfoMgr::init(){
 	this->frame = 0;
+	this->maxFrames = 3000;
+	this->positiveFitnessFactor = 1000.0;
 	this->dt = 0;
 
 	this->eIM_red  = new IMEnemy3D(RED);
@@ -86,14 +91,17 @@ void InfoMgr::tick(double dtime){
 
 	if(this->getFrameCount() > 10){
 		//check the end criteria
-		if(this->squadmgr_red->getEnemies().size() <= 0 || this->squadmgr_blue->getEnemies().size() <= 0 || this->getFrameCount() > 300000){
+		//		if(this->squadmgr_red->getEnemies().size() <= 0 || this->squadmgr_blue->getEnemies().size() <= 0 || this->getFrameCount() > 300000){
+		if(this->squadmgr_red->getEnemies().size() <= 0 || this->squadmgr_blue->getEnemies().size() <= 0 || this->getFrameCount() > this->maxFrames){
 			ptime endTime = getCurrentTime();
 			ptime startTime = this->engine->startTime;
 			long duration = (endTime - startTime).total_seconds();
 
 			int score = this->squadmgr_red->getSquadScore();
 
-			cout<</*"\nFinal Score is: "<<*/ score << /*", Game duration: "<<duration << " seconds." <<endl<<endl<<endl<<*/endl;
+//			cout<</*"\nFinal Score is: "<<*/ score << /*", Game duration: "<<duration << " seconds." <<endl<<endl<<endl<<*/endl;
+
+			std::cout << score + positiveFitnessFactor << std::endl;
 
 			exit(0);
 		}

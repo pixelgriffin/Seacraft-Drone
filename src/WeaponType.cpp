@@ -10,7 +10,9 @@ namespace FastEcslent
   {
     public:
       WeaponTypeInternal() {valid = false;}
-      void set(const char* name, int damageAmount, int damageBonus, int damageCooldown, int damageFactor, ExplosionType explosionType, int minRange, int maxRange, int innerSplashRadius, int medianSplashRadius, int outerSplashRadius, bool targetsAir, bool targetsGround, bool targetsOwn)
+      void set(const char* name, int damageAmount, int damageBonus, float damageCooldown, int damageFactor, ExplosionType explosionType,
+    		  int minRange, int maxRange, int innerSplashRadius, int medianSplashRadius, int outerSplashRadius, bool targetsAir,
+    		  bool targetsGround, bool targetsOwn)
       {
         if (initializingWeaponType)
         {
@@ -35,7 +37,7 @@ namespace FastEcslent
 
       int damageAmount;
       int damageBonus;
-      int damageCooldown;
+      float damageCooldown;
       int damageFactor;
       ExplosionType explosionType;
       int minRange;
@@ -65,8 +67,8 @@ namespace FastEcslent
     void init()
     {
       weaponTypeData[Fusion_Cutter.getID()].set("Fusion_Cutter", 16,  1, 22, 1, ExplosionTypes::Normal,            0, 15*2, 0, 0, 0,   0, 1, 0); //SCV
-      weaponTypeData[Rifle.getID()]        .set("Rifle",         20,  1, 30, 1, ExplosionTypes::Normal,            0, 5*20,0, 0, 0,   1, 1, 0);        //Marine
-      weaponTypeData[Hellfire.getID()]     .set("Hellfire",      20,  1, 15, 1, ExplosionTypes::Normal, 			  0, 7*20,0, 0, 0,   1, 1, 0);    //Hellion
+      weaponTypeData[Rifle.getID()]        .set("Rifle",         20,  1, 1.24f, 1, ExplosionTypes::Normal,         0, 5*20,0, 0, 0,   1, 1, 0);        //Marine
+      weaponTypeData[Hellfire.getID()]     .set("Hellfire",      20,  1, 0.625f, 1, ExplosionTypes::Normal, 	   0, 7*20,0, 0, 0,   1, 1, 0);    //Hellion
       weaponTypeData[Cannon.getID()]       .set("Cannon",        30,  3, 37, 1, ExplosionTypes::Enemy_Splash,      0, 300, 50,70,100, 0, 1, 0);      //Tank
       weaponTypeData[None.getID()]         .set("None",          0,   0, 0,  0, ExplosionTypes::None,              0, 0,   0, 0, 0,   0, 0, 0);
       weaponTypeData[Unknown.getID()]      .set("Unknown",       0,   0, 0,  0, ExplosionTypes::None,              0, 0,   0, 0, 0,   0, 0, 0);
@@ -130,7 +132,7 @@ namespace FastEcslent
   {
     return weaponTypeData[this->id].damageBonus;
   }
-  int WeaponType::damageCooldown() const
+  float WeaponType::damageCooldown() const
   {
     return weaponTypeData[this->id].damageCooldown;
   }

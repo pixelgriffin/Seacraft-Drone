@@ -6,7 +6,7 @@ namespace FastEcslent{
 	class MicroParam
 	{
 	public:
-		int freeze;        //freeze time after firing
+		float freeze;        //freeze time after firing
 		int kitingRange;   //Start to kiting in this range
 		int targetNearby;
 		float kitingDist;

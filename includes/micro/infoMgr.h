@@ -17,6 +17,9 @@ namespace FastEcslent {
     	InfoMgr(Engine *eng);
         ~InfoMgr();
         
+        int maxFrames;
+        double positiveFitnessFactor;
+
         void registerEntity(Entity* ent);
 		virtual void init();
 		virtual void tick(double dtime);

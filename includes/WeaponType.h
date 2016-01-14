@@ -33,7 +33,7 @@ namespace FastEcslent
       int damageBonus() const;
 
       /** Returns the amount of cooldown time between attacks. */
-      int damageCooldown() const;
+      float damageCooldown() const;
 
       /** Returns the amount that the damage increases per upgrade.
        * \see WeaponType::upgradeType. */

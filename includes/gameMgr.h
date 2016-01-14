@@ -60,6 +60,9 @@ namespace FastEcslent {
 		std::vector<MineralPatch*> mineralPatches;
 
 	public:
+		//hack for search fitness function
+		int startingNumberOfTurrets;
+		int startingNumberOfDrones;
 
 		Options options;
 		//game

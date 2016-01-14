@@ -22,12 +22,12 @@ MicroAspect::MicroAspect(Entity* u, SquadMgr* s, Side side){
 		params = GA::getInstance()->getBlueParams();
 	}
 
-	microparam.freeze = params.m_freeze;
+	microparam.freeze = params.m_freeze * 0.125f;
 	microparam.kitingRange = params.m_kitingRange * 32;
 	microparam.kitingDist = params.m_kitingDist*10;   //IM cell distance
 	microparam.targetNearby = params.m_targetNearby*10;
-	microparam.hpfocus = params.m_hpfocus*0.1;
-	microparam.hpkiting = params.m_hpkiting*0.1;
+	microparam.hpfocus = params.m_hpfocus*0.14;
+	microparam.hpkiting = params.m_hpkiting*0.14; // change from 0.1 to get upper limit closer to 1.0
 	return;
 
 	//ignore for now.

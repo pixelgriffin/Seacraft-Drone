@@ -25,9 +25,11 @@ SquadMgr::SquadMgr(Engine *eng, InfoMgr *inforMgr, Side s):side(s){
 	}
 
 	A = params.A * 1000;            //Attraction
-	B = params.B * 10;           //Nearby repulsion
-	m = params.m;// * 0.1;            //Nearby repulsion
-	n = params.n;// * 0.1;            //Attraction
+	B = params.B * 10000;           //Nearby repulsion
+	m = params.m * 0.3;            //Nearby repulsion
+	n = params.n * 0.3;            //Attraction
+
+	//The rest of the params are converted in microAspect.cpp
 
 	repulsionThreshold = 1500;
 
@@ -214,51 +216,61 @@ void SquadMgr::potentialMove(Entity* unit, Ogre::Vector3* target, int dist)
 int SquadMgr::getSquadScore()
 {
 
-	int unitscore = 100;
+	int droneCost = 75;
+	int turretCost = 75;
 	int fu = this->unitSet.size();
 	int eu = this->enemySet.size();
 	//int du = fu - eu;
 
-	double score = fu/*du*/*unitscore;
-
-	double umhp = 0, uhp = 0, emhp = 0, ehp = 0;
+////	double score = fu/*du*/*unitscore;
+//	double score = fu * droneCost;
+//
+//	double enemyScore = eu * turretCost;
+//
+//	score += -enemyScore;
+	double score;
+	double friendFitness = 0.0;
+	//double fumhp = 0.00001, fuhp = 0.00001, eumhp = 0.00001, euhp = 0.00001;
 
 	for (set<Entity*>::iterator i = this->unitSet.begin(); i != this->unitSet.end(); i++)
 	{
 	   Entity* t = *i;
-	   umhp += t->hitpointsmax;
-	   uhp += t->hitpoints;
+//	   fumhp += t->hitpointsmax;
+//	   fuhp += t->hitpoints;
+
+	   friendFitness += (droneCost * t->hitpoints/t->hitpointsmax);
+
+
 	}
+	double enemyFitness = 0.0f;
 	for (set<Entity*>::iterator i = this->enemySet.begin(); i != this->enemySet.end(); i++)
 	{
 	   Entity* t = *i;
-	   emhp += t->hitpointsmax;
-	   ehp += t->hitpoints;
+//	   eumhp += t->hitpointsmax;
+//	   euhp += t->hitpoints;
+	   enemyFitness += (turretCost * (t->hitpoints/t->hitpointsmax));
 	}
 
-	if (fu == 0)
-		umhp = 1;
+	score = friendFitness - enemyFitness;
 
-	if (eu == 0)
-	{
-		ehp = emhp = 1;
-	}
+	score += (engine->gameMgr->startingNumberOfTurrets - this->enemySet.size()) * (1.0 - this->im->getFrameCount()/this->im->maxFrames);
 
-	score += (uhp/umhp + (1 - ehp/emhp)) * 100;
+////	score += (uhp/umhp + (1 - ehp/emhp)) * 100;
+//
+//	double frame = this->im->getFrameCount();
+//	//Time score is the within [0-1) * marine score
+//	double timescore =  unitscore * (1.0 - frame/300000.0);    //250 is the set longest time in one game
+//
+//	if(score < 0) timescore = -score + 1;//timescore *= -1;  //when the enemy win, time score is negative
+//	if (eu == 0) score += timescore;
+//
+//	if(eu > 0 && fu > 0){    //didn't fight at all, punish
+//		//score -= eu* unitscore;
+//		score = 1;
+//	}
 
-	double frame = this->im->getFrameCount();
-	//Time score is the within [0-1) * marine score
-	double timescore =  unitscore * (1 - frame/300000);    //250 is the set longest time in one game
-
-	if(score < 0) timescore = -score + 1;//timescore *= -1;  //when the enemy win, time score is negative
-	if (eu == 0) score += timescore;
-
-	if(eu > 0 && fu > 0){    //didn't fight at all, punish
-		//score -= eu* unitscore;
-		score = 1;
-	}
-
-	return score;
+	//std::cout << score << std::endl;
+ 	return score;
 }
 
 int SquadMgr::getSquadScore2()

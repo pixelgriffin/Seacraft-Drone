@@ -101,6 +101,22 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1727613411" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release">
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.45032344" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.203005698" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.2036150789" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/usr/include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/includes/micro}&quot;"/>
+									<listOptionValue builtIn="false" value="/usr/include/OGRE"/>
+									<listOptionValue builtIn="false" value="/usr/include/boost"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/OGRE"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/includes/ai}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/includes/gfx/decorations}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/includes/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/includes/snd}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/includes/tactical}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/includes/net}&quot;"/>
+									<listOptionValue builtIn="false" value="/usr/include/OIS"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/includes}&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.other.other.2066501731" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++0x" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1275677550" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.838323507" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
@@ -110,6 +126,21 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.262414751" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.2070183524" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
+								<option id="gnu.cpp.link.option.libs.1092364443" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="OgreMain"/>
+									<listOptionValue builtIn="false" value="openal"/>
+									<listOptionValue builtIn="false" value="audio"/>
+									<listOptionValue builtIn="false" value="boost_system"/>
+									<listOptionValue builtIn="false" value="boost_thread"/>
+									<listOptionValue builtIn="false" value="boost_date_time"/>
+									<listOptionValue builtIn="false" value="OIS"/>
+								</option>
+								<option id="gnu.cpp.link.option.paths.959158538" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="/usr/lib"/>
+									<listOptionValue builtIn="false" value="/usr/local/lib"/>
+									<listOptionValue builtIn="false" value="/usr/lib/i386-linux-gnu/OGRE-1.7.4"/>
+									<listOptionValue builtIn="false" value="/usr/lib/i386-linux-gnu/"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1756444890" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
