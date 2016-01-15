@@ -55,7 +55,9 @@ public:
 
 	~SquadMgr(){};
 	FastEcslent::Entity* getTarget(){return this->target;};
-	int getSquadScore();
+	double fightScore();
+	double moveScore();
+	double getSquadScore();
 	int getSquadScore2();
 	int getSquadDestroyScore();
 	FastEcslent::Entity* setTarget();

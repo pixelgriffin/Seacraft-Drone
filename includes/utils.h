@@ -12,9 +12,15 @@
 #include <OgreMatrix3.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <math.h>
 
 const float pi = 3.14159;
 const float twopi = 2.0 * pi;
+const double epsilon = 0.0001;
+
+inline bool closeTo(double v1, double v2){
+	return ( fabs(v1-v2) < epsilon);
+}
 
 inline float clamp(float value, float lower, float upper){
 	if (value > upper)

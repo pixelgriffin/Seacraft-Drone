@@ -1,5 +1,5 @@
 src/distanceMgr.d: ../src/distanceMgr.cpp \
- /home/ecsl/workspace/DroneCraft/includes/distanceMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/distanceMgr.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -18,54 +18,54 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/ecsl/workspace/DroneCraft/includes/options.h \
- /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/const.h \
- /home/ecsl/workspace/DroneCraft/includes/mgr.h \
- /home/ecsl/workspace/DroneCraft/includes/ent.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/options.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/enums.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/const.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/mgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/ent.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/ecsl/workspace/DroneCraft/includes/utils.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/utils.h \
  /usr/local/include/OGRE/OgreMatrix3.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/ecsl/workspace/DroneCraft/includes/command.h \
- /home/ecsl/workspace/DroneCraft/includes/DEBUG.h \
- /home/ecsl/workspace/DroneCraft/includes/target.h \
- /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/unitWeapons.h \
- /home/ecsl/workspace/DroneCraft/includes/aspect.h \
- /home/ecsl/workspace/DroneCraft/includes/weaponMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/ExplosionType.h \
- /home/ecsl/workspace/DroneCraft/includes/WeaponType.h \
- /home/ecsl/workspace/DroneCraft/includes/unitAI.h \
- /home/ecsl/workspace/DroneCraft/includes/physics.h \
- /home/ecsl/workspace/DroneCraft/includes/identity.h \
- /home/ecsl/workspace/DroneCraft/includes/unitBuilder.h \
- /home/ecsl/workspace/DroneCraft/includes/net/netAspect.h \
- /home/ecsl/workspace/DroneCraft/includes/net/messages.h \
- /home/ecsl/workspace/DroneCraft/includes/engine.h \
- /home/ecsl/workspace/DroneCraft/includes/entityMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/const.h \
- /home/ecsl/workspace/DroneCraft/includes/options.h \
- /home/ecsl/workspace/DroneCraft/includes/mgr.h \
- /home/ecsl/workspace/DroneCraft/includes/ent.h \
- /home/ecsl/workspace/DroneCraft/includes/ent_sc.h \
- /home/ecsl/workspace/DroneCraft/includes/selectionMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/entHelpers.h \
- /home/ecsl/workspace/DroneCraft/includes/gameMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/buildings.h \
- /home/ecsl/workspace/DroneCraft/includes/levelMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/tactical/groupMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/tactical/group.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/GA.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/gfxThread.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/GraphicsInteractionManager.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/command.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/target.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/enums.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/unitWeapons.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/aspect.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/weaponMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/ExplosionType.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/WeaponType.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/unitAI.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/physics.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/identity.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/unitBuilder.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/net/netAspect.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/net/messages.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/engine.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/entityMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/const.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/options.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/mgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/ent.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/ent_sc.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/selectionMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/entHelpers.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gameMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/buildings.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/levelMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/tactical/groupMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/tactical/group.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/infoMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/IMEnemy3D.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/GA.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/IMParams.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/InfluenceMap3D.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/IMTerrain.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/InfluenceMap.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/SquadMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxThread.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/GraphicsInteractionManager.h \
  /usr/local/include/OGRE/OgreCamera.h \
  /usr/local/include/OGRE/OgreString.h \
  /usr/local/include/OGRE/OgreMovableObject.h \
@@ -172,31 +172,31 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreWindowEventUtilities.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/gfxNode.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/uiMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxNode.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/uiMgr.h \
  /usr/local/include/OGRE/OgreSceneQuery.h /usr/include/OIS/OISEvents.h \
  /usr/include/OIS/OISPrereqs.h /usr/include/OIS/OISConfig.h \
  /usr/include/OIS/OISInputManager.h /usr/include/OIS/OISKeyboard.h \
  /usr/include/OIS/OISObject.h /usr/include/OIS/OISInterface.h \
  /usr/include/OIS/OISEvents.h /usr/include/OIS/OISMouse.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/gfxMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/cameraMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/selectionBox.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/cameraMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/selectionBox.h \
  /usr/local/include/OGRE/OgreManualObject.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/inputHandlers.h \
- /home/ecsl/workspace/DroneCraft/includes/DEBUG.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/inputEvents.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/controlGroupsHandler.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/minimap.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/inputHandlers.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/inputEvents.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/controlGroupsHandler.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/minimap.h \
  /usr/local/include/OGRE/OgreRenderTargetListener.h \
  /usr/local/include/OGRE/OgreRectangle2D.h \
  /usr/local/include/OGRE/OgreTexture.h \
  /usr/local/include/OGRE/OgreRenderTexture.h \
  /usr/local/include/OGRE/OgreMaterialManager.h \
  /usr/local/include/OGRE/OgreMaterialSerializer.h \
- /home/ecsl/workspace/DroneCraft/includes/HealthBar.h \
- /home/ecsl/workspace/DroneCraft/includes/Rect.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/widgets.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/HealthBar.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/Rect.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/widgets.h \
  /usr/local/include/OGRE/OgreVector2.h \
  /usr/local/include/OGRE/OgreColourValue.h \
  /usr/local/include/OGRE/OgreOverlayManager.h \
@@ -209,14 +209,14 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
  /usr/local/include/OGRE/OgreOverlayElement.h \
  /usr/local/include/OGRE/OgreTextAreaOverlayElement.h \
  /usr/local/include/OGRE/OgreFont.h \
- /home/ecsl/workspace/DroneCraft/includes/commandFactory.h \
- /home/ecsl/workspace/DroneCraft/includes/command.h \
- /home/ecsl/workspace/DroneCraft/includes/commandHelp.h \
- /home/ecsl/workspace/DroneCraft/includes/buildings.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/widgetMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/widgets.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/gfxConst.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/lobbyMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/commandFactory.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/command.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/commandHelp.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/buildings.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/widgetMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/widgets.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxConst.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/lobbyMgr.h \
  /usr/local/include/OGRE/SdkTrays.h /usr/local/include/OGRE/Ogre.h \
  /usr/local/include/OGRE/OgreAnimation.h \
  /usr/local/include/OGRE/OgreArchiveManager.h \
@@ -283,17 +283,17 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
  /usr/local/include/OGRE/OgreBorderPanelOverlayElement.h \
  /usr/local/include/OGRE/OgrePanelOverlayElement.h \
  /usr/local/include/OGRE/OgreTextAreaOverlayElement.h \
- /home/ecsl/workspace/DroneCraft/includes/engine.h \
- /home/ecsl/workspace/DroneCraft/includes/net/netLobby.h \
- /home/ecsl/workspace/DroneCraft/includes/net/listener.h \
- /home/ecsl/workspace/DroneCraft/includes/net/sender.h \
- /home/ecsl/workspace/DroneCraft/includes/net/netCommon.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/engine.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/net/netLobby.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/net/listener.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/net/sender.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/net/netCommon.h \
  /usr/local/include/OGRE/OgreParticleSystem.h \
  /usr/local/include/OGRE/OgreParticleEmitter.h \
- /home/ecsl/workspace/DroneCraft/includes/net/netThread.h \
- /home/ecsl/workspace/DroneCraft/includes/timer.h
+ /home/sushil/workspace/Seacraft-Drone/includes/net/netThread.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/timer.h
 
-/home/ecsl/workspace/DroneCraft/includes/distanceMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/distanceMgr.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -331,101 +331,101 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/ecsl/workspace/DroneCraft/includes/options.h:
+/home/sushil/workspace/Seacraft-Drone/includes/options.h:
 
-/home/ecsl/workspace/DroneCraft/includes/enums.h:
+/home/sushil/workspace/Seacraft-Drone/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/const.h:
+/home/sushil/workspace/Seacraft-Drone/includes/const.h:
 
-/home/ecsl/workspace/DroneCraft/includes/mgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/mgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/ent.h:
+/home/sushil/workspace/Seacraft-Drone/includes/ent.h:
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/ecsl/workspace/DroneCraft/includes/utils.h:
+/home/sushil/workspace/Seacraft-Drone/includes/utils.h:
 
 /usr/local/include/OGRE/OgreMatrix3.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/ecsl/workspace/DroneCraft/includes/command.h:
+/home/sushil/workspace/Seacraft-Drone/includes/command.h:
 
-/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
+/home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h:
 
-/home/ecsl/workspace/DroneCraft/includes/target.h:
+/home/sushil/workspace/Seacraft-Drone/includes/target.h:
 
-/home/ecsl/workspace/DroneCraft/includes/enums.h:
+/home/sushil/workspace/Seacraft-Drone/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/unitWeapons.h:
+/home/sushil/workspace/Seacraft-Drone/includes/unitWeapons.h:
 
-/home/ecsl/workspace/DroneCraft/includes/aspect.h:
+/home/sushil/workspace/Seacraft-Drone/includes/aspect.h:
 
-/home/ecsl/workspace/DroneCraft/includes/weaponMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/weaponMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/ExplosionType.h:
+/home/sushil/workspace/Seacraft-Drone/includes/ExplosionType.h:
 
-/home/ecsl/workspace/DroneCraft/includes/WeaponType.h:
+/home/sushil/workspace/Seacraft-Drone/includes/WeaponType.h:
 
-/home/ecsl/workspace/DroneCraft/includes/unitAI.h:
+/home/sushil/workspace/Seacraft-Drone/includes/unitAI.h:
 
-/home/ecsl/workspace/DroneCraft/includes/physics.h:
+/home/sushil/workspace/Seacraft-Drone/includes/physics.h:
 
-/home/ecsl/workspace/DroneCraft/includes/identity.h:
+/home/sushil/workspace/Seacraft-Drone/includes/identity.h:
 
-/home/ecsl/workspace/DroneCraft/includes/unitBuilder.h:
+/home/sushil/workspace/Seacraft-Drone/includes/unitBuilder.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/netAspect.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/netAspect.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/messages.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/messages.h:
 
-/home/ecsl/workspace/DroneCraft/includes/engine.h:
+/home/sushil/workspace/Seacraft-Drone/includes/engine.h:
 
-/home/ecsl/workspace/DroneCraft/includes/entityMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/entityMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/const.h:
+/home/sushil/workspace/Seacraft-Drone/includes/const.h:
 
-/home/ecsl/workspace/DroneCraft/includes/options.h:
+/home/sushil/workspace/Seacraft-Drone/includes/options.h:
 
-/home/ecsl/workspace/DroneCraft/includes/mgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/mgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/ent.h:
+/home/sushil/workspace/Seacraft-Drone/includes/ent.h:
 
-/home/ecsl/workspace/DroneCraft/includes/ent_sc.h:
+/home/sushil/workspace/Seacraft-Drone/includes/ent_sc.h:
 
-/home/ecsl/workspace/DroneCraft/includes/selectionMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/selectionMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/entHelpers.h:
+/home/sushil/workspace/Seacraft-Drone/includes/entHelpers.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gameMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gameMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/buildings.h:
+/home/sushil/workspace/Seacraft-Drone/includes/buildings.h:
 
-/home/ecsl/workspace/DroneCraft/includes/levelMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/levelMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/tactical/groupMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/tactical/groupMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/tactical/group.h:
+/home/sushil/workspace/Seacraft-Drone/includes/tactical/group.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/infoMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/infoMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/IMEnemy3D.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/IMEnemy3D.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/GA.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/GA.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/IMParams.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap3D.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/InfluenceMap3D.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/IMTerrain.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/IMTerrain.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/InfluenceMap.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/SquadMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/SquadMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/gfxThread.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxThread.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/GraphicsInteractionManager.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/GraphicsInteractionManager.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
 
@@ -643,9 +643,9 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
 
 /usr/local/include/OGRE/OgreWindowEventUtilities.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/gfxNode.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxNode.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/uiMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/uiMgr.h:
 
 /usr/local/include/OGRE/OgreSceneQuery.h:
 
@@ -667,23 +667,23 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
 
 /usr/include/OIS/OISMouse.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/gfxMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/cameraMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/cameraMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/selectionBox.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/selectionBox.h:
 
 /usr/local/include/OGRE/OgreManualObject.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/inputHandlers.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/inputHandlers.h:
 
-/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
+/home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/inputEvents.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/inputEvents.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/controlGroupsHandler.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/controlGroupsHandler.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/minimap.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/minimap.h:
 
 /usr/local/include/OGRE/OgreRenderTargetListener.h:
 
@@ -697,11 +697,11 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
 
 /usr/local/include/OGRE/OgreMaterialSerializer.h:
 
-/home/ecsl/workspace/DroneCraft/includes/HealthBar.h:
+/home/sushil/workspace/Seacraft-Drone/includes/HealthBar.h:
 
-/home/ecsl/workspace/DroneCraft/includes/Rect.h:
+/home/sushil/workspace/Seacraft-Drone/includes/Rect.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/widgets.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/widgets.h:
 
 /usr/local/include/OGRE/OgreVector2.h:
 
@@ -727,21 +727,21 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
 
 /usr/local/include/OGRE/OgreFont.h:
 
-/home/ecsl/workspace/DroneCraft/includes/commandFactory.h:
+/home/sushil/workspace/Seacraft-Drone/includes/commandFactory.h:
 
-/home/ecsl/workspace/DroneCraft/includes/command.h:
+/home/sushil/workspace/Seacraft-Drone/includes/command.h:
 
-/home/ecsl/workspace/DroneCraft/includes/commandHelp.h:
+/home/sushil/workspace/Seacraft-Drone/includes/commandHelp.h:
 
-/home/ecsl/workspace/DroneCraft/includes/buildings.h:
+/home/sushil/workspace/Seacraft-Drone/includes/buildings.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/widgetMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/widgetMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/widgets.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/widgets.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/gfxConst.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxConst.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/lobbyMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/lobbyMgr.h:
 
 /usr/local/include/OGRE/SdkTrays.h:
 
@@ -877,20 +877,20 @@ src/distanceMgr.d: ../src/distanceMgr.cpp \
 
 /usr/local/include/OGRE/OgreTextAreaOverlayElement.h:
 
-/home/ecsl/workspace/DroneCraft/includes/engine.h:
+/home/sushil/workspace/Seacraft-Drone/includes/engine.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/netLobby.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/netLobby.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/listener.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/listener.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/sender.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/sender.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/netCommon.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/netCommon.h:
 
 /usr/local/include/OGRE/OgreParticleSystem.h:
 
 /usr/local/include/OGRE/OgreParticleEmitter.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/netThread.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/netThread.h:
 
-/home/ecsl/workspace/DroneCraft/includes/timer.h:
+/home/sushil/workspace/Seacraft-Drone/includes/timer.h:

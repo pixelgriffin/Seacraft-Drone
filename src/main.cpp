@@ -114,7 +114,7 @@ Options makeOptions(int argc, char*argv[]){
 
 int main(int argc, char *argv[]){
 //	srandom(time(NULL));
-	srandom(0.1);
+	srandom(1);
 	pair<IMParams, IMParams> microparams = makeParams(argc, argv);
 	GA::getInstance()->setParams(microparams.first, microparams.second);
 

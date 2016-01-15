@@ -1,5 +1,5 @@
 src/gfx/selectionBox.d: ../src/gfx/selectionBox.cpp \
- /home/ecsl/workspace/DroneCraft/includes/gfx/selectionBox.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/selectionBox.h \
  /usr/local/include/OGRE/OgreManualObject.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -59,7 +59,7 @@ src/gfx/selectionBox.d: ../src/gfx/selectionBox.cpp \
  /usr/local/include/OGRE/OgreSingleton.h \
  /usr/local/include/OGRE/OgreArchive.h
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/selectionBox.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/selectionBox.h:
 
 /usr/local/include/OGRE/OgreManualObject.h:
 

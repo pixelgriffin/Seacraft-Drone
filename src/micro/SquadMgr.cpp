@@ -7,6 +7,7 @@
 #include "infoMgr.h"
 #include <stdlib.h>
 #include <timer.h>
+#include <utils.h>
 
 using namespace FastEcslent;
 using namespace std;
@@ -213,13 +214,41 @@ void SquadMgr::potentialMove(Entity* unit, Ogre::Vector3* target, int dist)
 	}
 }
 
-int SquadMgr::getSquadScore()
+double SquadMgr::getSquadScore()
 {
+	double f1 = fightScore();
+	double f2 = moveScore();
+	double noMoveScore = ((this->engine->gameMgr->startingNumberOfDrones * this->engine->gameMgr->droneCost) -
+				(this->engine->gameMgr->startingNumberOfTurrets * this->engine->gameMgr->turretCost));
+	if(closeTo(f1, noMoveScore+1000)){
+		return 2000-f2;
 
-	int droneCost = 75;
-	int turretCost = 75;
-	int fu = this->unitSet.size();
-	int eu = this->enemySet.size();
+	} else {
+		return f1;
+	}
+
+}
+
+
+
+double SquadMgr::moveScore(){
+	double totalDist = 0.0;
+	for (set<Entity*>::iterator i = this->unitSet.begin(); i != this->unitSet.end(); i++){
+		for (set<Entity*>::iterator j = this->enemySet.begin(); j != this->enemySet.end(); j++){
+			Entity *f = *i;
+			Entity *e = *j;
+			totalDist += (f->pos - e->pos).length();
+		}
+	}
+	return totalDist/(this->unitSet.size() * this->enemySet.size());
+}
+
+double SquadMgr::fightScore(){
+
+	//int droneCost = 150;
+	//int turretCost = 150;
+	//int fu = this->unitSet.size();
+	//int eu = this->enemySet.size();
 	//int du = fu - eu;
 
 ////	double score = fu/*du*/*unitscore;
@@ -238,18 +267,18 @@ int SquadMgr::getSquadScore()
 //	   fumhp += t->hitpointsmax;
 //	   fuhp += t->hitpoints;
 
-	   friendFitness += (droneCost * t->hitpoints/t->hitpointsmax);
+	   friendFitness += (this->engine->gameMgr->droneCost * t->hitpoints/t->hitpointsmax);
 
 
 	}
 	double enemyFitness = 0.0f;
 	for (set<Entity*>::iterator i = this->enemySet.begin(); i != this->enemySet.end(); i++)
-	{
-	   Entity* t = *i;
-//	   eumhp += t->hitpointsmax;
-//	   euhp += t->hitpoints;
-	   enemyFitness += (turretCost * (t->hitpoints/t->hitpointsmax));
-	}
+		{
+		   Entity* t = *i;
+	//	   eumhp += t->hitpointsmax;
+	//	   euhp += t->hitpoints;
+		   enemyFitness += (this->engine->gameMgr->turretCost * (t->hitpoints/t->hitpointsmax));
+		}
 
 	score = friendFitness - enemyFitness;
 
@@ -270,7 +299,7 @@ int SquadMgr::getSquadScore()
 //	}
 
 	//std::cout << score << std::endl;
- 	return score;
+ 	return score + GA::getInstance()->positiveFitnessFactor;
 }
 
 int SquadMgr::getSquadScore2()

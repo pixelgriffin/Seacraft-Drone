@@ -63,6 +63,8 @@ namespace FastEcslent {
 		//hack for search fitness function
 		int startingNumberOfTurrets;
 		int startingNumberOfDrones;
+		double droneCost;
+		double turretCost;
 
 		Options options;
 		//game

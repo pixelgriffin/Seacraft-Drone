@@ -1,9 +1,9 @@
 src/tactical/groupAI.d: ../src/tactical/groupAI.cpp \
- /home/ecsl/workspace/DroneCraft/includes/tactical/groupAI.h \
- /home/ecsl/workspace/DroneCraft/includes/aspect.h \
- /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/command.h \
- /home/ecsl/workspace/DroneCraft/includes/DEBUG.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/tactical/groupAI.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/aspect.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/enums.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/command.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -22,19 +22,19 @@ src/tactical/groupAI.d: ../src/tactical/groupAI.cpp \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/ecsl/workspace/DroneCraft/includes/target.h \
- /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/DEBUG.h
+ /home/sushil/workspace/Seacraft-Drone/includes/target.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/enums.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h
 
-/home/ecsl/workspace/DroneCraft/includes/tactical/groupAI.h:
+/home/sushil/workspace/Seacraft-Drone/includes/tactical/groupAI.h:
 
-/home/ecsl/workspace/DroneCraft/includes/aspect.h:
+/home/sushil/workspace/Seacraft-Drone/includes/aspect.h:
 
-/home/ecsl/workspace/DroneCraft/includes/enums.h:
+/home/sushil/workspace/Seacraft-Drone/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/command.h:
+/home/sushil/workspace/Seacraft-Drone/includes/command.h:
 
-/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
+/home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -72,8 +72,8 @@ src/tactical/groupAI.d: ../src/tactical/groupAI.cpp \
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/ecsl/workspace/DroneCraft/includes/target.h:
+/home/sushil/workspace/Seacraft-Drone/includes/target.h:
 
-/home/ecsl/workspace/DroneCraft/includes/enums.h:
+/home/sushil/workspace/Seacraft-Drone/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
+/home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h:

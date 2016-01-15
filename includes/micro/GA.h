@@ -20,6 +20,7 @@ public:
 	GA();
 	~GA();
 
+	double positiveFitnessFactor;
 	int writeFitness2SharedMemory(int score);
 	IMParams getRedParams();
 	IMParams getBlueParams();

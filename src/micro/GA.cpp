@@ -15,6 +15,7 @@ GA::GA()
 {
 	chromoLen = 61;
 	signalLen = 4;
+	positiveFitnessFactor = 1000.0;
 	this->initialized = false;
 
 }

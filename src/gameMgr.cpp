@@ -260,6 +260,11 @@ void FastEcslent::GameMgr::WaterCraft(){
 }
 
 void FastEcslent::GameMgr::StarCraft(){
+
+	droneCost = 150.0;
+	turretCost = 150.0;
+
+
 	setupEntityBuildTimes();
 	setupEntitySupply();
     setupEntityBuildables();

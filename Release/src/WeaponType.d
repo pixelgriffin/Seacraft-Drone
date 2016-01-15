@@ -1,7 +1,7 @@
 src/WeaponType.d: ../src/WeaponType.cpp \
- /home/ecsl/workspace/DroneCraft/includes/WeaponType.h \
- /home/ecsl/workspace/DroneCraft/includes/ExplosionType.h
+ /home/sushil/workspace/Seacraft-Drone/includes/WeaponType.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/ExplosionType.h
 
-/home/ecsl/workspace/DroneCraft/includes/WeaponType.h:
+/home/sushil/workspace/Seacraft-Drone/includes/WeaponType.h:
 
-/home/ecsl/workspace/DroneCraft/includes/ExplosionType.h:
+/home/sushil/workspace/Seacraft-Drone/includes/ExplosionType.h:

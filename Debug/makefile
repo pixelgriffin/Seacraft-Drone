@@ -45,19 +45,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: DroneCraft
+all: Seacraft-Drone
 
 # Tool invocations
-DroneCraft: $(OBJS) $(USER_OBJS)
+Seacraft-Drone: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L/usr/lib -L/usr/local/lib -L/usr/lib/i386-linux-gnu/OGRE-1.7.4 -L/usr/lib/i386-linux-gnu/ -o "DroneCraft" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/usr/lib -L/usr/local/lib -L/usr/lib/i386-linux-gnu/OGRE-1.7.4 -L/usr/lib/i386-linux-gnu/ -o "Seacraft-Drone" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) DroneCraft
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) Seacraft-Drone
 	-@echo ' '
 
 .PHONY: all clean dependents

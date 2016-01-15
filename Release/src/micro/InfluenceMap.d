@@ -1,7 +1,7 @@
 src/micro/InfluenceMap.d: ../src/micro/InfluenceMap.cpp \
- /home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h \
- /home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h \
- /home/ecsl/workspace/DroneCraft/includes/ent.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/InfluenceMap.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/micro/IMParams.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/ent.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -21,34 +21,34 @@ src/micro/InfluenceMap.d: ../src/micro/InfluenceMap.cpp \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/ecsl/workspace/DroneCraft/includes/const.h \
- /home/ecsl/workspace/DroneCraft/includes/utils.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/const.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/utils.h \
  /usr/local/include/OGRE/OgreMatrix3.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/ecsl/workspace/DroneCraft/includes/command.h \
- /home/ecsl/workspace/DroneCraft/includes/DEBUG.h \
- /home/ecsl/workspace/DroneCraft/includes/target.h \
- /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/unitWeapons.h \
- /home/ecsl/workspace/DroneCraft/includes/aspect.h \
- /home/ecsl/workspace/DroneCraft/includes/enums.h \
- /home/ecsl/workspace/DroneCraft/includes/weaponMgr.h \
- /home/ecsl/workspace/DroneCraft/includes/mgr.h \
- /home/ecsl/workspace/DroneCraft/includes/options.h \
- /home/ecsl/workspace/DroneCraft/includes/ExplosionType.h \
- /home/ecsl/workspace/DroneCraft/includes/WeaponType.h \
- /home/ecsl/workspace/DroneCraft/includes/unitAI.h \
- /home/ecsl/workspace/DroneCraft/includes/physics.h \
- /home/ecsl/workspace/DroneCraft/includes/identity.h \
- /home/ecsl/workspace/DroneCraft/includes/unitBuilder.h \
- /home/ecsl/workspace/DroneCraft/includes/net/netAspect.h \
- /home/ecsl/workspace/DroneCraft/includes/net/messages.h
+ /home/sushil/workspace/Seacraft-Drone/includes/command.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/target.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/enums.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/unitWeapons.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/aspect.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/enums.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/weaponMgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/mgr.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/options.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/ExplosionType.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/WeaponType.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/unitAI.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/physics.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/identity.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/unitBuilder.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/net/netAspect.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/net/messages.h
 
-/home/ecsl/workspace/DroneCraft/includes/micro/InfluenceMap.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/InfluenceMap.h:
 
-/home/ecsl/workspace/DroneCraft/includes/micro/IMParams.h:
+/home/sushil/workspace/Seacraft-Drone/includes/micro/IMParams.h:
 
-/home/ecsl/workspace/DroneCraft/includes/ent.h:
+/home/sushil/workspace/Seacraft-Drone/includes/ent.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -88,46 +88,46 @@ src/micro/InfluenceMap.d: ../src/micro/InfluenceMap.cpp \
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/ecsl/workspace/DroneCraft/includes/const.h:
+/home/sushil/workspace/Seacraft-Drone/includes/const.h:
 
-/home/ecsl/workspace/DroneCraft/includes/utils.h:
+/home/sushil/workspace/Seacraft-Drone/includes/utils.h:
 
 /usr/local/include/OGRE/OgreMatrix3.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/ecsl/workspace/DroneCraft/includes/command.h:
+/home/sushil/workspace/Seacraft-Drone/includes/command.h:
 
-/home/ecsl/workspace/DroneCraft/includes/DEBUG.h:
+/home/sushil/workspace/Seacraft-Drone/includes/DEBUG.h:
 
-/home/ecsl/workspace/DroneCraft/includes/target.h:
+/home/sushil/workspace/Seacraft-Drone/includes/target.h:
 
-/home/ecsl/workspace/DroneCraft/includes/enums.h:
+/home/sushil/workspace/Seacraft-Drone/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/unitWeapons.h:
+/home/sushil/workspace/Seacraft-Drone/includes/unitWeapons.h:
 
-/home/ecsl/workspace/DroneCraft/includes/aspect.h:
+/home/sushil/workspace/Seacraft-Drone/includes/aspect.h:
 
-/home/ecsl/workspace/DroneCraft/includes/enums.h:
+/home/sushil/workspace/Seacraft-Drone/includes/enums.h:
 
-/home/ecsl/workspace/DroneCraft/includes/weaponMgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/weaponMgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/mgr.h:
+/home/sushil/workspace/Seacraft-Drone/includes/mgr.h:
 
-/home/ecsl/workspace/DroneCraft/includes/options.h:
+/home/sushil/workspace/Seacraft-Drone/includes/options.h:
 
-/home/ecsl/workspace/DroneCraft/includes/ExplosionType.h:
+/home/sushil/workspace/Seacraft-Drone/includes/ExplosionType.h:
 
-/home/ecsl/workspace/DroneCraft/includes/WeaponType.h:
+/home/sushil/workspace/Seacraft-Drone/includes/WeaponType.h:
 
-/home/ecsl/workspace/DroneCraft/includes/unitAI.h:
+/home/sushil/workspace/Seacraft-Drone/includes/unitAI.h:
 
-/home/ecsl/workspace/DroneCraft/includes/physics.h:
+/home/sushil/workspace/Seacraft-Drone/includes/physics.h:
 
-/home/ecsl/workspace/DroneCraft/includes/identity.h:
+/home/sushil/workspace/Seacraft-Drone/includes/identity.h:
 
-/home/ecsl/workspace/DroneCraft/includes/unitBuilder.h:
+/home/sushil/workspace/Seacraft-Drone/includes/unitBuilder.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/netAspect.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/netAspect.h:
 
-/home/ecsl/workspace/DroneCraft/includes/net/messages.h:
+/home/sushil/workspace/Seacraft-Drone/includes/net/messages.h:

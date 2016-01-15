@@ -97,11 +97,11 @@ void InfoMgr::tick(double dtime){
 			ptime startTime = this->engine->startTime;
 			long duration = (endTime - startTime).total_seconds();
 
-			int score = this->squadmgr_red->getSquadScore();
+			double score = this->squadmgr_red->getSquadScore();
 
 //			cout<</*"\nFinal Score is: "<<*/ score << /*", Game duration: "<<duration << " seconds." <<endl<<endl<<endl<<*/endl;
 
-			std::cout << score + positiveFitnessFactor << std::endl;
+			std::cout << score << std::endl;
 
 			exit(0);
 		}

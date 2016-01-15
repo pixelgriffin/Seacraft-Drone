@@ -1,5 +1,5 @@
 src/gfx/DebugDrawer.d: ../src/gfx/DebugDrawer.cpp \
- /home/ecsl/workspace/DroneCraft/includes/gfx/DebugDrawer.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/DebugDrawer.h \
  /usr/local/include/OGRE/OgreSingleton.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -16,7 +16,7 @@ src/gfx/DebugDrawer.d: ../src/gfx/DebugDrawer.cpp \
  /usr/local/include/OGRE/OgreHeaderPrefix.h \
  /usr/local/include/OGRE/OgreHeaderSuffix.h \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
- /home/ecsl/workspace/DroneCraft/includes/gfx/gfxConst.h \
+ /home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxConst.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
  /usr/local/include/OGRE/OgreString.h \
  /usr/local/include/OGRE/OgreSceneNode.h \
@@ -115,7 +115,7 @@ src/gfx/DebugDrawer.d: ../src/gfx/DebugDrawer.cpp \
  /usr/local/include/OGRE/OgreManualObject.h \
  /usr/local/include/OGRE/OgreAxisAlignedBox.h
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/DebugDrawer.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/DebugDrawer.h:
 
 /usr/local/include/OGRE/OgreSingleton.h:
 
@@ -149,7 +149,7 @@ src/gfx/DebugDrawer.d: ../src/gfx/DebugDrawer.cpp \
 
 /usr/local/include/OGRE/OgreMemoryNedPooling.h:
 
-/home/ecsl/workspace/DroneCraft/includes/gfx/gfxConst.h:
+/home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxConst.h:
 
 /usr/local/include/OGRE/OgreSceneManager.h:
 
