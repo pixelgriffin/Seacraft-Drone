@@ -101,7 +101,7 @@ Options makeOptions(int argc, char*argv[]){
 
 	options.enableInteraction = false;
 
-	options.enableGfx = false;
+	options.enableGfx = true;
 	options.runDebugTests = false;
 
 	options.speedup = 50.0; //300.0; //10.0;

@@ -22,7 +22,7 @@ MicroAspect::MicroAspect(Entity* u, SquadMgr* s, Side side){
 		params = GA::getInstance()->getBlueParams();
 	}
 
-	microparam.freeze = params.m_freeze * 0.125f;
+	microparam.freeze = params.m_freeze * (0.125f / 1.0f);
 	microparam.kitingRange = params.m_kitingRange * 32;
 	microparam.kitingDist = params.m_kitingDist*10;   //IM cell distance
 	microparam.targetNearby = params.m_targetNearby*10;
@@ -152,8 +152,16 @@ void MicroAspect::onFire(set<Entity*> &enemies){
 
 
 	//attack freeze
-	if(weapon->weaponType->damageCooldown() - weapon->m_cooldown < this->microparam.freeze){
+	//for drone:
+	//cooldown starts at damageCooldown() value then increments down by dt
+	//
+	//if(1.24f - (0 - 1.24f) < 0.125);
+	//will never work (1.24 - x) will never be more than 1.375
+	/*if(weapon->weaponType->damageCooldown() - weapon->m_cooldown < this->microparam.freeze){
 	//if((unit->getType().groundWeapon().damageCooldown()-unit->getGroundWeaponCooldown()) < this->microparam.freeze){
+		return;
+	}*/
+	if(weapon->weaponType->damageCooldown() - weapon->m_cooldown < ((this->microparam.freeze * weapon->weaponType->damageCooldown()) / 2.0f)) {
 		return;
 	}
 

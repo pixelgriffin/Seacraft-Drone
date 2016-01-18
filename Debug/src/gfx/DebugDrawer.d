@@ -1,354 +1,325 @@
 src/gfx/DebugDrawer.d: ../src/gfx/DebugDrawer.cpp \
- /home/sushil/workspace/Seacraft-Drone/includes/gfx/DebugDrawer.h \
- /usr/local/include/OGRE/OgreSingleton.h \
- /usr/local/include/OGRE/OgrePrerequisites.h \
- /usr/local/include/OGRE/OgrePlatform.h \
- /usr/local/include/OGRE/OgreConfig.h \
- /usr/local/include/OGRE/OgreBuildSettings.h \
- /usr/local/include/OGRE/Threading/OgreThreadDefines.h \
- /usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h \
- /usr/local/include/OGRE/OgreStdHeaders.h \
- /usr/local/include/OGRE/Threading/OgreThreadHeaders.h \
- /usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h \
- /usr/local/include/OGRE/OgreMemoryAllocatorConfig.h \
- /usr/local/include/OGRE/OgreMemoryAllocatedObject.h \
- /usr/local/include/OGRE/OgreMemorySTLAllocator.h \
- /usr/local/include/OGRE/OgreHeaderPrefix.h \
- /usr/local/include/OGRE/OgreHeaderSuffix.h \
- /usr/local/include/OGRE/OgreMemoryNedPooling.h \
- /home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxConst.h \
- /usr/local/include/OGRE/OgreSceneManager.h \
- /usr/local/include/OGRE/OgreString.h \
- /usr/local/include/OGRE/OgreSceneNode.h \
- /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCommon.h \
- /usr/local/include/OGRE/OgreMatrix3.h \
- /usr/local/include/OGRE/OgreVector3.h /usr/local/include/OGRE/OgreMath.h \
- /usr/local/include/OGRE/OgreQuaternion.h \
- /usr/local/include/OGRE/OgreMatrix4.h \
- /usr/local/include/OGRE/OgreVector4.h \
- /usr/local/include/OGRE/OgrePlane.h \
- /usr/local/include/OGRE/OgreRenderable.h \
- /usr/local/include/OGRE/OgreRenderOperation.h \
- /usr/local/include/OGRE/OgreVertexIndexData.h \
- /usr/local/include/OGRE/OgreHardwareVertexBuffer.h \
- /usr/local/include/OGRE/OgreHardwareBuffer.h \
- /usr/local/include/OGRE/OgreSharedPtr.h \
- /usr/local/include/OGRE/OgreColourValue.h \
- /usr/local/include/OGRE/OgreHardwareIndexBuffer.h \
- /usr/local/include/OGRE/OgreMaterial.h \
- /usr/local/include/OGRE/OgreResource.h \
- /usr/local/include/OGRE/OgreStringInterface.h \
- /usr/local/include/OGRE/OgreAtomicWrappers.h \
- /usr/local/include/OGRE/OgreException.h \
- /usr/local/include/OGRE/OgreIteratorWrappers.h \
- /usr/local/include/OGRE/OgreIteratorWrapper.h \
- /usr/local/include/OGRE/OgreIteratorRange.h \
- /usr/local/include/OGRE/OgreBlendMode.h \
- /usr/local/include/OGRE/OgreGpuProgram.h \
- /usr/local/include/OGRE/OgreSerializer.h \
- /usr/local/include/OGRE/OgreDataStream.h \
- /usr/local/include/OGRE/OgreGpuProgramParams.h \
- /usr/local/include/OGRE/OgreAny.h \
- /usr/local/include/OGRE/OgreUserObjectBindings.h \
- /usr/local/include/OGRE/OgreMesh.h \
- /usr/local/include/OGRE/OgreAxisAlignedBox.h \
- /usr/local/include/OGRE/OgreVertexBoneAssignment.h \
- /usr/local/include/OGRE/OgreProgressiveMesh.h \
- /usr/local/include/OGRE/OgreSkeleton.h \
- /usr/local/include/OGRE/OgreStringVector.h \
- /usr/local/include/OGRE/OgreAnimationTrack.h \
- /usr/local/include/OGRE/OgreSimpleSpline.h \
- /usr/local/include/OGRE/OgreRotationalSpline.h \
- /usr/local/include/OGRE/OgreKeyFrame.h \
- /usr/local/include/OGRE/OgreAnimable.h \
- /usr/local/include/OGRE/OgreVector2.h /usr/local/include/OGRE/OgrePose.h \
- /usr/local/include/OGRE/OgreSceneQuery.h \
- /usr/local/include/OGRE/OgreSphere.h /usr/local/include/OGRE/OgreRay.h \
- /usr/local/include/OGRE/OgrePlaneBoundedVolume.h \
- /usr/local/include/OGRE/OgreAutoParamDataSource.h \
- /usr/local/include/OGRE/OgreLight.h \
- /usr/local/include/OGRE/OgreMovableObject.h \
- /usr/local/include/OGRE/OgreRenderQueue.h \
- /usr/local/include/OGRE/OgreShadowCaster.h \
- /usr/local/include/OGRE/OgreFactoryObj.h \
- /usr/local/include/OGRE/OgreShadowCameraSetup.h \
- /usr/local/include/OGRE/OgreMovablePlane.h \
- /usr/local/include/OGRE/OgreAnimationState.h \
- /usr/local/include/OGRE/OgreController.h \
- /usr/local/include/OGRE/OgreRenderQueueSortingGrouping.h \
- /usr/local/include/OGRE/OgreTechnique.h \
- /usr/local/include/OGRE/OgrePass.h \
- /usr/local/include/OGRE/OgreTextureUnitState.h \
- /usr/local/include/OGRE/OgreTexture.h \
- /usr/local/include/OGRE/OgreImage.h \
- /usr/local/include/OGRE/OgrePixelFormat.h \
- /usr/local/include/OGRE/OgreRenderSystemCapabilities.h \
- /usr/local/include/OGRE/OgreStringConverter.h \
- /usr/local/include/OGRE/OgreLogManager.h \
- /usr/local/include/OGRE/OgreLog.h \
- /usr/local/include/OGRE/OgreSingleton.h \
- /usr/local/include/OGRE/OgreRadixSort.h \
- /usr/local/include/OGRE/OgreRectangle2D.h \
- /usr/local/include/OGRE/OgreSimpleRenderable.h \
- /usr/local/include/OGRE/OgreResourceGroupManager.h \
- /usr/local/include/OGRE/OgreArchive.h \
- /usr/local/include/OGRE/OgreShadowTextureManager.h \
- /usr/local/include/OGRE/OgreCamera.h \
- /usr/local/include/OGRE/OgreFrustum.h \
- /usr/local/include/OGRE/OgreInstancedGeometry.h \
- /usr/local/include/OGRE/OgreSkeletonInstance.h \
- /usr/local/include/OGRE/OgreBone.h \
- /usr/local/include/OGRE/OgreLodListener.h \
- /usr/local/include/OGRE/OgreRenderSystem.h \
- /usr/local/include/OGRE/OgreRenderTarget.h \
- /usr/local/include/OGRE/OgreTextureManager.h \
- /usr/local/include/OGRE/OgreResourceManager.h \
- /usr/local/include/OGRE/OgreScriptLoader.h \
- /usr/local/include/OGRE/OgreViewport.h \
- /usr/local/include/OGRE/OgreTimer.h \
- /usr/local/include/OGRE/GLX/OgreTimerImp.h \
- /usr/local/include/OGRE/GLX/../OgrePrerequisites.h \
- /usr/local/include/OGRE/OgreRenderTexture.h \
- /usr/local/include/OGRE/OgreFrameListener.h \
- /usr/local/include/OGRE/OgreConfigOptionMap.h \
- /usr/local/include/OGRE/OgreRenderQueue.h \
- /usr/local/include/OGRE/OgreManualObject.h \
- /usr/local/include/OGRE/OgreAxisAlignedBox.h
+ /home/ecsl/workspace/Seacraft-Drone/includes/gfx/DebugDrawer.h \
+ /usr/include/OGRE/OgreSingleton.h /usr/include/OGRE/OgrePrerequisites.h \
+ /usr/include/OGRE/OgrePlatform.h /usr/include/OGRE/OgreConfig.h \
+ /usr/include/OGRE/OgreBuildSettings.h \
+ /usr/include/OGRE/Threading/OgreThreadDefines.h \
+ /usr/include/OGRE/Threading/OgreThreadDefinesBoost.h \
+ /usr/include/OGRE/OgreStdHeaders.h \
+ /usr/include/OGRE/Threading/OgreThreadHeaders.h \
+ /usr/include/OGRE/Threading/OgreThreadHeadersBoost.h \
+ /usr/include/OGRE/OgreMemoryAllocatorConfig.h \
+ /usr/include/OGRE/OgreMemoryAllocatedObject.h \
+ /usr/include/OGRE/OgreMemorySTLAllocator.h \
+ /usr/include/OGRE/OgreHeaderPrefix.h \
+ /usr/include/OGRE/OgreHeaderSuffix.h \
+ /usr/include/OGRE/OgreMemoryNedPooling.h \
+ /home/ecsl/workspace/Seacraft-Drone/includes/gfx/gfxConst.h \
+ /usr/include/OGRE/OgreSceneManager.h /usr/include/OGRE/OgreString.h \
+ /usr/include/OGRE/OgreSceneNode.h /usr/include/OGRE/OgreNode.h \
+ /usr/include/OGRE/OgreCommon.h /usr/include/OGRE/OgreMatrix3.h \
+ /usr/include/OGRE/OgreVector3.h /usr/include/OGRE/OgreMath.h \
+ /usr/include/OGRE/OgreQuaternion.h /usr/include/OGRE/OgreMatrix4.h \
+ /usr/include/OGRE/OgreVector4.h /usr/include/OGRE/OgrePlane.h \
+ /usr/include/OGRE/OgreRenderable.h \
+ /usr/include/OGRE/OgreRenderOperation.h \
+ /usr/include/OGRE/OgreVertexIndexData.h \
+ /usr/include/OGRE/OgreHardwareVertexBuffer.h \
+ /usr/include/OGRE/OgreHardwareBuffer.h /usr/include/OGRE/OgreSharedPtr.h \
+ /usr/include/OGRE/OgreColourValue.h \
+ /usr/include/OGRE/OgreHardwareIndexBuffer.h \
+ /usr/include/OGRE/OgreMaterial.h /usr/include/OGRE/OgreResource.h \
+ /usr/include/OGRE/OgreStringInterface.h \
+ /usr/include/OGRE/OgreAtomicWrappers.h /usr/include/OGRE/OgreException.h \
+ /usr/include/OGRE/OgreIteratorWrappers.h \
+ /usr/include/OGRE/OgreIteratorWrapper.h \
+ /usr/include/OGRE/OgreIteratorRange.h /usr/include/OGRE/OgreBlendMode.h \
+ /usr/include/OGRE/OgreGpuProgram.h /usr/include/OGRE/OgreSerializer.h \
+ /usr/include/OGRE/OgreDataStream.h \
+ /usr/include/OGRE/OgreGpuProgramParams.h /usr/include/OGRE/OgreAny.h \
+ /usr/include/OGRE/OgreUserObjectBindings.h /usr/include/OGRE/OgreMesh.h \
+ /usr/include/OGRE/OgreAxisAlignedBox.h \
+ /usr/include/OGRE/OgreVertexBoneAssignment.h \
+ /usr/include/OGRE/OgreProgressiveMesh.h /usr/include/OGRE/OgreSkeleton.h \
+ /usr/include/OGRE/OgreStringVector.h \
+ /usr/include/OGRE/OgreAnimationTrack.h \
+ /usr/include/OGRE/OgreSimpleSpline.h \
+ /usr/include/OGRE/OgreRotationalSpline.h \
+ /usr/include/OGRE/OgreKeyFrame.h /usr/include/OGRE/OgreAnimable.h \
+ /usr/include/OGRE/OgreVector2.h /usr/include/OGRE/OgrePose.h \
+ /usr/include/OGRE/OgreSceneQuery.h /usr/include/OGRE/OgreSphere.h \
+ /usr/include/OGRE/OgreRay.h /usr/include/OGRE/OgrePlaneBoundedVolume.h \
+ /usr/include/OGRE/OgreAutoParamDataSource.h \
+ /usr/include/OGRE/OgreLight.h /usr/include/OGRE/OgreMovableObject.h \
+ /usr/include/OGRE/OgreRenderQueue.h /usr/include/OGRE/OgreShadowCaster.h \
+ /usr/include/OGRE/OgreFactoryObj.h \
+ /usr/include/OGRE/OgreShadowCameraSetup.h \
+ /usr/include/OGRE/OgreMovablePlane.h \
+ /usr/include/OGRE/OgreAnimationState.h \
+ /usr/include/OGRE/OgreController.h \
+ /usr/include/OGRE/OgreRenderQueueSortingGrouping.h \
+ /usr/include/OGRE/OgreTechnique.h /usr/include/OGRE/OgrePass.h \
+ /usr/include/OGRE/OgreTextureUnitState.h /usr/include/OGRE/OgreTexture.h \
+ /usr/include/OGRE/OgreImage.h /usr/include/OGRE/OgrePixelFormat.h \
+ /usr/include/OGRE/OgreRenderSystemCapabilities.h \
+ /usr/include/OGRE/OgreStringConverter.h \
+ /usr/include/OGRE/OgreLogManager.h /usr/include/OGRE/OgreLog.h \
+ /usr/include/OGRE/OgreSingleton.h /usr/include/OGRE/OgreRadixSort.h \
+ /usr/include/OGRE/OgreRectangle2D.h \
+ /usr/include/OGRE/OgreSimpleRenderable.h \
+ /usr/include/OGRE/OgreResourceGroupManager.h \
+ /usr/include/OGRE/OgreArchive.h \
+ /usr/include/OGRE/OgreShadowTextureManager.h \
+ /usr/include/OGRE/OgreCamera.h /usr/include/OGRE/OgreFrustum.h \
+ /usr/include/OGRE/OgreInstancedGeometry.h \
+ /usr/include/OGRE/OgreSkeletonInstance.h /usr/include/OGRE/OgreBone.h \
+ /usr/include/OGRE/OgreLodListener.h /usr/include/OGRE/OgreRenderSystem.h \
+ /usr/include/OGRE/OgreRenderTarget.h \
+ /usr/include/OGRE/OgreTextureManager.h \
+ /usr/include/OGRE/OgreResourceManager.h \
+ /usr/include/OGRE/OgreScriptLoader.h /usr/include/OGRE/OgreViewport.h \
+ /usr/include/OGRE/OgreTimer.h /usr/include/OGRE/GLX/OgreTimerImp.h \
+ /usr/include/OGRE/GLX/../OgrePrerequisites.h \
+ /usr/include/OGRE/OgreRenderTexture.h \
+ /usr/include/OGRE/OgreFrameListener.h \
+ /usr/include/OGRE/OgreConfigOptionMap.h \
+ /usr/include/OGRE/OgreRenderQueue.h /usr/include/OGRE/OgreManualObject.h \
+ /usr/include/OGRE/OgreAxisAlignedBox.h
 
-/home/sushil/workspace/Seacraft-Drone/includes/gfx/DebugDrawer.h:
+/home/ecsl/workspace/Seacraft-Drone/includes/gfx/DebugDrawer.h:
 
-/usr/local/include/OGRE/OgreSingleton.h:
+/usr/include/OGRE/OgreSingleton.h:
 
-/usr/local/include/OGRE/OgrePrerequisites.h:
+/usr/include/OGRE/OgrePrerequisites.h:
 
-/usr/local/include/OGRE/OgrePlatform.h:
+/usr/include/OGRE/OgrePlatform.h:
 
-/usr/local/include/OGRE/OgreConfig.h:
+/usr/include/OGRE/OgreConfig.h:
 
-/usr/local/include/OGRE/OgreBuildSettings.h:
+/usr/include/OGRE/OgreBuildSettings.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadDefines.h:
+/usr/include/OGRE/Threading/OgreThreadDefines.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h:
+/usr/include/OGRE/Threading/OgreThreadDefinesBoost.h:
 
-/usr/local/include/OGRE/OgreStdHeaders.h:
+/usr/include/OGRE/OgreStdHeaders.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadHeaders.h:
+/usr/include/OGRE/Threading/OgreThreadHeaders.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h:
+/usr/include/OGRE/Threading/OgreThreadHeadersBoost.h:
 
-/usr/local/include/OGRE/OgreMemoryAllocatorConfig.h:
+/usr/include/OGRE/OgreMemoryAllocatorConfig.h:
 
-/usr/local/include/OGRE/OgreMemoryAllocatedObject.h:
+/usr/include/OGRE/OgreMemoryAllocatedObject.h:
 
-/usr/local/include/OGRE/OgreMemorySTLAllocator.h:
+/usr/include/OGRE/OgreMemorySTLAllocator.h:
 
-/usr/local/include/OGRE/OgreHeaderPrefix.h:
+/usr/include/OGRE/OgreHeaderPrefix.h:
 
-/usr/local/include/OGRE/OgreHeaderSuffix.h:
+/usr/include/OGRE/OgreHeaderSuffix.h:
 
-/usr/local/include/OGRE/OgreMemoryNedPooling.h:
+/usr/include/OGRE/OgreMemoryNedPooling.h:
 
-/home/sushil/workspace/Seacraft-Drone/includes/gfx/gfxConst.h:
+/home/ecsl/workspace/Seacraft-Drone/includes/gfx/gfxConst.h:
 
-/usr/local/include/OGRE/OgreSceneManager.h:
+/usr/include/OGRE/OgreSceneManager.h:
 
-/usr/local/include/OGRE/OgreString.h:
+/usr/include/OGRE/OgreString.h:
 
-/usr/local/include/OGRE/OgreSceneNode.h:
+/usr/include/OGRE/OgreSceneNode.h:
 
-/usr/local/include/OGRE/OgreNode.h:
+/usr/include/OGRE/OgreNode.h:
 
-/usr/local/include/OGRE/OgreCommon.h:
+/usr/include/OGRE/OgreCommon.h:
 
-/usr/local/include/OGRE/OgreMatrix3.h:
+/usr/include/OGRE/OgreMatrix3.h:
 
-/usr/local/include/OGRE/OgreVector3.h:
+/usr/include/OGRE/OgreVector3.h:
 
-/usr/local/include/OGRE/OgreMath.h:
+/usr/include/OGRE/OgreMath.h:
 
-/usr/local/include/OGRE/OgreQuaternion.h:
+/usr/include/OGRE/OgreQuaternion.h:
 
-/usr/local/include/OGRE/OgreMatrix4.h:
+/usr/include/OGRE/OgreMatrix4.h:
 
-/usr/local/include/OGRE/OgreVector4.h:
+/usr/include/OGRE/OgreVector4.h:
 
-/usr/local/include/OGRE/OgrePlane.h:
+/usr/include/OGRE/OgrePlane.h:
 
-/usr/local/include/OGRE/OgreRenderable.h:
+/usr/include/OGRE/OgreRenderable.h:
 
-/usr/local/include/OGRE/OgreRenderOperation.h:
+/usr/include/OGRE/OgreRenderOperation.h:
 
-/usr/local/include/OGRE/OgreVertexIndexData.h:
+/usr/include/OGRE/OgreVertexIndexData.h:
 
-/usr/local/include/OGRE/OgreHardwareVertexBuffer.h:
+/usr/include/OGRE/OgreHardwareVertexBuffer.h:
 
-/usr/local/include/OGRE/OgreHardwareBuffer.h:
+/usr/include/OGRE/OgreHardwareBuffer.h:
 
-/usr/local/include/OGRE/OgreSharedPtr.h:
+/usr/include/OGRE/OgreSharedPtr.h:
 
-/usr/local/include/OGRE/OgreColourValue.h:
+/usr/include/OGRE/OgreColourValue.h:
 
-/usr/local/include/OGRE/OgreHardwareIndexBuffer.h:
+/usr/include/OGRE/OgreHardwareIndexBuffer.h:
 
-/usr/local/include/OGRE/OgreMaterial.h:
+/usr/include/OGRE/OgreMaterial.h:
 
-/usr/local/include/OGRE/OgreResource.h:
+/usr/include/OGRE/OgreResource.h:
 
-/usr/local/include/OGRE/OgreStringInterface.h:
+/usr/include/OGRE/OgreStringInterface.h:
 
-/usr/local/include/OGRE/OgreAtomicWrappers.h:
+/usr/include/OGRE/OgreAtomicWrappers.h:
 
-/usr/local/include/OGRE/OgreException.h:
+/usr/include/OGRE/OgreException.h:
 
-/usr/local/include/OGRE/OgreIteratorWrappers.h:
+/usr/include/OGRE/OgreIteratorWrappers.h:
 
-/usr/local/include/OGRE/OgreIteratorWrapper.h:
+/usr/include/OGRE/OgreIteratorWrapper.h:
 
-/usr/local/include/OGRE/OgreIteratorRange.h:
+/usr/include/OGRE/OgreIteratorRange.h:
 
-/usr/local/include/OGRE/OgreBlendMode.h:
+/usr/include/OGRE/OgreBlendMode.h:
 
-/usr/local/include/OGRE/OgreGpuProgram.h:
+/usr/include/OGRE/OgreGpuProgram.h:
 
-/usr/local/include/OGRE/OgreSerializer.h:
+/usr/include/OGRE/OgreSerializer.h:
 
-/usr/local/include/OGRE/OgreDataStream.h:
+/usr/include/OGRE/OgreDataStream.h:
 
-/usr/local/include/OGRE/OgreGpuProgramParams.h:
+/usr/include/OGRE/OgreGpuProgramParams.h:
 
-/usr/local/include/OGRE/OgreAny.h:
+/usr/include/OGRE/OgreAny.h:
 
-/usr/local/include/OGRE/OgreUserObjectBindings.h:
+/usr/include/OGRE/OgreUserObjectBindings.h:
 
-/usr/local/include/OGRE/OgreMesh.h:
+/usr/include/OGRE/OgreMesh.h:
 
-/usr/local/include/OGRE/OgreAxisAlignedBox.h:
+/usr/include/OGRE/OgreAxisAlignedBox.h:
 
-/usr/local/include/OGRE/OgreVertexBoneAssignment.h:
+/usr/include/OGRE/OgreVertexBoneAssignment.h:
 
-/usr/local/include/OGRE/OgreProgressiveMesh.h:
+/usr/include/OGRE/OgreProgressiveMesh.h:
 
-/usr/local/include/OGRE/OgreSkeleton.h:
+/usr/include/OGRE/OgreSkeleton.h:
 
-/usr/local/include/OGRE/OgreStringVector.h:
+/usr/include/OGRE/OgreStringVector.h:
 
-/usr/local/include/OGRE/OgreAnimationTrack.h:
+/usr/include/OGRE/OgreAnimationTrack.h:
 
-/usr/local/include/OGRE/OgreSimpleSpline.h:
+/usr/include/OGRE/OgreSimpleSpline.h:
 
-/usr/local/include/OGRE/OgreRotationalSpline.h:
+/usr/include/OGRE/OgreRotationalSpline.h:
 
-/usr/local/include/OGRE/OgreKeyFrame.h:
+/usr/include/OGRE/OgreKeyFrame.h:
 
-/usr/local/include/OGRE/OgreAnimable.h:
+/usr/include/OGRE/OgreAnimable.h:
 
-/usr/local/include/OGRE/OgreVector2.h:
+/usr/include/OGRE/OgreVector2.h:
 
-/usr/local/include/OGRE/OgrePose.h:
+/usr/include/OGRE/OgrePose.h:
 
-/usr/local/include/OGRE/OgreSceneQuery.h:
+/usr/include/OGRE/OgreSceneQuery.h:
 
-/usr/local/include/OGRE/OgreSphere.h:
+/usr/include/OGRE/OgreSphere.h:
 
-/usr/local/include/OGRE/OgreRay.h:
+/usr/include/OGRE/OgreRay.h:
 
-/usr/local/include/OGRE/OgrePlaneBoundedVolume.h:
+/usr/include/OGRE/OgrePlaneBoundedVolume.h:
 
-/usr/local/include/OGRE/OgreAutoParamDataSource.h:
+/usr/include/OGRE/OgreAutoParamDataSource.h:
 
-/usr/local/include/OGRE/OgreLight.h:
+/usr/include/OGRE/OgreLight.h:
 
-/usr/local/include/OGRE/OgreMovableObject.h:
+/usr/include/OGRE/OgreMovableObject.h:
 
-/usr/local/include/OGRE/OgreRenderQueue.h:
+/usr/include/OGRE/OgreRenderQueue.h:
 
-/usr/local/include/OGRE/OgreShadowCaster.h:
+/usr/include/OGRE/OgreShadowCaster.h:
 
-/usr/local/include/OGRE/OgreFactoryObj.h:
+/usr/include/OGRE/OgreFactoryObj.h:
 
-/usr/local/include/OGRE/OgreShadowCameraSetup.h:
+/usr/include/OGRE/OgreShadowCameraSetup.h:
 
-/usr/local/include/OGRE/OgreMovablePlane.h:
+/usr/include/OGRE/OgreMovablePlane.h:
 
-/usr/local/include/OGRE/OgreAnimationState.h:
+/usr/include/OGRE/OgreAnimationState.h:
 
-/usr/local/include/OGRE/OgreController.h:
+/usr/include/OGRE/OgreController.h:
 
-/usr/local/include/OGRE/OgreRenderQueueSortingGrouping.h:
+/usr/include/OGRE/OgreRenderQueueSortingGrouping.h:
 
-/usr/local/include/OGRE/OgreTechnique.h:
+/usr/include/OGRE/OgreTechnique.h:
 
-/usr/local/include/OGRE/OgrePass.h:
+/usr/include/OGRE/OgrePass.h:
 
-/usr/local/include/OGRE/OgreTextureUnitState.h:
+/usr/include/OGRE/OgreTextureUnitState.h:
 
-/usr/local/include/OGRE/OgreTexture.h:
+/usr/include/OGRE/OgreTexture.h:
 
-/usr/local/include/OGRE/OgreImage.h:
+/usr/include/OGRE/OgreImage.h:
 
-/usr/local/include/OGRE/OgrePixelFormat.h:
+/usr/include/OGRE/OgrePixelFormat.h:
 
-/usr/local/include/OGRE/OgreRenderSystemCapabilities.h:
+/usr/include/OGRE/OgreRenderSystemCapabilities.h:
 
-/usr/local/include/OGRE/OgreStringConverter.h:
+/usr/include/OGRE/OgreStringConverter.h:
 
-/usr/local/include/OGRE/OgreLogManager.h:
+/usr/include/OGRE/OgreLogManager.h:
 
-/usr/local/include/OGRE/OgreLog.h:
+/usr/include/OGRE/OgreLog.h:
 
-/usr/local/include/OGRE/OgreSingleton.h:
+/usr/include/OGRE/OgreSingleton.h:
 
-/usr/local/include/OGRE/OgreRadixSort.h:
+/usr/include/OGRE/OgreRadixSort.h:
 
-/usr/local/include/OGRE/OgreRectangle2D.h:
+/usr/include/OGRE/OgreRectangle2D.h:
 
-/usr/local/include/OGRE/OgreSimpleRenderable.h:
+/usr/include/OGRE/OgreSimpleRenderable.h:
 
-/usr/local/include/OGRE/OgreResourceGroupManager.h:
+/usr/include/OGRE/OgreResourceGroupManager.h:
 
-/usr/local/include/OGRE/OgreArchive.h:
+/usr/include/OGRE/OgreArchive.h:
 
-/usr/local/include/OGRE/OgreShadowTextureManager.h:
+/usr/include/OGRE/OgreShadowTextureManager.h:
 
-/usr/local/include/OGRE/OgreCamera.h:
+/usr/include/OGRE/OgreCamera.h:
 
-/usr/local/include/OGRE/OgreFrustum.h:
+/usr/include/OGRE/OgreFrustum.h:
 
-/usr/local/include/OGRE/OgreInstancedGeometry.h:
+/usr/include/OGRE/OgreInstancedGeometry.h:
 
-/usr/local/include/OGRE/OgreSkeletonInstance.h:
+/usr/include/OGRE/OgreSkeletonInstance.h:
 
-/usr/local/include/OGRE/OgreBone.h:
+/usr/include/OGRE/OgreBone.h:
 
-/usr/local/include/OGRE/OgreLodListener.h:
+/usr/include/OGRE/OgreLodListener.h:
 
-/usr/local/include/OGRE/OgreRenderSystem.h:
+/usr/include/OGRE/OgreRenderSystem.h:
 
-/usr/local/include/OGRE/OgreRenderTarget.h:
+/usr/include/OGRE/OgreRenderTarget.h:
 
-/usr/local/include/OGRE/OgreTextureManager.h:
+/usr/include/OGRE/OgreTextureManager.h:
 
-/usr/local/include/OGRE/OgreResourceManager.h:
+/usr/include/OGRE/OgreResourceManager.h:
 
-/usr/local/include/OGRE/OgreScriptLoader.h:
+/usr/include/OGRE/OgreScriptLoader.h:
 
-/usr/local/include/OGRE/OgreViewport.h:
+/usr/include/OGRE/OgreViewport.h:
 
-/usr/local/include/OGRE/OgreTimer.h:
+/usr/include/OGRE/OgreTimer.h:
 
-/usr/local/include/OGRE/GLX/OgreTimerImp.h:
+/usr/include/OGRE/GLX/OgreTimerImp.h:
 
-/usr/local/include/OGRE/GLX/../OgrePrerequisites.h:
+/usr/include/OGRE/GLX/../OgrePrerequisites.h:
 
-/usr/local/include/OGRE/OgreRenderTexture.h:
+/usr/include/OGRE/OgreRenderTexture.h:
 
-/usr/local/include/OGRE/OgreFrameListener.h:
+/usr/include/OGRE/OgreFrameListener.h:
 
-/usr/local/include/OGRE/OgreConfigOptionMap.h:
+/usr/include/OGRE/OgreConfigOptionMap.h:
 
-/usr/local/include/OGRE/OgreRenderQueue.h:
+/usr/include/OGRE/OgreRenderQueue.h:
 
-/usr/local/include/OGRE/OgreManualObject.h:
+/usr/include/OGRE/OgreManualObject.h:
 
-/usr/local/include/OGRE/OgreAxisAlignedBox.h:
+/usr/include/OGRE/OgreAxisAlignedBox.h:
